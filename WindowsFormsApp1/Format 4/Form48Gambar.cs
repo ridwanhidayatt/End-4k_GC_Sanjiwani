@@ -36,7 +36,11 @@ namespace WindowsFormsApp1.Format_4
         string ambilDaerah, gabung, gabung1, jam;
         string[] new_order = new string[10];
 
-          
+
+        private bool isButton2Pressed = false;
+        private bool isButton4Pressed = false;
+        private bool isButton6Pressed = false;
+        private bool isButton8Pressed = false;
 
 
 
@@ -837,13 +841,15 @@ private void InitializeThumbnailsForToday()
                 // Get the list of installed printers
                 foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
                 {
-                    // Only add "HP Smart Tank 660-670 series" to the ComboBox
-                    if (printer.Contains("HP Smart Tank 660-670 series"))
-                    //if (printer.Contains("Microsoft IPP Class Driver"))
-                    {
-                        comboBox1.Items.Add(printer);
-                        break; // Stop after adding the specific printer
-                    }
+                    //// Only add "HP Smart Tank 660-670 series" to the ComboBox
+                    //if (printer.Contains("HP Smart Tank 660-670 series"))
+                    ////if (printer.Contains("Microsoft IPP Class Driver"))
+                    //{
+                    //    comboBox1.Items.Add(printer);
+                    //    break; // Stop after adding the specific printer
+                    //}
+
+                    comboBox1.Items.Add(printer);
                 }
 
                 // Optionally, set default selection (e.g., -1 to not select any printer)
@@ -887,36 +893,7 @@ private void InitializeThumbnailsForToday()
 
 
         private void buttonPrint_Click(object sender, EventArgs e)
-        {
-            //// Validasi: Periksa apakah semua PictureBox memiliki gambar
-            //if (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null ||
-            //    pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null ||
-            //    pictureBox7.Image == null || pictureBox8.Image == null)
-            //{
-            //    // Tampilkan pesan peringatan jika ada PictureBox yang belum diisi
-            //    MessageBox.Show("Semua gambar harus terisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return; // Hentikan proses jika validasi gagal
-            //}
-            //else
-            //{
-            //if (textBox12.Text != "")
-            //{
-            //if (richTextBox1.Text == "")
-            //{
-            //    MessageBox.Show("Hasil belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-
-            //else if (richTextBox2.Text == "")
-            //{
-            //    MessageBox.Show("Kesimpulan belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            //}
-
-            //else if (richTextBox3.Text == "")
-            //{
-            //    MessageBox.Show("Saran belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else 
+        { 
             if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
             {
                 MessageBox.Show("Pilih Jenis terlebih dahulu", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -933,60 +910,28 @@ private void InitializeThumbnailsForToday()
             {
                 PrintDocument pd = new PrintDocument();
                 pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-                        pd.DefaultPageSettings.Landscape = false;
+                pd.DefaultPageSettings.Landscape = false;
 
-                        if (comboBox2.Text == "Default")
-                        {
-                            pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-                    pd.Print();
-                    //printPreviewDialog1.Document = pd;
-                    //printPreviewDialog1.ShowDialog();
-
-                    HistoryPrintA4(comboBox2.Text);
-                    //FillListBox();
-                    PopulatePrinterComboBox();
-                            //comboBox2.Items.Clear(); // Membersihkan isi comboBox terlebih dahulu
-                            //comboBox2.Items.Add("Pilih Profil"); // Menambahkan pilihan default
-                            //comboBox2.Items.Add("Default"); // Menambahkan opsi Default
-                            //comboBox2.Items.Add("Adjust Brightness"); // Menambahkan opsi Adjust Brightness
+                if (comboBox2.Text == "Default")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+                    //pd.Print();
+                    printPreviewDialog1.Document = pd;
+                    printPreviewDialog1.ShowDialog();
+                    HistoryPrintA4(comboBox2.Text); 
+                    PopulatePrinterComboBox(); 
                     comboBox2.SelectedIndex = 0; // Mengatur pilihan default yang dipilih 
-                            MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else if (comboBox2.Text == "Adjust Brightness")
-                        {
-                            pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-                            pd.Print();
-                            //printPreviewDialog1.Document = pd;
-                            //printPreviewDialog1.ShowDialog();
-                            HistoryPrintA4(comboBox2.Text);
-                    //FillListBox();
-
-                    PopulatePrinterComboBox();
-                            //comboBox2.Items.Clear(); // Membersihkan isi comboBox terlebih dahulu
-                            //comboBox2.Items.Add("Pilih Profil"); // Menambahkan pilihan default
-                            //comboBox2.Items.Add("Default"); // Menambahkan opsi Default
-                            //comboBox2.Items.Add("Adjust Brightness"); // Menambahkan opsi Adjust Brightness
-                    comboBox2.SelectedIndex = 0; // Mengatur pilihan default yang dipilih 
-                            MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-
-
-
-            }
-            //}
-
-
-
-
-            //}
-
-
-
-            //    else
-            //    {
-            //        MessageBox.Show("keluhan belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    } 
-            //}
+                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (comboBox2.Text == "Adjust Brightness")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+                    pd.Print(); 
+                    HistoryPrintA4(comboBox2.Text); 
+                    PopulatePrinterComboBox(); 
+                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  } 
+            } 
         }
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
@@ -1378,29 +1323,24 @@ private void InitializeThumbnailsForToday()
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             if (logoValue == "1")
-            {
-                //AdjustPictureBoxSize(e.Graphics, "Persegi");
-                //e.Graphics.DrawImage(picLogo1.Image, 30, 3, picLogo1.Width, picLogo1.Height);
+            { 
 
                 if (jenisValue == "Persegi Panjang")
-                {
-                    // Handle case when logoValue is "1" and jenisValue is "Persegi Panjang"
+                { 
                     AdjustPictureBoxSize(e.Graphics, jenisValue);
                     e.Graphics.DrawImage(picLogo2.Image, 30, 10, picLogo2.Width, picLogo2.Height);
                 }
                 else
-                {
-                    // Handle case when logoValue is "1" and jenisValue is not "Persegi Panjang"
+                { 
                     AdjustPictureBoxSize(e.Graphics, "Persegi");
                     e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
                 }
             }
             else if (logoValue == "2")
             {
-                AdjustPictureBoxSize(e.Graphics, jenisValue); // Adjust the size based on jenisValue
+                AdjustPictureBoxSize(e.Graphics, jenisValue); 
                 e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
-
-                // Adjust the coordinates based on jenisValue
+                 
                 if (jenisValue == "Persegi")
                 {
                     e.Graphics.DrawImage(picLogo2.Image, 675, 10, picLogo2.Width, picLogo2.Height);
@@ -1465,121 +1405,108 @@ private void InitializeThumbnailsForToday()
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
             e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
-            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
-            //e.Graphics.DrawRectangle(redPen, 135, 250, 627, 21);
+            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227); 
             e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
-            //e.Graphics.DrawImage(pictureBox1.Image, 326, 300, 220,165);
-            //e.Graphics.DrawImage(pictureBox2.Image, 556, 300, 220, 165);
-
-            //e.Graphics.DrawImage(pictureBox3.Image, 326, 475, 220, 165);
-            //e.Graphics.DrawImage(pictureBox4.Image, 556, 475, 220, 165);
-
-            //e.Graphics.DrawImage(pictureBox5.Image, 326, 650, 220, 165);
-            //e.Graphics.DrawImage(pictureBox6.Image, 556, 650, 220, 165);
-
-            //e.Graphics.DrawImage(pictureBox7.Image, 326, 825, 220, 165);
-            //e.Graphics.DrawImage(pictureBox8.Image, 556, 825, 220, 165);
-
+            //Rectangle rect;
 
             //if (pictureBox1.Image != null)
             //    e.Graphics.DrawImage(pictureBox1.Image, 326, 300, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(326, 300, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox2.Image != null)
             //    e.Graphics.DrawImage(pictureBox2.Image, 556, 300, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(556, 300, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox3.Image != null)
             //    e.Graphics.DrawImage(pictureBox3.Image, 326, 475, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(326, 475, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox4.Image != null)
             //    e.Graphics.DrawImage(pictureBox4.Image, 556, 475, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(556, 475, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox5.Image != null)
             //    e.Graphics.DrawImage(pictureBox5.Image, 326, 650, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(326, 650, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox6.Image != null)
             //    e.Graphics.DrawImage(pictureBox6.Image, 556, 650, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(556, 650, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox7.Image != null)
             //    e.Graphics.DrawImage(pictureBox7.Image, 326, 825, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(326, 825, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
             //if (pictureBox8.Image != null)
             //    e.Graphics.DrawImage(pictureBox8.Image, 556, 825, 220, 165);
+            //else
+            //{
+            //    rect = new Rectangle(556, 825, 220, 165);
+            //    e.Graphics.DrawRectangle(Pens.Black, rect);
+            //}
 
 
-            Rectangle rect;
-
-            if (pictureBox1.Image != null)
-                e.Graphics.DrawImage(pictureBox1.Image, 326, 300, 220, 165);
-            else
+            // Memeriksa apakah tombol 2 ditekan
+            if (isButton2Pressed == true)
             {
-                rect = new Rectangle(326, 300, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
+                MessageBox.Show("Tombol 2 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 449, 223, 411, 221);
+                e.Graphics.DrawImage(pictureBox2.Image, 449, 452, 411, 221);
+                isButton2Pressed = false; // Reset setelah digunakan
             }
 
-            if (pictureBox2.Image != null)
-                e.Graphics.DrawImage(pictureBox2.Image, 556, 300, 220, 165);
-            else
+            // Memeriksa apakah tombol 4 ditekan
+            if (isButton4Pressed == true)
             {
-                rect = new Rectangle(556, 300, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
+                MessageBox.Show("Tombol 4 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 559, 223, 217, 108);
+                e.Graphics.DrawImage(pictureBox2.Image, 559, 337, 217, 108);
+                e.Graphics.DrawImage(pictureBox3.Image, 559, 451, 217, 108);
+                e.Graphics.DrawImage(pictureBox4.Image, 559, 566, 217, 108);
+                isButton4Pressed = false; // Reset setelah digunakan
             }
 
-            if (pictureBox3.Image != null)
-                e.Graphics.DrawImage(pictureBox3.Image, 326, 475, 220, 165);
-            else
+            if (isButton6Pressed)
             {
-                rect = new Rectangle(326, 475, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
+                MessageBox.Show("Tombol 6 ditekan!");
             }
 
-            if (pictureBox4.Image != null)
-                e.Graphics.DrawImage(pictureBox4.Image, 556, 475, 220, 165);
-            else
+            if (isButton8Pressed)
             {
-                rect = new Rectangle(556, 475, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
-            }
-
-            if (pictureBox5.Image != null)
-                e.Graphics.DrawImage(pictureBox5.Image, 326, 650, 220, 165);
-            else
-            {
-                rect = new Rectangle(326, 650, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
-            }
-
-            if (pictureBox6.Image != null)
-                e.Graphics.DrawImage(pictureBox6.Image, 556, 650, 220, 165);
-            else
-            {
-                rect = new Rectangle(556, 650, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
-            }
-
-            if (pictureBox7.Image != null)
-                e.Graphics.DrawImage(pictureBox7.Image, 326, 825, 220, 165);
-            else
-            {
-                rect = new Rectangle(326, 825, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
-            }
-
-            if (pictureBox8.Image != null)
-                e.Graphics.DrawImage(pictureBox8.Image, 556, 825, 220, 165);
-            else
-            {
-                rect = new Rectangle(556, 825, 220, 165);
-                e.Graphics.DrawRectangle(Pens.Black, rect);
+                MessageBox.Show("Tombol 8 ditekan!");
             }
 
 
-
-
-
-
-            // Cek item yang dipilih
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
                 e.Graphics.DrawImage(pictureBox9.Image, 631, 990, 159, 159);
@@ -1590,26 +1517,12 @@ private void InitializeThumbnailsForToday()
 
             }
 
-
-
-
-            //e.Graphics.DrawImage(pictureBox9.Image, 631, 845, 159, 159); 
-            //e.Graphics.DrawImage(pictureBox9.Image, 565, 845, 159, 159);
-
-
             e.Graphics.DrawRectangle(redPen, 30, 300, 280, 350);
             e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
             string combinedText = richTextBox1.Text;
             string hasil = AddNewlinesIfTooLong(combinedText, 34);
             e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
-
-            //e.Graphics.DrawRectangle(redPen, 30, 300, 230, 180);
-            //e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
-            //string combinedText = richTextBox1.Text;
-            //string hasil = AddNewlinesIfTooLong(combinedText, 34);
-            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
-            ////e.Graphics.DrawString(richTextBox1.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 314);
-
+            
             e.Graphics.DrawRectangle(redPen, 30, 660, 280, 100);
             e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 660);
             string combinedText1 = richTextBox2.Text;
@@ -1676,6 +1589,216 @@ private void InitializeThumbnailsForToday()
             pictureBox8.Image.Dispose();
             pictureBox8.Image = null;
         }
+
+
+        private void ClearImages()
+        {
+            // Menghapus gambar dari PictureBox1 hingga PictureBox8
+            pictureBox1.Image = null;
+            pictureBox2.Image = null;
+            pictureBox3.Image = null;
+            pictureBox4.Image = null;
+            pictureBox5.Image = null;
+            pictureBox6.Image = null;
+            pictureBox7.Image = null;
+            pictureBox8.Image = null;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
+            pictureBox1.Visible = true;
+            pictureBox1.Location = new Point(455, 223);
+            pictureBox1.Size = new Size(411, 221);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
+            pictureBox2.Visible = true;
+            pictureBox2.Location = new Point(455, 452);
+            pictureBox2.Size = new Size(411, 221);
+
+            close1.Visible = true;
+            close1.Location = new Point(835, 229);
+
+            close2.Visible = true;
+            close2.Location = new Point(835, 458);
+
+
+            // Menyembunyikan PictureBox3 hingga PictureBox8
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+
+            close3.Visible = false;
+            close4.Visible = false;
+            close5.Visible = false;
+            close6.Visible = false;
+            close7.Visible = false;
+            close8.Visible = false;
+
+            isButton2Pressed = true; // Toggle status tombol 1
+            //ShowMessageForButton(2); // Panggil metode untuk menampilkan MessageBox
+            ClearImages();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
+            pictureBox1.Visible = true;
+            pictureBox1.Location = new Point(559, 223);
+            pictureBox1.Size = new Size(217, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
+            pictureBox2.Visible = true;
+            pictureBox2.Location = new Point(559, 337);
+            pictureBox2.Size = new Size(217, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
+            pictureBox3.Visible = true;
+            pictureBox3.Location = new Point(559, 451);
+            pictureBox3.Size = new Size(217, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
+            pictureBox4.Visible = true;
+            //pictureBox4.Location = new Point(658, 403);
+            pictureBox4.Location = new Point(559, 566);
+            pictureBox4.Size = new Size(217, 108);
+
+            // Menyembunyikan PictureBox5 hingga PictureBox8
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+
+            isButton4Pressed = true ; // Toggle status tombol 1
+            //ShowMessageForButton(4); // Panggil metode untuk menampilkan MessageBox
+            ClearImages();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
+            pictureBox1.Visible = true;
+            pictureBox1.Location = new Point(455,291);
+            pictureBox1.Size = new Size(205, 110);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
+            pictureBox2.Visible = true;
+            pictureBox2.Location = new Point(661, 291);
+            pictureBox2.Size = new Size(205, 110);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
+            pictureBox3.Visible = true;
+            pictureBox3.Location = new Point(455, 431);
+            pictureBox3.Size = new Size(205, 110);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
+            pictureBox4.Visible = true;
+            pictureBox4.Location = new Point(661, 431);
+            pictureBox4.Size = new Size(205, 110);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox5
+            pictureBox5.Visible = true;
+            pictureBox5.Location = new Point(455, 571);
+            pictureBox5.Size = new Size(205, 110);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox6
+            pictureBox6.Visible = true;
+            pictureBox6.Location = new Point(661, 571);
+            pictureBox6.Size = new Size(205, 110);
+
+            // Menyembunyikan PictureBox7 dan PictureBox8
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+
+            isButton6Pressed = true; // Toggle status tombol 1
+            //ShowMessageForButton(6); // Panggil metode untuk menampilkan MessageBox
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
+            pictureBox1.Visible = true;
+            pictureBox1.Location = new Point(455, 223);
+            pictureBox1.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
+            pictureBox2.Visible = true;
+            pictureBox2.Location = new Point(662, 223);
+            pictureBox2.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
+            pictureBox3.Visible = true;
+            pictureBox3.Location = new Point(455, 337);
+            pictureBox3.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
+            pictureBox4.Visible = true;
+            pictureBox4.Location = new Point(662, 337);
+            pictureBox4.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox5
+            pictureBox5.Visible = true;
+            pictureBox5.Location = new Point(455, 450);
+            pictureBox5.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox6
+            pictureBox6.Visible = true;
+            pictureBox6.Location = new Point(662, 450);
+            pictureBox6.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox7
+            pictureBox7.Visible = true;
+            pictureBox7.Location = new Point(455, 564);
+            pictureBox7.Size = new Size(206, 108);
+
+            // Menampilkan dan mengatur lokasi serta ukuran PictureBox8
+            pictureBox8.Visible = true;
+            pictureBox8.Location = new Point(662, 564);
+            pictureBox8.Size = new Size(206, 108);
+
+
+            isButton8Pressed = true; // Toggle status tombol 1
+            //ShowMessageForButton(8); // Panggil metode untuk menampilkan MessageBox
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (isButton2Pressed)
+                MessageBox.Show("Tombol 2 ditekan!");
+        }
+
+
+        // Metode untuk menampilkan MessageBox berdasarkan tombol yang ditekan
+        //private void ShowMessageForButton(int buttonNumber)
+        //{
+        //    // Logika untuk menampilkan MessageBox sesuai dengan status tombol
+        //    if (buttonNumber == 2)
+        //    {
+        //        if (isButton2Pressed)
+        //            MessageBox.Show("Tombol 2 ditekan!"); 
+        //    }
+        //    else if (buttonNumber == 4)
+        //    {
+        //        if (isButton4Pressed)
+        //            MessageBox.Show("Tombol 4 ditekan!"); 
+        //    }
+        //    else if (buttonNumber == 6)
+        //    {
+        //        if (isButton6Pressed)
+        //            MessageBox.Show("Tombol 6 ditekan!"); 
+        //    }
+        //    else if (buttonNumber == 8)
+        //    {
+        //        if (isButton4Pressed)
+        //            MessageBox.Show("Tombol 8 ditekan!"); 
+        //    }
+        //}
 
         public class PictureBoxControls
         {
@@ -1858,16 +1981,16 @@ private void InitializeThumbnailsForToday()
                         picLogo2.Size = new Size(100, 100);
 
                         richTextBoxNRS.Size = new Size(644, 20);
-                        richTextBoxNRS.Location = new Point(109, 12);
+                        richTextBoxNRS.Location = new Point(113, 12);
 
                         richTextBoxBE.Size = new Size(644, 20);
-                        richTextBoxBE.Location = new Point(109, 34);
+                        richTextBoxBE.Location = new Point(113, 34);
 
                         richTextBoxJalan.Size = new Size(644, 18);
-                        richTextBoxJalan.Location = new Point(109, 55);
+                        richTextBoxJalan.Location = new Point(113, 55);
 
                         richTextBoxEmail.Size = new Size(644, 18);
-                        richTextBoxEmail.Location = new Point(109, 71);
+                        richTextBoxEmail.Location = new Point(113, 71);
 
                         //label1.Size = new Size(538, 23);
                         //label1.Location = new Point(164, 27);
