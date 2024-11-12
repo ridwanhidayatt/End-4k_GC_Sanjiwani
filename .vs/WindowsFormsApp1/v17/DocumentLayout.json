@@ -1,0 +1,426 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formdokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formdokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formdokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formdokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|d:\\endoscopy jadi\\zeus oem\\endoscope (oem-zeus) - copy\\windowsformsapp1 - tampilan kanan [3] - format 1,2 logokotak\\windowsformsapp1\\format 3\\form310gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 3\\form310gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 3\\form310gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 3\\form310gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form26gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form26gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form26gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form26gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form24gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form24gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form24gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form24gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form22gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form22gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form22gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form22gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form21gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form21gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 2\\form21gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 2\\form21gambar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form6print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form6print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form6print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form6print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form4print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form4print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form4print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form4print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form1print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form1print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\format 1\\form1print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\format 1\\form1print.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form utama\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form utama\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form utama\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form utama\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C95026-DF9E-4247-B7C3-EF27A8287E08}|WindowsFormsApp3\\WindowsFormsApp3.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44C95026-DF9E-4247-B7C3-EF27A8287E08}|WindowsFormsApp3\\WindowsFormsApp3.csproj|solutionrelative:windowsformsapp3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C95026-DF9E-4247-B7C3-EF27A8287E08}|WindowsFormsApp3\\WindowsFormsApp3.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C95026-DF9E-4247-B7C3-EF27A8287E08}|WindowsFormsApp3\\WindowsFormsApp3.csproj|solutionrelative:windowsformsapp3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\windowsformsapp1\\form child\\formprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CAA1561-358F-4913-9D4B-D164AD428171}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form child\\formprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp3\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp3\\Form1.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp3\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\Endoscope (OEM-ZEUS)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp3\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T09:41:52.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp3\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp3\\Form1.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp3\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp3\\Form1.cs",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAMwKkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T09:40:38.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form310Gambar.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "ViewState": "AQIAAJgEAAAAAAAAAAAuwKsEAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T09:39:34.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form310Gambar.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 3\\Form310Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 3\\Form310Gambar.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 3\\Form310Gambar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T09:39:33.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form6Print.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "ViewState": "AQIAAKwEAAAAAAAAAAAAALUEAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T09:31:16.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form6Print.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form6Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form6Print.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form6Print.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T09:31:10.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form4Print.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "ViewState": "AQIAAJwEAAAAAAAAAAAAAK0EAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T07:31:45.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form4Print.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form4Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form4Print.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form4Print.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T07:31:44.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form1Print.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "ViewState": "AQIAABkGAAAAAAAAAAAIwCwGAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:31:51.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Form1Print.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 1\\Form1Print.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 1\\Form1Print.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 1\\Form1Print.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:31:50.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormDokter.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "ViewState": "AQIAAOsCAAAAAAAAAAAuwAgDAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:31:24.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormUser.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "ViewState": "AQIAADYFAAAAAAAAAAAcwEsFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:31:07.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormUser.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormUser.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormUser.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Child\\FormUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:31:06.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormDokter.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormDokter.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormDokter.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Child\\FormDokter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:30:59.844Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormPrint.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwB8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:28:31.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormPrint.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Child\\FormPrint.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\GASTRO COLON\\FULL HD - GastroColon - (Custom Flowlayoutpanel)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormPrint.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\GASTRO COLON\\FULL HD - GastroColon - (Custom Flowlayoutpanel)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Child\\FormPrint.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:28:27.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormUtama.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "ViewState": "AQIAAMwFAAAAAAAAAAAQwNwFAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T07:26:08.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form26Gambar.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "ViewState": "AQIAAK8DAAAAAAAAAAAswL4DAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:53:08.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form26Gambar.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form26Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form26Gambar.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form26Gambar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:53:07.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form24Gambar.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "ViewState": "AQIAAKUFAAAAAAAAAAAIwLUFAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:51:48.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form24Gambar.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form24Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form24Gambar.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form24Gambar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:45:41.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form22Gambar.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "ViewState": "AQIAAKoDAAAAAAAAAAAAwKkDAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:14:19.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form22Gambar.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form22Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form22Gambar.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form22Gambar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:12:03.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form21Gambar.cs",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "ViewState": "AQIAAIEDAAAAAAAAAAAAAJwDAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:43:24.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form21Gambar.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Format 2\\Form21Gambar.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Format 2\\Form21Gambar.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Format 2\\Form21Gambar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:06:33.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormUtama.cs [Design]",
+              "DocumentMoniker": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS) - Copy\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form Utama\\FormUtama.cs",
+              "ToolTip": "D:\\ENDOSCOPY JADI\\ZEUS OEM\\Endoscope (OEM-ZEUS)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Utama\\FormUtama.cs [Design]",
+              "RelativeToolTip": "..\\..\\Endoscope (OEM-ZEUS)\\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\\WindowsFormsApp1\\Form Utama\\FormUtama.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:06:26.988Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

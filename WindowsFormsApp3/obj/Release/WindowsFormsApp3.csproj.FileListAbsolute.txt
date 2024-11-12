@@ -1,0 +1,3 @@
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp3\obj\Release\WindowsFormsApp3.Form1.resources
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp3\obj\Release\WindowsFormsApp3.Properties.Resources.resources
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp3\obj\Release\WindowsFormsApp3.csproj.GenerateResource.Cache

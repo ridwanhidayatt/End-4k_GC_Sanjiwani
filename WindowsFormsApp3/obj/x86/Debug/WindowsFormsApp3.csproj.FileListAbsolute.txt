@@ -1,0 +1,183 @@
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print 1366X768 - csv - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.pdb
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\csvHelper FHD\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\Endoscope\Taufik\allResolution\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.CodeAnalysisLog.xml
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.lastcodeanalysissucceeded
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+C:\Users\Windows10\Downloads\FHD 1366X768\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.CodeAnalysisLog.xml
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.lastcodeanalysissucceeded
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\FHD 1440X900_JADI\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.CodeAnalysisLog.xml
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.lastcodeanalysissucceeded
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\1440\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDOSCOPY JADI\1440\use  flowlayoutPanel1\FHD 1440X900_JADI - flowlayoutpanel\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsF.90B8DF9B.Up2Date
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\GASTRO COLON\use  flowlayoutPanel1\use Format 3\FULL HD - Gastro Colon\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+F:\Gastro colon\ridwan\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsF.90B8DF9B.Up2Date
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDOSCOPY JADI\ZEUS OEM\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+C:\Users\Gerlink\Desktop\Endoscope (OEM-ZEUS)\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe.config
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\WindowsFormsApp3.pdb
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.dll
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\bin\x86\Debug\CsvHelper.xml
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Form1.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.exe
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan]\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp3\obj\x86\Debug\WindowsFormsApp3.pdb

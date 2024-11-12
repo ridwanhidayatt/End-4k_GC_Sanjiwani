@@ -1,0 +1,11 @@
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\bin\Release\WindowsFormsApp2.pdb
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\bin\Release\MySql.Data.dll
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.AssemblyReference.cache
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Form1.resources
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Properties.Resources.resources
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.GenerateResource.cache
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CopyComplete
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.exe
+D:\Endoscope\FHD\1440\All\fix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy\WindowsFormsApp2\obj\Release\WindowsFormsApp2.pdb

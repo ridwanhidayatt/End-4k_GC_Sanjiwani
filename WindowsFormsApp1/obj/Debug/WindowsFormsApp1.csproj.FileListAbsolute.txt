@@ -1,0 +1,78 @@
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Controls.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Imaging.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Imaging.Formats.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.DirectShow.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.FFMPEG.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.VFW.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Math.dll
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Controls.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Imaging.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Imaging.Formats.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.DirectShow.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.FFMPEG.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Video.VFW.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\AForge.Math.xml
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\RnD\Medical\Endoscope\C#\Camera Framework 3.5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Endoscope\Dany\FHD\FHD Diperbesar Print - Copy - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak - Copy - Copy - Copy - Copy - Copy - Copy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Video.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\CsvHelper.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\EPPlus.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\MySql.Data.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\MySqlBackup.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Math.dll
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Controls.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Imaging.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Imaging.Formats.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Video.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Video.FFMPEG.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Video.VFW.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\CsvHelper.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\EPPlus.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\Debug\AForge.Math.xml
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Utama.FormDokter.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Print.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4Print.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form6Print.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormPrint.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormUser.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Format_2.Form21Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Format_2.Form22Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Format_2.Form24Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Format_2.Form26Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Format_3.Form310Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSwitcing.FormSwitcing2Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSwitcing.FormSwitcing4Gambar.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\IT\Desktop\FULL HD - GastroColon_PlanBFix\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
