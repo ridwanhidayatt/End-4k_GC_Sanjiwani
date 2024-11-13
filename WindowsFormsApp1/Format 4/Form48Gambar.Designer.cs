@@ -43,8 +43,20 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.close7 = new System.Windows.Forms.Button();
+            this.close8 = new System.Windows.Forms.Button();
+            this.close5 = new System.Windows.Forms.Button();
+            this.close6 = new System.Windows.Forms.Button();
+            this.close3 = new System.Windows.Forms.Button();
+            this.close4 = new System.Windows.Forms.Button();
+            this.close1 = new System.Windows.Forms.Button();
+            this.close2 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
@@ -88,19 +100,6 @@
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.close2 = new System.Windows.Forms.Button();
-            this.close1 = new System.Windows.Forms.Button();
-            this.close4 = new System.Windows.Forms.Button();
-            this.close3 = new System.Windows.Forms.Button();
-            this.close6 = new System.Windows.Forms.Button();
-            this.close5 = new System.Windows.Forms.Button();
-            this.close8 = new System.Windows.Forms.Button();
-            this.close7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -268,7 +267,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -289,6 +287,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1563, 992);
             this.panel1.TabIndex = 101;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(1503, 176);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 50);
+            this.button4.TabIndex = 185;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(1503, 120);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 184;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1503, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 183;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(1503, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 182;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox3
             // 
@@ -358,6 +400,94 @@
             this.panel2.Size = new System.Drawing.Size(880, 898);
             this.panel2.TabIndex = 39;
             // 
+            // close7
+            // 
+            this.close7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close7.Image = ((System.Drawing.Image)(resources.GetObject("close7.Image")));
+            this.close7.Location = new System.Drawing.Point(630, 570);
+            this.close7.Name = "close7";
+            this.close7.Size = new System.Drawing.Size(25, 25);
+            this.close7.TabIndex = 194;
+            this.close7.UseVisualStyleBackColor = true;
+            this.close7.Click += new System.EventHandler(this.close7_Click);
+            // 
+            // close8
+            // 
+            this.close8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close8.Image = ((System.Drawing.Image)(resources.GetObject("close8.Image")));
+            this.close8.Location = new System.Drawing.Point(837, 570);
+            this.close8.Name = "close8";
+            this.close8.Size = new System.Drawing.Size(25, 25);
+            this.close8.TabIndex = 193;
+            this.close8.UseVisualStyleBackColor = true;
+            this.close8.Click += new System.EventHandler(this.close8_Click);
+            // 
+            // close5
+            // 
+            this.close5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close5.Image = ((System.Drawing.Image)(resources.GetObject("close5.Image")));
+            this.close5.Location = new System.Drawing.Point(630, 456);
+            this.close5.Name = "close5";
+            this.close5.Size = new System.Drawing.Size(25, 25);
+            this.close5.TabIndex = 192;
+            this.close5.UseVisualStyleBackColor = true;
+            this.close5.Click += new System.EventHandler(this.close5_Click);
+            // 
+            // close6
+            // 
+            this.close6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close6.Image = ((System.Drawing.Image)(resources.GetObject("close6.Image")));
+            this.close6.Location = new System.Drawing.Point(837, 456);
+            this.close6.Name = "close6";
+            this.close6.Size = new System.Drawing.Size(25, 25);
+            this.close6.TabIndex = 191;
+            this.close6.UseVisualStyleBackColor = true;
+            this.close6.Click += new System.EventHandler(this.close6_Click);
+            // 
+            // close3
+            // 
+            this.close3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close3.Image = ((System.Drawing.Image)(resources.GetObject("close3.Image")));
+            this.close3.Location = new System.Drawing.Point(630, 343);
+            this.close3.Name = "close3";
+            this.close3.Size = new System.Drawing.Size(25, 25);
+            this.close3.TabIndex = 190;
+            this.close3.UseVisualStyleBackColor = true;
+            this.close3.Click += new System.EventHandler(this.close3_Click);
+            // 
+            // close4
+            // 
+            this.close4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close4.Image = ((System.Drawing.Image)(resources.GetObject("close4.Image")));
+            this.close4.Location = new System.Drawing.Point(837, 343);
+            this.close4.Name = "close4";
+            this.close4.Size = new System.Drawing.Size(25, 25);
+            this.close4.TabIndex = 189;
+            this.close4.UseVisualStyleBackColor = true;
+            this.close4.Click += new System.EventHandler(this.close4_Click);
+            // 
+            // close1
+            // 
+            this.close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close1.Image = ((System.Drawing.Image)(resources.GetObject("close1.Image")));
+            this.close1.Location = new System.Drawing.Point(630, 229);
+            this.close1.Name = "close1";
+            this.close1.Size = new System.Drawing.Size(25, 25);
+            this.close1.TabIndex = 188;
+            this.close1.UseVisualStyleBackColor = true;
+            this.close1.Click += new System.EventHandler(this.close1_Click_1);
+            // 
+            // close2
+            // 
+            this.close2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close2.Image = ((System.Drawing.Image)(resources.GetObject("close2.Image")));
+            this.close2.Location = new System.Drawing.Point(837, 229);
+            this.close2.Name = "close2";
+            this.close2.Size = new System.Drawing.Size(25, 25);
+            this.close2.TabIndex = 187;
+            this.close2.UseVisualStyleBackColor = true;
+            this.close2.Click += new System.EventHandler(this.close2_Click);
+            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
@@ -411,7 +541,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(662, 448);
+            this.pictureBox6.Location = new System.Drawing.Point(662, 450);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(206, 108);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -421,7 +551,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Location = new System.Drawing.Point(662, 562);
+            this.pictureBox8.Location = new System.Drawing.Point(662, 564);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(206, 108);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -431,7 +561,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(455, 448);
+            this.pictureBox5.Location = new System.Drawing.Point(455, 450);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(206, 108);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -441,7 +571,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(455, 562);
+            this.pictureBox7.Location = new System.Drawing.Point(455, 564);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(206, 108);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -451,7 +581,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(662, 335);
+            this.pictureBox4.Location = new System.Drawing.Point(662, 337);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(206, 108);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -461,7 +591,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(455, 335);
+            this.pictureBox3.Location = new System.Drawing.Point(455, 337);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(206, 108);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -471,7 +601,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(662, 222);
+            this.pictureBox2.Location = new System.Drawing.Point(662, 223);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(206, 108);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -481,7 +611,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(455, 222);
+            this.pictureBox1.Location = new System.Drawing.Point(455, 223);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(206, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -785,140 +915,6 @@
             this.panel7.Size = new System.Drawing.Size(0, 0);
             this.panel7.TabIndex = 102;
             // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1503, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 182;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1503, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 183;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1503, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 184;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1503, 176);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 185;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(1503, 242);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 23);
-            this.button5.TabIndex = 186;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // close2
-            // 
-            this.close2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close2.Image = ((System.Drawing.Image)(resources.GetObject("close2.Image")));
-            this.close2.Location = new System.Drawing.Point(837, 228);
-            this.close2.Name = "close2";
-            this.close2.Size = new System.Drawing.Size(25, 25);
-            this.close2.TabIndex = 187;
-            this.close2.UseVisualStyleBackColor = true;
-            // 
-            // close1
-            // 
-            this.close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close1.Image = ((System.Drawing.Image)(resources.GetObject("close1.Image")));
-            this.close1.Location = new System.Drawing.Point(630, 228);
-            this.close1.Name = "close1";
-            this.close1.Size = new System.Drawing.Size(25, 25);
-            this.close1.TabIndex = 188;
-            this.close1.UseVisualStyleBackColor = true;
-            // 
-            // close4
-            // 
-            this.close4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close4.Image = ((System.Drawing.Image)(resources.GetObject("close4.Image")));
-            this.close4.Location = new System.Drawing.Point(837, 341);
-            this.close4.Name = "close4";
-            this.close4.Size = new System.Drawing.Size(25, 25);
-            this.close4.TabIndex = 189;
-            this.close4.UseVisualStyleBackColor = true;
-            // 
-            // close3
-            // 
-            this.close3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close3.Image = ((System.Drawing.Image)(resources.GetObject("close3.Image")));
-            this.close3.Location = new System.Drawing.Point(630, 341);
-            this.close3.Name = "close3";
-            this.close3.Size = new System.Drawing.Size(25, 25);
-            this.close3.TabIndex = 190;
-            this.close3.UseVisualStyleBackColor = true;
-            // 
-            // close6
-            // 
-            this.close6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close6.Image = ((System.Drawing.Image)(resources.GetObject("close6.Image")));
-            this.close6.Location = new System.Drawing.Point(837, 454);
-            this.close6.Name = "close6";
-            this.close6.Size = new System.Drawing.Size(25, 25);
-            this.close6.TabIndex = 191;
-            this.close6.UseVisualStyleBackColor = true;
-            // 
-            // close5
-            // 
-            this.close5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close5.Image = ((System.Drawing.Image)(resources.GetObject("close5.Image")));
-            this.close5.Location = new System.Drawing.Point(630, 454);
-            this.close5.Name = "close5";
-            this.close5.Size = new System.Drawing.Size(25, 25);
-            this.close5.TabIndex = 192;
-            this.close5.UseVisualStyleBackColor = true;
-            // 
-            // close8
-            // 
-            this.close8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close8.Image = ((System.Drawing.Image)(resources.GetObject("close8.Image")));
-            this.close8.Location = new System.Drawing.Point(837, 568);
-            this.close8.Name = "close8";
-            this.close8.Size = new System.Drawing.Size(25, 25);
-            this.close8.TabIndex = 193;
-            this.close8.UseVisualStyleBackColor = true;
-            // 
-            // close7
-            // 
-            this.close7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close7.Image = ((System.Drawing.Image)(resources.GetObject("close7.Image")));
-            this.close7.Location = new System.Drawing.Point(630, 568);
-            this.close7.Name = "close7";
-            this.close7.Size = new System.Drawing.Size(25, 25);
-            this.close7.TabIndex = 194;
-            this.close7.UseVisualStyleBackColor = true;
-            // 
             // Form48Gambar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1017,7 +1013,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button close7;
         private System.Windows.Forms.Button close8;
         private System.Windows.Forms.Button close5;

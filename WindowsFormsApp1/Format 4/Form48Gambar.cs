@@ -1368,7 +1368,7 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 125, 100, 21);
             e.Graphics.DrawString(textBox5.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 127);
-            e.Graphics.DrawRectangle(redPen, 506, 125, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 125, 296, 21);
             e.Graphics.DrawString(textBox11.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 509, 127);
 
             e.Graphics.DrawRectangle(redPen, 30, 150, 100, 21);
@@ -1378,7 +1378,7 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 150, 100, 21);
             e.Graphics.DrawString(textBox6.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 152);
-            e.Graphics.DrawRectangle(redPen, 506, 150, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 150, 296, 21);
             e.Graphics.DrawString(textBox12.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 152);
 
             e.Graphics.DrawRectangle(redPen, 30, 175, 100, 21);
@@ -1390,23 +1390,23 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 175, 100, 21);
             e.Graphics.DrawString(textBox7.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 177);
-            e.Graphics.DrawRectangle(redPen, 506, 175, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 175, 296, 21);
             e.Graphics.DrawString(textBox13.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 177);
 
             StringFormat SF2 = new StringFormat();
             SF2.Alignment = StringAlignment.Near;
             e.Graphics.DrawRectangle(redPen, 30, 200, 362, 21);
-            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 200, SF2);
-            e.Graphics.DrawRectangle(redPen, 401, 200, 374, 21);
+            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 203, SF2);
+            e.Graphics.DrawRectangle(redPen, 401, 200, 401, 21);
             e.Graphics.DrawString(richTextBox4.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 403, 202);
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 47);
+            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
-            e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 225, 257, 21);
             e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227); 
-            e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 250, 257, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
             //Rectangle rect;
@@ -1476,35 +1476,7 @@ private void InitializeThumbnailsForToday()
             //}
 
 
-            // Memeriksa apakah tombol 2 ditekan
-            if (isButton2Pressed == true)
-            {
-                MessageBox.Show("Tombol 2 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 449, 223, 411, 221);
-                e.Graphics.DrawImage(pictureBox2.Image, 449, 452, 411, 221);
-                isButton2Pressed = false; // Reset setelah digunakan
-            }
-
-            // Memeriksa apakah tombol 4 ditekan
-            if (isButton4Pressed == true)
-            {
-                MessageBox.Show("Tombol 4 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 559, 223, 217, 108);
-                e.Graphics.DrawImage(pictureBox2.Image, 559, 337, 217, 108);
-                e.Graphics.DrawImage(pictureBox3.Image, 559, 451, 217, 108);
-                e.Graphics.DrawImage(pictureBox4.Image, 559, 566, 217, 108);
-                isButton4Pressed = false; // Reset setelah digunakan
-            }
-
-            if (isButton6Pressed)
-            {
-                MessageBox.Show("Tombol 6 ditekan!");
-            }
-
-            if (isButton8Pressed)
-            {
-                MessageBox.Show("Tombol 8 ditekan!");
-            }
+           
 
 
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
@@ -1517,28 +1489,120 @@ private void InitializeThumbnailsForToday()
 
             }
 
-            e.Graphics.DrawRectangle(redPen, 30, 300, 280, 350);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
+            e.Graphics.DrawRectangle(redPen, 30, 275, 362, 420);
+            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
             string combinedText = richTextBox1.Text;
             string hasil = AddNewlinesIfTooLong(combinedText, 34);
             e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
             
-            e.Graphics.DrawRectangle(redPen, 30, 660, 280, 100);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 660);
+            e.Graphics.DrawRectangle(redPen, 30, 700, 362, 160);
+            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
             string combinedText1 = richTextBox2.Text;
             string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
             e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
 
-            e.Graphics.DrawRectangle(redPen, 30, 770, 280, 75);
-            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 770);
+            //e.Graphics.DrawRectangle(redPen, 30, 770, 362, 75);
+            e.Graphics.DrawRectangle(redPen, 30, 865, 362, 145);
+            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 865);
             string combinedText2 = richTextBox3.Text;
             string saran = AddNewlinesIfTooLong(combinedText2, 34);
             e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
 
-            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 866, SF1);
-            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 880, SF1);
+            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
+            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
 
-            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 966, SF1);
+            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
+
+
+
+
+
+            // Memeriksa apakah tombol 2 ditekan
+            if (isButton2Pressed == true)
+            {
+                //MessageBox.Show("Tombol 2 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
+                e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
+                //isButton2Pressed = false; // Reset setelah digunakan
+            }
+
+            // Memeriksa apakah tombol 4 ditekan
+            if (isButton4Pressed == true)
+            {
+                //MessageBox.Show("Tombol 4 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
+                e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
+                e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
+                e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
+                //isButton4Pressed = false; // Reset setelah digunakan
+            }
+
+            if (isButton6Pressed)
+            {
+                e.Graphics.DrawImage(pictureBox1.Image, 485, 228, 233, 122);
+                e.Graphics.DrawImage(pictureBox2.Image, 485, 355, 233, 122);
+                e.Graphics.DrawImage(pictureBox3.Image, 485, 482, 233, 122);
+                e.Graphics.DrawImage(pictureBox4.Image, 485, 609, 233, 122);
+                e.Graphics.DrawImage(pictureBox5.Image, 485, 736, 233, 122);
+                e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122);
+
+                //e.Graphics.DrawImage(pictureBox6.Image, 401, 888, 400, 105);
+
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 558, 198, 430);
+            }
+
+            if (isButton8Pressed)
+            {
+
+                e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
+
+                e.Graphics.DrawImage(pictureBox3.Image, 404, 327, 195, 94);
+                e.Graphics.DrawImage(pictureBox4.Image, 604, 327, 195, 94);
+
+                e.Graphics.DrawImage(pictureBox5.Image, 404, 426, 195, 94);
+                e.Graphics.DrawImage(pictureBox6.Image, 604, 426, 195, 94);
+
+                e.Graphics.DrawImage(pictureBox7.Image, 404, 525, 195, 94);
+                e.Graphics.DrawImage(pictureBox8.Image, 604, 525, 195, 94);
+
+
+
+                
+                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox3.Image, 404, 414, 195, 94);
+                //e.Graphics.DrawImage(pictureBox4.Image, 604, 414, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox5.Image, 404, 600, 195, 94);
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 600, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox7.Image, 404, 786, 195, 94);
+                //e.Graphics.DrawImage(pictureBox8.Image, 604, 786, 195, 94);
+
+
+
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 509, 228, 184, 92);
+                //e.Graphics.DrawImage(pictureBox2.Image, 509, 324, 184, 92);
+                //e.Graphics.DrawImage(pictureBox3.Image, 509, 420, 184, 92);
+                //e.Graphics.DrawImage(pictureBox4.Image, 509, 516, 184, 92);
+                //e.Graphics.DrawImage(pictureBox5.Image, 509, 612, 184, 92);
+                //e.Graphics.DrawImage(pictureBox6.Image, 509, 708, 184, 92);
+                //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
+                //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
+
+
+            }
+
+
+            //isButton2Pressed = false; // Reset setelah digunakan
+            //isButton4Pressed = false; // Reset setelah digunakan
+
+
+
+
         }
 
         private void close1_Click(object sender, EventArgs e)
@@ -1548,47 +1612,7 @@ private void InitializeThumbnailsForToday()
             //close1.Visible = false;
         }
 
-        private void close2_Click(object sender, EventArgs e)
-        {
-            pictureBox2.Image.Dispose();
-            pictureBox2.Image = null;
-        }
-
-        private void close3_Click(object sender, EventArgs e)
-        {
-            pictureBox3.Image.Dispose();
-            pictureBox3.Image = null;
-        }
-
-        private void close4_Click(object sender, EventArgs e)
-        {
-            pictureBox4.Image.Dispose();
-            pictureBox4.Image = null;
-        }
-
-        private void close5_Click(object sender, EventArgs e)
-        {
-            pictureBox5.Image.Dispose();
-            pictureBox5.Image = null;
-        }
-
-        private void close6_Click(object sender, EventArgs e)
-        {
-            pictureBox6.Image.Dispose();
-            pictureBox6.Image = null;
-        }
-
-        private void close7_Click(object sender, EventArgs e)
-        {
-            pictureBox7.Image.Dispose();
-            pictureBox7.Image = null;
-        }
-
-        private void close8_Click(object sender, EventArgs e)
-        {
-            pictureBox8.Image.Dispose();
-            pictureBox8.Image = null;
-        }
+        
 
 
         private void ClearImages()
@@ -1639,9 +1663,13 @@ private void InitializeThumbnailsForToday()
             close7.Visible = false;
             close8.Visible = false;
 
-            isButton2Pressed = true; // Toggle status tombol 1
             //ShowMessageForButton(2); // Panggil metode untuk menampilkan MessageBox
             ClearImages();
+
+            isButton2Pressed = true;  
+            isButton4Pressed = false;
+            isButton6Pressed = false;
+            isButton8Pressed = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -1649,23 +1677,37 @@ private void InitializeThumbnailsForToday()
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
             pictureBox1.Visible = true;
             pictureBox1.Location = new Point(559, 223);
-            pictureBox1.Size = new Size(217, 108);
+            pictureBox1.Size = new Size(224, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
             pictureBox2.Visible = true;
-            pictureBox2.Location = new Point(559, 337);
-            pictureBox2.Size = new Size(217, 108);
+            pictureBox2.Location = new Point(559, 348);
+            pictureBox2.Size = new Size(224, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
             pictureBox3.Visible = true;
-            pictureBox3.Location = new Point(559, 451);
-            pictureBox3.Size = new Size(217, 108);
+            pictureBox3.Location = new Point(559, 473);
+            pictureBox3.Size = new Size(224, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
             pictureBox4.Visible = true;
             //pictureBox4.Location = new Point(658, 403);
-            pictureBox4.Location = new Point(559, 566);
-            pictureBox4.Size = new Size(217, 108);
+            pictureBox4.Location = new Point(559, 598);
+            pictureBox4.Size = new Size(224, 120);
+
+            close1.Visible = true;
+            close1.Location = new Point(751, 229);
+
+            close2.Visible = true;
+            close2.Location = new Point(751, 354);
+
+            close3.Visible = true;
+            close3.Location = new Point(751, 479);
+
+            close4.Visible = true;
+            close4.Location = new Point(751, 604);
+
+
 
             // Menyembunyikan PictureBox5 hingga PictureBox8
             pictureBox5.Visible = false;
@@ -1673,9 +1715,18 @@ private void InitializeThumbnailsForToday()
             pictureBox7.Visible = false;
             pictureBox8.Visible = false;
 
-            isButton4Pressed = true ; // Toggle status tombol 1
-            //ShowMessageForButton(4); // Panggil metode untuk menampilkan MessageBox
+            close5.Visible = false;
+            close6.Visible = false;
+            close7.Visible = false;
+            close8.Visible = false;
+
             ClearImages();
+
+            isButton2Pressed = false;
+            isButton4Pressed = true;
+            isButton6Pressed = false;
+            isButton8Pressed = false;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1710,12 +1761,43 @@ private void InitializeThumbnailsForToday()
             pictureBox6.Location = new Point(661, 571);
             pictureBox6.Size = new Size(205, 110);
 
+
+
+            close1.Visible = true;
+            close1.Location = new Point(630, 296);
+
+            close2.Visible = true;
+            close2.Location = new Point(836, 296);
+
+            close3.Visible = true;
+            close3.Location = new Point(630, 436);
+
+            close4.Visible = true;
+            close4.Location = new Point(836, 436);
+
+            close5.Visible = true;
+            close5.Location = new Point(630, 576);
+
+            close6.Visible = true;
+            close6.Location = new Point(836, 576);
+
+
+
+
+
             // Menyembunyikan PictureBox7 dan PictureBox8
             pictureBox7.Visible = false;
             pictureBox8.Visible = false;
 
-            isButton6Pressed = true; // Toggle status tombol 1
-            //ShowMessageForButton(6); // Panggil metode untuk menampilkan MessageBox
+            close7.Visible = false;
+            close8.Visible = false;
+
+            ClearImages();
+
+            isButton2Pressed = false;
+            isButton4Pressed = false;
+            isButton6Pressed = true;
+            isButton8Pressed = false;
 
         }
 
@@ -1762,16 +1844,80 @@ private void InitializeThumbnailsForToday()
             pictureBox8.Size = new Size(206, 108);
 
 
-            isButton8Pressed = true; // Toggle status tombol 1
-            //ShowMessageForButton(8); // Panggil metode untuk menampilkan MessageBox
+            close1.Visible = true;
+            close1.Location = new Point(630, 229);
 
-        }
+            close2.Visible = true;
+            close2.Location = new Point(837, 229);
 
-        private void button5_Click(object sender, EventArgs e)
+            close3.Visible = true;
+            close3.Location = new Point(630, 343);
+
+            close4.Visible = true;
+            close4.Location = new Point(837, 343);
+
+            close5.Visible = true;
+            close5.Location = new Point(630, 456);
+
+            close6.Visible = true;
+            close6.Location = new Point(837, 456);
+
+            close7.Visible = true;
+            close7.Location = new Point(630, 570);
+
+            close8.Visible = true;
+            close8.Location = new Point(837, 570);
+
+            ClearImages();
+
+
+            isButton2Pressed = false;
+            isButton4Pressed = false;
+            isButton6Pressed = false;
+            isButton8Pressed = true;
+
+        } 
+
+        private void close1_Click_1(object sender, EventArgs e)
         {
-            if (isButton2Pressed)
-                MessageBox.Show("Tombol 2 ditekan!");
+            pictureBox1.Image = null;
         }
+
+        private void close2_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Image = null;
+        }
+
+        private void close3_Click(object sender, EventArgs e)
+        {
+            pictureBox3.Image = null;
+        }
+
+        private void close4_Click(object sender, EventArgs e)
+        {
+            pictureBox4.Image = null;
+        }
+
+        private void close5_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Image = null;
+        }
+
+        private void close6_Click(object sender, EventArgs e)
+        {
+            pictureBox6.Image = null;
+        }
+
+        private void close7_Click(object sender, EventArgs e)
+        {
+            pictureBox7.Image = null;
+        }
+
+        private void close8_Click(object sender, EventArgs e)
+        {
+            pictureBox8.Image = null;
+        }
+
 
 
         // Metode untuk menampilkan MessageBox berdasarkan tombol yang ditekan
