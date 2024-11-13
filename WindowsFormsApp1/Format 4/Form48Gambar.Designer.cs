@@ -632,7 +632,7 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(10, 291);
-            this.richTextBox1.MaxLength = 335;
+            this.richTextBox1.MaxLength = 9000;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(439, 203);
             this.richTextBox1.TabIndex = 151;

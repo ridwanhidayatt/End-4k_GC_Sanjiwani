@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.Format_4
         private bool isButton6Pressed = false;
         private bool isButton8Pressed = false;
 
-
+        private string selectedPrinter;
 
         private Dictionary<PictureBox, PictureBoxControls> pictureBoxControls = new Dictionary<PictureBox, PictureBoxControls>();
 
@@ -874,8 +874,17 @@ private void InitializeThumbnailsForToday()
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            string Pname = comboBox1.SelectedItem.ToString();
-            printer.SetDefaultPrinter(Pname);
+
+
+
+            
+
+            if (comboBox1.SelectedIndex != -1)
+            {
+                selectedPrinter = comboBox1.SelectedItem.ToString();
+                string Pname = comboBox1.SelectedItem.ToString();
+                printer.SetDefaultPrinter(Pname);
+            }
         }
 
         void FillListBox()
@@ -893,45 +902,116 @@ private void InitializeThumbnailsForToday()
 
 
         private void buttonPrint_Click(object sender, EventArgs e)
-        { 
+        {
+            //if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
+            //{
+            //    MessageBox.Show("Pilih Jenis terlebih dahulu", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //else if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
+            //{
+            //    MessageBox.Show("Pilih Profil yang dipakai", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //else if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "Pilih Printer")
+            //{
+            //    MessageBox.Show("Pilih printer yang digunakan", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //else
+            //{
+            //    PrintDocument pd = new PrintDocument();
+            //    pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+            //    pd.DefaultPageSettings.Landscape = false;
+
+            //    if (comboBox2.Text == "Default")
+            //    {
+            //        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+            //        pd.PrinterSettings.PrinterName = selectedPrinter;
+            //        //pd.Print();
+            //        printPreviewDialog1.Document = pd;
+            //        printPreviewDialog1.ShowDialog();
+            //        HistoryPrintA4(comboBox2.Text); 
+            //        PopulatePrinterComboBox(); 
+            //        comboBox2.SelectedIndex = 0;  
+            //        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //    else if (comboBox2.Text == "Adjust Brightness")
+            //    {
+            //        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+            //        pd.Print(); 
+            //        HistoryPrintA4(comboBox2.Text); 
+            //        PopulatePrinterComboBox(); 
+            //        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //      } 
+            //} 
+
+
+            // Validasi ComboBox sebelum mencetak
             if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
             {
-                MessageBox.Show("Pilih Jenis terlebih dahulu", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
             {
-                MessageBox.Show("Pilih Profil yang dipakai", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Pilih Profil yang dipakai", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "Pilih Printer")
+            else if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
             {
-                MessageBox.Show("Pilih printer yang digunakan", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Pilih printer yang digunakan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                // Simpan pilihan printer dari ComboBox1 jika belum ada printer yang dipilih sebelumnya
+                if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
+                {
+                    selectedPrinter = comboBox1.SelectedItem.ToString();
+                }
+
                 PrintDocument pd = new PrintDocument();
                 pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
                 pd.DefaultPageSettings.Landscape = false;
 
-                if (comboBox2.Text == "Default")
+                if (!string.IsNullOrEmpty(selectedPrinter))
                 {
-                    pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-                    //pd.Print();
-                    printPreviewDialog1.Document = pd;
-                    printPreviewDialog1.ShowDialog();
-                    HistoryPrintA4(comboBox2.Text); 
-                    PopulatePrinterComboBox(); 
-                    comboBox2.SelectedIndex = 0; // Mengatur pilihan default yang dipilih 
-                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    pd.PrinterSettings.PrinterName = selectedPrinter; // Menggunakan printer yang telah dipilih
+
+                    if (comboBox2.Text == "Default")
+                    {
+                        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+
+                        // Menggunakan Print Preview jika diperlukan
+                        printPreviewDialog1.Document = pd;
+                        printPreviewDialog1.ShowDialog();
+
+                        // Proses pencetakan
+                        //pd.Print();
+
+                        // Log history
+                        HistoryPrintA4(comboBox2.Text);
+                        PopulatePrinterComboBox();
+
+                        comboBox2.SelectedIndex = 0; // Reset profil ke default
+                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (comboBox2.Text == "Adjust Brightness")
+                    {
+                        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+
+                        // Langsung cetak tanpa preview
+                        pd.Print();
+
+                        // Log history
+                        HistoryPrintA4(comboBox2.Text);
+                        PopulatePrinterComboBox();
+
+                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else if (comboBox2.Text == "Adjust Brightness")
+                else
                 {
-                    pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-                    pd.Print(); 
-                    HistoryPrintA4(comboBox2.Text); 
-                    PopulatePrinterComboBox(); 
-                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                  } 
-            } 
+                    MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+
         }
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
@@ -1314,7 +1394,7 @@ private void InitializeThumbnailsForToday()
                 pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
                 pdoc.DefaultPageSettings.Landscape = false;
                 //pdoc.PrintPage += pdoc_PrintPage;
-                pdoc.PrintPage += printDocument1_PrintPage;
+                pdoc.PrintPage += printDocument1_PrintPage;                
                 pdoc.Print();
             }
 
@@ -1489,12 +1569,48 @@ private void InitializeThumbnailsForToday()
 
             }
 
+
+
+           
+
+
+
             e.Graphics.DrawRectangle(redPen, 30, 275, 362, 420);
             e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
-            string combinedText = richTextBox1.Text;
-            string hasil = AddNewlinesIfTooLong(combinedText, 34);
-            e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
-            
+            //string combinedText = richTextBox1.Text;
+            //string hasil = AddNewlinesIfTooLong(combinedText, 34);
+            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
+
+            // Ukuran area cetak
+            float printWidth = 362;
+            float printHeight = 420;
+
+            // Inisialisasi ukuran font awal
+            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            Font font = new Font("Arial", fontSize);
+            string text = richTextBox1.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSize = e.Graphics.MeasureString(text, font, (int)printWidth);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSize.Height > printHeight && fontSize > 1)
+            {
+                fontSize -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                font = new Font("Arial", fontSize);
+                textSize = e.Graphics.MeasureString(text, font, (int)printWidth);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 288, printWidth, printHeight));
+
+
+
+
+
+
+
+
             e.Graphics.DrawRectangle(redPen, 30, 700, 362, 160);
             e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
             string combinedText1 = richTextBox2.Text;
