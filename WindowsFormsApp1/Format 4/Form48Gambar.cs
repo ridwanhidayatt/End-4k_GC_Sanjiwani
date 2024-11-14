@@ -995,8 +995,12 @@ private void InitializeThumbnailsForToday()
                     {
                         pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
 
+
+                        printPreviewDialog1.Document = pd;
+                        printPreviewDialog1.ShowDialog();
+
                         // Langsung cetak tanpa preview
-                        pd.Print();
+                        //pd.Print();
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
@@ -1034,33 +1038,25 @@ private void InitializeThumbnailsForToday()
         {
 
 
-            //MessageBox.Show("test");
-
-
             if (logoValue == "1")
             {
-                //AdjustPictureBoxSize(e.Graphics, "Persegi");
-                //e.Graphics.DrawImage(picLogo1.Image, 30, 3, picLogo1.Width, picLogo1.Height);
 
                 if (jenisValue == "Persegi Panjang")
                 {
-                    // Handle case when logoValue is "1" and jenisValue is "Persegi Panjang"
                     AdjustPictureBoxSize(e.Graphics, jenisValue);
                     e.Graphics.DrawImage(picLogo2.Image, 30, 10, picLogo2.Width, picLogo2.Height);
                 }
                 else
                 {
-                    // Handle case when logoValue is "1" and jenisValue is not "Persegi Panjang"
                     AdjustPictureBoxSize(e.Graphics, "Persegi");
                     e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
                 }
             }
             else if (logoValue == "2")
             {
-                AdjustPictureBoxSize(e.Graphics, jenisValue); // Adjust the size based on jenisValue
+                AdjustPictureBoxSize(e.Graphics, jenisValue);
                 e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
 
-                // Adjust the coordinates based on jenisValue
                 if (jenisValue == "Persegi")
                 {
                     e.Graphics.DrawImage(picLogo2.Image, 675, 10, picLogo2.Width, picLogo2.Height);
@@ -1088,7 +1084,7 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 125, 100, 21);
             e.Graphics.DrawString(textBox5.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 127);
-            e.Graphics.DrawRectangle(redPen, 506, 125, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 125, 296, 21);
             e.Graphics.DrawString(textBox11.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 509, 127);
 
             e.Graphics.DrawRectangle(redPen, 30, 150, 100, 21);
@@ -1098,7 +1094,7 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 150, 100, 21);
             e.Graphics.DrawString(textBox6.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 152);
-            e.Graphics.DrawRectangle(redPen, 506, 150, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 150, 296, 21);
             e.Graphics.DrawString(textBox12.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 152);
 
             e.Graphics.DrawRectangle(redPen, 30, 175, 100, 21);
@@ -1110,24 +1106,23 @@ private void InitializeThumbnailsForToday()
 
             e.Graphics.DrawRectangle(redPen, 401, 175, 100, 21);
             e.Graphics.DrawString(textBox7.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 177);
-            e.Graphics.DrawRectangle(redPen, 506, 175, 269, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 175, 296, 21);
             e.Graphics.DrawString(textBox13.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 177);
 
             StringFormat SF2 = new StringFormat();
             SF2.Alignment = StringAlignment.Near;
             e.Graphics.DrawRectangle(redPen, 30, 200, 362, 21);
-            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 200, SF2);
-            e.Graphics.DrawRectangle(redPen, 401, 200, 374, 21);
+            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 203, SF2);
+            e.Graphics.DrawRectangle(redPen, 401, 200, 401, 21);
             e.Graphics.DrawString(richTextBox4.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 403, 202);
 
-            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 47);
+
+            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
-            e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 225, 257, 21);
             e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
-
-            //e.Graphics.DrawRectangle(redPen, 135, 250, 627, 21);
-            e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 250, 257, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
             //float contrast = 1.41f;
@@ -1162,195 +1157,236 @@ private void InitializeThumbnailsForToday()
             //e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(556, 825, 220, 165), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
 
 
-            // Menggambar gambar dari pictureBox1
-            if (pictureBox1.Image != null)
+            // Memeriksa apakah tombol 2 ditekan
+            if (isButton2Pressed == true)
             {
-                e.Graphics.DrawImage(
-                    pictureBox1.Image,
-                    new Rectangle(326, 300, 220, 165),
-                    0, 0,
-                    pictureBox1.Image.Width,
-                    pictureBox1.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(326, 300, 220, 165));
+                //MessageBox.Show("Tombol 2 ditekan!");
+                //e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
+                //e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
+
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(401, 229, 402, 211), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(401, 448, 402, 211), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
-            // Menggambar gambar dari pictureBox2
-            if (pictureBox2.Image != null)
+            // Memeriksa apakah tombol 4 ditekan
+            if (isButton4Pressed == true)
             {
-                e.Graphics.DrawImage(
-                    pictureBox2.Image,
-                    new Rectangle(556, 300, 220, 165),
-                    0, 0,
-                    pictureBox2.Image.Width,
-                    pictureBox2.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(556, 300, 220, 165));
+                //MessageBox.Show("Tombol 4 ditekan!");
+                //e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
+                //e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
+                //e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
+                //e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
+
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(419, 228, 364, 186), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(419, 419, 364, 186), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(419, 610, 364, 186), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(419, 801, 364, 186), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
-            // Menggambar gambar dari pictureBox3
-            if (pictureBox3.Image != null)
+            if (isButton6Pressed)
             {
-                e.Graphics.DrawImage(
-                    pictureBox3.Image,
-                    new Rectangle(326, 475, 220, 165),
-                    0, 0,
-                    pictureBox3.Image.Width,
-                    pictureBox3.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(326, 475, 220, 165));
+                //e.Graphics.DrawImage(pictureBox1.Image, 485, 228, 233, 122);
+                //e.Graphics.DrawImage(pictureBox2.Image, 485, 355, 233, 122);
+                //e.Graphics.DrawImage(pictureBox3.Image, 485, 482, 233, 122);
+                //e.Graphics.DrawImage(pictureBox4.Image, 485, 609, 233, 122);
+                //e.Graphics.DrawImage(pictureBox5.Image, 485, 736, 233, 122);
+                //e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122); 
+
+
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(485, 228, 233, 122), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(485, 355, 233, 122), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(485, 482, 233, 122), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(485, 609, 233, 122), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(485, 736, 233, 122), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(485, 863, 233, 122), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
-            // Menggambar gambar dari pictureBox4
-            if (pictureBox4.Image != null)
+            if (isButton8Pressed)
             {
-                e.Graphics.DrawImage(
-                    pictureBox4.Image,
-                    new Rectangle(556, 475, 220, 165),
-                    0, 0,
-                    pictureBox4.Image.Width,
-                    pictureBox4.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(556, 475, 220, 165));
-            }
 
-            // Menggambar gambar dari pictureBox5
-            if (pictureBox5.Image != null)
-            {
-                e.Graphics.DrawImage(
-                    pictureBox5.Image,
-                    new Rectangle(326, 650, 220, 165),
-                    0, 0,
-                    pictureBox5.Image.Width,
-                    pictureBox5.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(326, 650, 220, 165));
-            }
+                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
 
-            // Menggambar gambar dari pictureBox6
-            if (pictureBox6.Image != null)
-            {
-                e.Graphics.DrawImage(
-                    pictureBox6.Image,
-                    new Rectangle(556, 650, 220, 165),
-                    0, 0,
-                    pictureBox6.Image.Width,
-                    pictureBox6.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(556, 650, 220, 165));
-            }
+                //e.Graphics.DrawImage(pictureBox3.Image, 404, 327, 195, 94);
+                //e.Graphics.DrawImage(pictureBox4.Image, 604, 327, 195, 94);
 
-            // Menggambar gambar dari pictureBox7
-            if (pictureBox7.Image != null)
-            {
-                e.Graphics.DrawImage(
-                    pictureBox7.Image,
-                    new Rectangle(326, 825, 220, 165),
-                    0, 0,
-                    pictureBox7.Image.Width,
-                    pictureBox7.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(326, 825, 220, 165));
-            }
+                //e.Graphics.DrawImage(pictureBox5.Image, 404, 426, 195, 94);
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 426, 195, 94);
 
-            // Menggambar gambar dari pictureBox8
-            if (pictureBox8.Image != null)
-            {
-                e.Graphics.DrawImage(
-                    pictureBox8.Image,
-                    new Rectangle(556, 825, 220, 165),
-                    0, 0,
-                    pictureBox8.Image.Width,
-                    pictureBox8.Image.Height,
-                    GraphicsUnit.Pixel,
-                    ia);
-            }
-            else
-            {
-                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(556, 825, 220, 165));
+                //e.Graphics.DrawImage(pictureBox7.Image, 404, 525, 195, 94);
+                //e.Graphics.DrawImage(pictureBox8.Image, 604, 525, 195, 94);
+
+
+
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(404, 228, 195, 94), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(604, 228, 195, 94), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(404, 327, 195, 94), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(604, 327, 195, 94), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+
+                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(404, 426, 195, 94), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(604, 426, 195, 94), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+
+                e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(404, 525, 195, 94), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(604, 525, 195, 94), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
+
+
+
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox3.Image, 404, 414, 195, 94);
+                //e.Graphics.DrawImage(pictureBox4.Image, 604, 414, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox5.Image, 404, 600, 195, 94);
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 600, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox7.Image, 404, 786, 195, 94);
+                //e.Graphics.DrawImage(pictureBox8.Image, 604, 786, 195, 94);
+
+
+
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 509, 228, 184, 92);
+                //e.Graphics.DrawImage(pictureBox2.Image, 509, 324, 184, 92);
+                //e.Graphics.DrawImage(pictureBox3.Image, 509, 420, 184, 92);
+                //e.Graphics.DrawImage(pictureBox4.Image, 509, 516, 184, 92);
+                //e.Graphics.DrawImage(pictureBox5.Image, 509, 612, 184, 92);
+                //e.Graphics.DrawImage(pictureBox6.Image, 509, 708, 184, 92);
+                //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
+                //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
+
+
             }
 
 
 
 
 
-
-
-            // Cek item yang dipilih
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
                 e.Graphics.DrawImage(pictureBox9.Image, 631, 990, 159, 159);
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
-                e.Graphics.DrawImage(pictureBox9.Image, 565, 990, 159, 159);
+                e.Graphics.DrawImage(pictureBox9.Image, 522, 990, 159, 159);
 
             }
 
 
-            //e.Graphics.DrawImage(pictureBox9.Image, new Rectangle(270, 848, 252, 135), 0, 0, pictureBox9.Image.Width, pictureBox9.Image.Height, GraphicsUnit.Pixel, ia);
-            //e.Graphics.DrawImage(pictureBox10.Image, new Rectangle(524, 848, 252, 135), 0, 0, pictureBox10.Image.Width, pictureBox10.Image.Height, GraphicsUnit.Pixel, ia);
-            ia.Dispose();
 
-            e.Graphics.DrawRectangle(redPen, 30, 300, 280, 350);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
-            string combinedText = richTextBox1.Text;
-            string hasil = AddNewlinesIfTooLong(combinedText, 34);
-            e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
 
-            //e.Graphics.DrawRectangle(redPen, 30, 300, 230, 180);
-            //e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
+
+
+
+            e.Graphics.DrawRectangle(redPen, 30, 275, 362, 420);
+            e.Graphics.DrawString("HASIL :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
             //string combinedText = richTextBox1.Text;
             //string hasil = AddNewlinesIfTooLong(combinedText, 34);
-            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
-            ////e.Graphics.DrawString(richTextBox1.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 314);
+            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
 
-            e.Graphics.DrawRectangle(redPen, 30, 660, 280, 100);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 660);
-            string combinedText1 = richTextBox2.Text;
-            string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
-            e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
+            // Ukuran area cetak
+            float printWidth = 362;
+            float printHeight = 413;
 
-            e.Graphics.DrawRectangle(redPen, 30, 770, 280, 75);
-            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 770);
-            string combinedText2 = richTextBox3.Text;
-            string saran = AddNewlinesIfTooLong(combinedText2, 34);
-            e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
+            // Inisialisasi ukuran font awal
+            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            Font font = new Font("Montserrat", fontSize);
+            string text = richTextBox1.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSize = e.Graphics.MeasureString(text, font, (int)printWidth);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSize.Height > printHeight && fontSize > 1)
+            {
+                fontSize -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                font = new Font("Montserrat", fontSize);
+                textSize = e.Graphics.MeasureString(text, font, (int)printWidth);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 298, printWidth, printHeight));
 
 
 
-            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 866, SF1);
-            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 880, SF1);
 
-            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 966, SF1);
+
+
+
+
+            e.Graphics.DrawRectangle(redPen, 30, 700, 362, 160);
+            e.Graphics.DrawString("KESIMPULAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
+            //string combinedText1 = richTextBox2.Text;
+            //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
+            //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
+
+            // Ukuran area cetak
+            float printWidthKesimpulan = 362;
+            float printHeightKesimpulan = 140;
+
+            // Inisialisasi ukuran font awal
+            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
+            string textKesimpulan = richTextBox2.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSizeKesimpulan = e.Graphics.MeasureString(textKesimpulan, fontKesimpulan, (int)printWidthKesimpulan);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSizeKesimpulan.Height > printHeightKesimpulan && fontSizeKesimpulan > 1)
+            {
+                fontSizeKesimpulan -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
+                textSizeKesimpulan = e.Graphics.MeasureString(textKesimpulan, fontKesimpulan, (int)printWidthKesimpulan);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(textKesimpulan, fontKesimpulan, Brushes.Black, new RectangleF(30, 724, printWidthKesimpulan, printHeightKesimpulan));
+
+
+
+            //e.Graphics.DrawRectangle(redPen, 30, 770, 362, 75);
+            e.Graphics.DrawRectangle(redPen, 30, 865, 362, 145);
+            e.Graphics.DrawString("SARAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 865);
+            //string combinedText2 = richTextBox3.Text;
+            //string saran = AddNewlinesIfTooLong(combinedText2, 34);
+            //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
+
+            // Ukuran area cetak
+            float printWidthSaran = 362;
+            float printHeightSaran = 110;
+
+            // Inisialisasi ukuran font awal
+            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            Font fontSaran = new Font("Montserrat", fontSizeSaran);
+            string textSaran = richTextBox3.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSizeSaran = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSizeKesimpulan.Height > printHeightSaran && fontSizeSaran > 1)
+            {
+                fontSizeSaran -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                fontSaran = new Font("Montserrat", fontSizeSaran, FontStyle.Regular);
+                textSizeKesimpulan = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(textSaran, fontSaran, Brushes.Black, new RectangleF(30, 888, printWidthSaran, printHeightSaran));
+
+
+
+
+
+
+
+            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
+            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
+
+            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
         }
 
         private void HistoryPrintA4(string profile)
@@ -1556,7 +1592,96 @@ private void InitializeThumbnailsForToday()
             //}
 
 
-           
+
+
+
+
+            // Memeriksa apakah tombol 2 ditekan
+            if (isButton2Pressed == true)
+            {
+                //MessageBox.Show("Tombol 2 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
+                e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
+                //isButton2Pressed = false; // Reset setelah digunakan
+            }
+
+            // Memeriksa apakah tombol 4 ditekan
+            if (isButton4Pressed == true)
+            {
+                //MessageBox.Show("Tombol 4 ditekan!");
+                e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
+                e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
+                e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
+                e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
+                //isButton4Pressed = false; // Reset setelah digunakan
+            }
+
+            if (isButton6Pressed)
+            {
+                e.Graphics.DrawImage(pictureBox1.Image, 485, 228, 233, 122);
+                e.Graphics.DrawImage(pictureBox2.Image, 485, 355, 233, 122);
+                e.Graphics.DrawImage(pictureBox3.Image, 485, 482, 233, 122);
+                e.Graphics.DrawImage(pictureBox4.Image, 485, 609, 233, 122);
+                e.Graphics.DrawImage(pictureBox5.Image, 485, 736, 233, 122);
+                e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122);
+
+                //e.Graphics.DrawImage(pictureBox6.Image, 401, 888, 400, 105);
+
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 558, 198, 430);
+            }
+
+            if (isButton8Pressed)
+            {
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox3.Image, 404, 327, 195, 94);
+                //e.Graphics.DrawImage(pictureBox4.Image, 604, 327, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox5.Image, 404, 426, 195, 94);
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 426, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox7.Image, 404, 525, 195, 94);
+                //e.Graphics.DrawImage(pictureBox8.Image, 604, 525, 195, 94);
+
+
+
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
+                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox3.Image, 404, 414, 195, 94);
+                //e.Graphics.DrawImage(pictureBox4.Image, 604, 414, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox5.Image, 404, 600, 195, 94);
+                //e.Graphics.DrawImage(pictureBox6.Image, 604, 600, 195, 94);
+
+                //e.Graphics.DrawImage(pictureBox7.Image, 404, 786, 195, 94);
+                //e.Graphics.DrawImage(pictureBox8.Image, 604, 786, 195, 94);
+
+
+
+
+                e.Graphics.DrawImage(pictureBox1.Image, 509, 228, 184, 92);
+                e.Graphics.DrawImage(pictureBox2.Image, 509, 324, 184, 92);
+                e.Graphics.DrawImage(pictureBox3.Image, 509, 420, 184, 92);
+                e.Graphics.DrawImage(pictureBox4.Image, 509, 516, 184, 92);
+                e.Graphics.DrawImage(pictureBox5.Image, 509, 612, 184, 92);
+                e.Graphics.DrawImage(pictureBox6.Image, 509, 708, 184, 92);
+                e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
+                e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
+
+
+            }
+
+
+            //isButton2Pressed = false; // Reset setelah digunakan
+            //isButton4Pressed = false; // Reset setelah digunakan
+
+
+
+
 
 
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
@@ -1565,7 +1690,7 @@ private void InitializeThumbnailsForToday()
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
-                e.Graphics.DrawImage(pictureBox9.Image, 565, 990, 159, 159);
+                e.Graphics.DrawImage(pictureBox9.Image, 522, 990, 159, 159);
 
             }
 
@@ -1682,93 +1807,6 @@ private void InitializeThumbnailsForToday()
             e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
 
             e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
-
-
-
-
-
-            // Memeriksa apakah tombol 2 ditekan
-            if (isButton2Pressed == true)
-            {
-                //MessageBox.Show("Tombol 2 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
-                e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
-                //isButton2Pressed = false; // Reset setelah digunakan
-            }
-
-            // Memeriksa apakah tombol 4 ditekan
-            if (isButton4Pressed == true)
-            {
-                //MessageBox.Show("Tombol 4 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
-                e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
-                e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
-                e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
-                //isButton4Pressed = false; // Reset setelah digunakan
-            }
-
-            if (isButton6Pressed)
-            {
-                e.Graphics.DrawImage(pictureBox1.Image, 485, 228, 233, 122);
-                e.Graphics.DrawImage(pictureBox2.Image, 485, 355, 233, 122);
-                e.Graphics.DrawImage(pictureBox3.Image, 485, 482, 233, 122);
-                e.Graphics.DrawImage(pictureBox4.Image, 485, 609, 233, 122);
-                e.Graphics.DrawImage(pictureBox5.Image, 485, 736, 233, 122);
-                e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122);
-
-                //e.Graphics.DrawImage(pictureBox6.Image, 401, 888, 400, 105);
-
-                //e.Graphics.DrawImage(pictureBox6.Image, 604, 558, 198, 430);
-            }
-
-            if (isButton8Pressed)
-            {
-
-                e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
-                e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
-
-                e.Graphics.DrawImage(pictureBox3.Image, 404, 327, 195, 94);
-                e.Graphics.DrawImage(pictureBox4.Image, 604, 327, 195, 94);
-
-                e.Graphics.DrawImage(pictureBox5.Image, 404, 426, 195, 94);
-                e.Graphics.DrawImage(pictureBox6.Image, 604, 426, 195, 94);
-
-                e.Graphics.DrawImage(pictureBox7.Image, 404, 525, 195, 94);
-                e.Graphics.DrawImage(pictureBox8.Image, 604, 525, 195, 94);
-
-
-
-                
-                //e.Graphics.DrawImage(pictureBox1.Image, 404, 228, 195, 94);
-                //e.Graphics.DrawImage(pictureBox2.Image, 604, 228, 195, 94);
-
-                //e.Graphics.DrawImage(pictureBox3.Image, 404, 414, 195, 94);
-                //e.Graphics.DrawImage(pictureBox4.Image, 604, 414, 195, 94);
-
-                //e.Graphics.DrawImage(pictureBox5.Image, 404, 600, 195, 94);
-                //e.Graphics.DrawImage(pictureBox6.Image, 604, 600, 195, 94);
-
-                //e.Graphics.DrawImage(pictureBox7.Image, 404, 786, 195, 94);
-                //e.Graphics.DrawImage(pictureBox8.Image, 604, 786, 195, 94);
-
-
-
-
-                //e.Graphics.DrawImage(pictureBox1.Image, 509, 228, 184, 92);
-                //e.Graphics.DrawImage(pictureBox2.Image, 509, 324, 184, 92);
-                //e.Graphics.DrawImage(pictureBox3.Image, 509, 420, 184, 92);
-                //e.Graphics.DrawImage(pictureBox4.Image, 509, 516, 184, 92);
-                //e.Graphics.DrawImage(pictureBox5.Image, 509, 612, 184, 92);
-                //e.Graphics.DrawImage(pictureBox6.Image, 509, 708, 184, 92);
-                //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
-                //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
-
-
-            }
-
-
-            //isButton2Pressed = false; // Reset setelah digunakan
-            //isButton4Pressed = false; // Reset setelah digunakan
 
 
 
@@ -2087,6 +2125,7 @@ private void InitializeThumbnailsForToday()
         {
             pictureBox8.Image = null;
         }
+        
 
 
 
@@ -2138,10 +2177,12 @@ private void InitializeThumbnailsForToday()
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
                 pictureBox9.Image = Image.FromFile(gastroImagePath);
+                pictureBox9.Location = new Point(705, 734);
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
                 pictureBox9.Image = Image.FromFile(colonImagePath);
+                pictureBox9.Location = new Point(580, 734);
             }
         }
 
