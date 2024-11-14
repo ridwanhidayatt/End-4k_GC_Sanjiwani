@@ -1576,18 +1576,18 @@ private void InitializeThumbnailsForToday()
 
 
             e.Graphics.DrawRectangle(redPen, 30, 275, 362, 420);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
+            e.Graphics.DrawString("HASIL :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
             //string combinedText = richTextBox1.Text;
             //string hasil = AddNewlinesIfTooLong(combinedText, 34);
             //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
 
             // Ukuran area cetak
             float printWidth = 362;
-            float printHeight = 420;
+            float printHeight = 413;
 
             // Inisialisasi ukuran font awal
             float fontSize = 12; // Ukuran font awal, bisa disesuaikan
-            Font font = new Font("Arial", fontSize);
+            Font font = new Font("Montserrat", fontSize);
             string text = richTextBox1.Text;
 
             // Mengukur teks dengan ukuran font saat ini
@@ -1597,12 +1597,12 @@ private void InitializeThumbnailsForToday()
             while (textSize.Height > printHeight && fontSize > 1)
             {
                 fontSize -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
-                font = new Font("Arial", fontSize);
+                font = new Font("Montserrat", fontSize);
                 textSize = e.Graphics.MeasureString(text, font, (int)printWidth);
             }
 
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
-            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 288, printWidth, printHeight));
+            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 298, printWidth, printHeight));
 
 
 
@@ -1612,17 +1612,71 @@ private void InitializeThumbnailsForToday()
 
 
             e.Graphics.DrawRectangle(redPen, 30, 700, 362, 160);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
-            string combinedText1 = richTextBox2.Text;
-            string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
-            e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
+            e.Graphics.DrawString("KESIMPULAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
+            //string combinedText1 = richTextBox2.Text;
+            //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
+            //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
+
+            // Ukuran area cetak
+            float printWidthKesimpulan = 362;
+            float printHeightKesimpulan = 140;
+
+            // Inisialisasi ukuran font awal
+            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
+            string textKesimpulan = richTextBox2.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSizeKesimpulan = e.Graphics.MeasureString(textKesimpulan, fontKesimpulan, (int)printWidthKesimpulan);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSizeKesimpulan.Height > printHeightKesimpulan && fontSizeKesimpulan > 1)
+            {
+                fontSizeKesimpulan -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
+                textSizeKesimpulan = e.Graphics.MeasureString(textKesimpulan, fontKesimpulan, (int)printWidthKesimpulan);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(textKesimpulan, fontKesimpulan, Brushes.Black, new RectangleF(30, 724, printWidthKesimpulan, printHeightKesimpulan));
+
+
 
             //e.Graphics.DrawRectangle(redPen, 30, 770, 362, 75);
             e.Graphics.DrawRectangle(redPen, 30, 865, 362, 145);
-            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 865);
-            string combinedText2 = richTextBox3.Text;
-            string saran = AddNewlinesIfTooLong(combinedText2, 34);
-            e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
+            e.Graphics.DrawString("SARAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 865);
+            //string combinedText2 = richTextBox3.Text;
+            //string saran = AddNewlinesIfTooLong(combinedText2, 34);
+            //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
+
+            // Ukuran area cetak
+            float printWidthSaran = 362;
+            float printHeightSaran = 110;
+
+            // Inisialisasi ukuran font awal
+            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            Font fontSaran = new Font("Montserrat", fontSizeSaran);
+            string textSaran = richTextBox3.Text;
+
+            // Mengukur teks dengan ukuran font saat ini
+            SizeF textSizeSaran = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
+
+            // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
+            while (textSizeKesimpulan.Height > printHeightSaran && fontSizeSaran > 1)
+            {
+                fontSizeSaran -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
+                fontSaran = new Font("Montserrat", fontSizeSaran, FontStyle.Regular);
+                textSizeKesimpulan = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
+            }
+
+            // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
+            e.Graphics.DrawString(textSaran, fontSaran, Brushes.Black, new RectangleF(30, 888, printWidthSaran, printHeightSaran));
+
+
+
+
+
+
 
             e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
             e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
