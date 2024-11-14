@@ -38,6 +38,7 @@ namespace WindowsFormsApp1.Format_3
 
         private Dictionary<PictureBox, PictureBoxControls> pictureBoxControls = new Dictionary<PictureBox, PictureBoxControls>();
 
+        private string selectedPrinter;
 
         public Form310Gambar()
         {
@@ -53,6 +54,35 @@ namespace WindowsFormsApp1.Format_3
 
             comboBox1.KeyPress += new KeyPressEventHandler(ComboBox_KeyPress);
             comboBox2.KeyPress += new KeyPressEventHandler(ComboBox_KeyPress);
+
+
+            // Tambahkan item ke ComboBox
+            comboBox3.Items.Add("Gastrokopi");
+            comboBox3.Items.Add("Kolonoskopi");
+
+            // Event ketika item di ComboBox berubah
+            comboBox3.SelectedIndexChanged += ComboBox3_SelectedIndexChanged;
+
+
+        }
+
+        private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Path gambar yang ingin Anda tampilkan
+            string gastroImagePath = @"D:\GLEndoscope\LogoKOP\aset-02.png";
+            string colonImagePath = @"D:\GLEndoscope\LogoKOP\aset-01.png";
+
+            // Cek item yang dipilih
+            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
+            {
+                pictureBox11.Image = Image.FromFile(gastroImagePath);
+                pictureBox11.Location = new Point(748, 787);
+            }
+            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
+            {
+                pictureBox11.Image = Image.FromFile(colonImagePath);
+                pictureBox11.Location = new Point(599, 787);
+            }
         }
 
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -370,32 +400,24 @@ namespace WindowsFormsApp1.Format_3
             }
         }
 
-
+        private PictureBox[] pictureBoxes;
         private void InitializeThumbnailsForToday()
         {
+            // Inisialisasi array PictureBox
+            pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
+
             // Call the method to read data from the CSV file
             ReadDataFromCSV(csvFilePath);
 
-            tanggal = DateTime.Now.ToString("ddMMyyyy");
-            string text = DateTime.Now.ToString("Y");
-            string[] arr = text.Split(' ');
-            splitBulan = arr[0];
-            splitTahun = arr[1];
-
-            // Gabungkan string menjadi bagian dari folder path yang akan dicari
-            string searchPattern = $@"{gabung}\Image";
-
-            // Root folder
+            string tanggal = DateTime.Now.ToString("ddMMyyyy");
             string rootPath = @"D:\GLEndoscope";
 
-            // Bersihkan ComboBox dan FlowLayoutPanel sebelum memulai
+            // Bersihkan ComboBox dan FlowLayoutPanel
             cbx_now.Items.Clear();
             flowLayoutPanel2.Controls.Clear();
 
-            // Format untuk mendapatkan nama bulan
             var culture = new System.Globalization.CultureInfo("id-ID");
 
-            // Loop untuk mencari semua subfolder di rootPath
             foreach (string yearFolder in Directory.GetDirectories(rootPath))
             {
                 foreach (string monthFolder in Directory.GetDirectories(yearFolder))
@@ -404,13 +426,10 @@ namespace WindowsFormsApp1.Format_3
                     {
                         foreach (string patientFolder in Directory.GetDirectories(dayFolder))
                         {
-                            // Gabungkan folder dengan folder Image
                             string folderPath = Path.Combine(patientFolder, "Image");
 
-                            // Cek apakah folder saat ini adalah folder yang sesuai
                             if (patientFolder.EndsWith(gabung) && Directory.Exists(folderPath))
                             {
-                                // Pastikan folder tersebut memiliki file gambar
                                 string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly)
                                     .Where(file => file.ToLower().EndsWith(".jpg") ||
                                                    file.ToLower().EndsWith(".jpeg") ||
@@ -421,55 +440,39 @@ namespace WindowsFormsApp1.Format_3
 
                                 if (imageFiles.Length > 0)
                                 {
-                                    // Misal 'day' memiliki format seperti '30092024'
                                     string day = Path.GetFileName(dayFolder);
+                                    string dayPart = day.Substring(0, 2);
+                                    string monthPart = day.Substring(2, 2);
+                                    string yearPart = day.Substring(4, 4);
 
-                                    // Memisahkan hari, bulan, dan tahun
-                                    string dayPart = day.Substring(0, 2);  // '30'
-                                    string monthPart = day.Substring(2, 2); // '09'
-                                    string yearPart = day.Substring(4, 4);  // '2024'
-
-                                    // Deklarasikan variabel untuk hasil parsing bulan
                                     int monthNumber;
-
-                                    // Coba konversi bulan menjadi nomor bulan dan ambil nama bulannya
                                     if (int.TryParse(monthPart, out monthNumber) && monthNumber >= 1 && monthNumber <= 12)
                                     {
-                                        // Mendapatkan nama bulan berdasarkan culture
                                         monthPart = culture.DateTimeFormat.GetMonthName(monthNumber);
                                     }
 
-                                    // Format tanggal sesuai dengan format yang diinginkan: "dd-MM-yyyy"
                                     string formattedDate = $"{dayPart} - {monthPart} - {yearPart}";
 
-                                    // Tambahkan formattedDate ke ComboBox
                                     cbx_now.Items.Add(new ComboBoxItem
                                     {
                                         FolderPath = folderPath,
                                         DisplayText = formattedDate
                                     });
                                 }
-
-
                             }
                         }
                     }
                 }
             }
 
-            // Event handler ketika pilihan pada ComboBox berubah
             cbx_now.SelectedIndexChanged += (s, e) =>
             {
-                // Hapus semua thumbnail yang ada di FlowLayoutPanel
                 flowLayoutPanel2.Controls.Clear();
 
-                // Dapatkan folder path dari pilihan yang dipilih
                 ComboBoxItem selectedItem = cbx_now.SelectedItem as ComboBoxItem;
                 if (selectedItem != null)
                 {
                     string selectedFolder = selectedItem.FolderPath;
-
-                    // Ambil semua file gambar dari folder yang dipilih
                     string[] imageFiles = Directory.GetFiles(selectedFolder, "*.*", SearchOption.TopDirectoryOnly)
                         .Where(file => file.ToLower().EndsWith(".jpg") ||
                                        file.ToLower().EndsWith(".jpeg") ||
@@ -478,7 +481,6 @@ namespace WindowsFormsApp1.Format_3
                                        file.ToLower().EndsWith(".gif"))
                         .ToArray();
 
-                    // Tampilkan gambar sebagai thumbnail
                     foreach (string file in imageFiles)
                     {
                         try
@@ -493,24 +495,36 @@ namespace WindowsFormsApp1.Format_3
                                 Tag = file
                             };
 
-                            // Tambahkan event handler untuk menangani klik pada thumbnail
-                            thumbnail.MouseDown += Thumbnail_MouseDown;
-                            flowLayoutPanel2.Controls.Add(thumbnail);  // Tambahkan thumbnail ke FlowLayoutPanel
+                            // Event handler untuk klik thumbnail
+                            thumbnail.Click += (sender, args) =>
+                            {
+                                // Cari PictureBox yang kosong dan tampilkan gambar
+                                foreach (PictureBox pb in pictureBoxes)
+                                {
+                                    if (pb.Image == null) // Jika PictureBox kosong
+                                    {
+                                        pb.Image = Image.FromFile(file); // Tampilkan gambar
+                                        break; // Hentikan setelah menemukan PictureBox kosong
+                                    }
+                                }
+                            };
+
+                            flowLayoutPanel2.Controls.Add(thumbnail);
                         }
                         catch (Exception ex)
                         {
-                            // Jika ada kesalahan saat memuat gambar, tampilkan pesan error
                             MessageBox.Show($"Error loading image {file}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
             };
 
-            // Jika tidak ada folder yang cocok
+
             if (cbx_now.Items.Count == 0)
             {
                 //MessageBox.Show("Tidak ditemukan folder yang sesuai dengan gabungan NORM dan Nama.", "Folder Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
 
         //kode yg terakhir sebelum yg di atas
@@ -574,10 +588,6 @@ namespace WindowsFormsApp1.Format_3
                 thumbnail.DoDragDrop(thumbnail.Tag, DragDropEffects.Copy);
             }
         }
-
-
-        
-
 
         private void InitializeMainPictureBoxes()
         {
@@ -736,7 +746,10 @@ namespace WindowsFormsApp1.Format_3
 
             textBox6.ReadOnly = true;
             textBox6.BackColor = System.Drawing.SystemColors.Window;
-            buttobDeleteFalse();
+            //buttobDeleteFalse();
+
+            pictureBox9.Image = null;
+
         }
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
@@ -911,268 +924,144 @@ namespace WindowsFormsApp1.Format_3
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            // Validasi: Periksa apakah semua PictureBox memiliki gambar
-            if (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null ||
-                pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null ||
-                pictureBox7.Image == null || pictureBox8.Image == null || pictureBox9.Image == null ||
-                pictureBox10.Image == null)
+           if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
             {
-                // Tampilkan pesan peringatan jika ada PictureBox yang belum diisi
-                MessageBox.Show("Semua gambar harus terisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Hentikan proses jika validasi gagal
+                MessageBox.Show("Pilih Profil yang dipakai", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
+            {
+                MessageBox.Show("Pilih printer yang digunakan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                if (textBox12.Text != "")
+                // Simpan pilihan printer dari ComboBox1 jika belum ada printer yang dipilih sebelumnya
+                if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
                 {
-                    if (richTextBox1.Text == "")
+                    selectedPrinter = comboBox1.SelectedItem.ToString();
+                }
+
+                PrintDocument pd = new PrintDocument();
+                pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                pd.DefaultPageSettings.Landscape = false;
+
+                if (!string.IsNullOrEmpty(selectedPrinter))
+                {
+                    pd.PrinterSettings.PrinterName = selectedPrinter; // Menggunakan printer yang telah dipilih
+
+                    if (comboBox2.Text == "Default")
                     {
-                        MessageBox.Show("Hasil belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+
+                        // Menggunakan Print Preview jika diperlukan
+                        printPreviewDialog1.Document = pd;
+                        printPreviewDialog1.ShowDialog();
+
+                        // Proses pencetakan
+                        //pd.Print();
+
+                        // Log history
+                        HistoryPrintA4(comboBox2.Text);
+                        PopulatePrinterComboBox();
+                        comboBox2.SelectedIndex = 0; // Reset profil ke default
+                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-                    else if (richTextBox2.Text == "")
+                    else if (comboBox2.Text == "Adjust Brightness")
                     {
-                        MessageBox.Show("Kesimpulan belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
 
-                    }
+                        // Menggunakan Print Preview jika diperlukan
+                        //printPreviewDialog1.Document = pd;
+                        //printPreviewDialog1.ShowDialog();
 
-                    else if (richTextBox3.Text == "")
-                    {
-                        MessageBox.Show("Saran belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                        // Langsung cetak tanpa preview
+                        pd.Print();
 
-                    else if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
-                    {
-                        MessageBox.Show("Pilih Profil yang dipakai", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "Pilih Printer")
-                    {
-                        MessageBox.Show("Pilih printer yang digunakan", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-
-
-                    else
-                    {
-                        //if (comboBox1.SelectedIndex == -1)
-                        //{
-                        //    MessageBox.Show("Pilih printer yang digunakan", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //}
-                        //else
-                        //{
-                        //if(comboBox2.SelectedIndex == -1)
-                        //{
-                        //    MessageBox.Show("Pilih profil terlebih dahulu ", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //}
-                        PrintDocument pd = new PrintDocument();
-                        pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-                        pd.DefaultPageSettings.Landscape = false;
-
-                        if (comboBox2.Text == "Default")
-                        {
-                            pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-                            pd.Print();
-                            //printPreviewDialog1.Document = pd;
-                            //printPreviewDialog1.ShowDialog();
-
-                            //comboBox1.Items.Clear();
-                            //comboBox1.ResetText();
-
-                            HistoryPrintA4(comboBox2.Text);
-
-
-                            FillListBox();
-                            comboBox2.Items.Clear(); // Membersihkan isi comboBox terlebih dahulu
-                            comboBox2.Items.Add("Pilih Profil"); // Menambahkan pilihan default
-                            comboBox2.Items.Add("Default"); // Menambahkan opsi Default
-                            comboBox2.Items.Add("Adjust Brightness"); // Menambahkan opsi Adjust Brightness
-                            comboBox2.SelectedIndex = 0; // Mengatur pilihan default yang dipilih
-                            //clearTextboxPemeriksaan();
-                            //buttobDeleteFalse();
-
-                            //pictureBox1.Image.Dispose();
-                            //pictureBox1.Image = null;
-                            //pictureBox2.Image.Dispose();
-                            //pictureBox2.Image = null;
-                            //pictureBox3.Image.Dispose();
-                            //pictureBox3.Image = null;
-                            //pictureBox4.Image.Dispose();
-                            //pictureBox4.Image = null;
-                            //pictureBox5.Image.Dispose();
-                            //pictureBox5.Image = null;
-                            //pictureBox6.Image.Dispose();
-                            //pictureBox6.Image = null;
-                            //pictureBox7.Image.Dispose();
-                            //pictureBox7.Image = null;
-                            //pictureBox8.Image.Dispose();
-                            //pictureBox8.Image = null;
-                            //pictureBox9.Image.Dispose();
-                            //pictureBox9.Image = null;
-                            //pictureBox10.Image.Dispose();
-                            //pictureBox10.Image = null;
-
-
-                            //buttonCancel.PerformClick();
-                            //int sendFormUtama = 8;
-                            //TransfEventPrint310(sendFormUtama.ToString());
-                            MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else if (comboBox2.Text == "Adjust Brightness")
-                        {
-                            pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-                            pd.Print();
-                            //printPreviewDialog1.Document = pd;
-                            //printPreviewDialog1.ShowDialog();
-
-                            //comboBox1.Items.Clear();
-                            //comboBox1.ResetText();
-
-                            HistoryPrintA4(comboBox2.Text);
-
-
-                            FillListBox();
-                            comboBox2.Items.Clear(); // Membersihkan isi comboBox terlebih dahulu
-                            comboBox2.Items.Add("Pilih Profil"); // Menambahkan pilihan default
-                            comboBox2.Items.Add("Default"); // Menambahkan opsi Default
-                            comboBox2.Items.Add("Adjust Brightness"); // Menambahkan opsi Adjust Brightness
-                            comboBox2.SelectedIndex = 0; // Mengatur pilihan default yang dipilih
-                            //clearTextboxPemeriksaan();
-                            //buttobDeleteFalse();
-
-                            //pictureBox1.Image.Dispose();
-                            //pictureBox1.Image = null;
-                            //pictureBox2.Image.Dispose();
-                            //pictureBox2.Image = null;
-                            //pictureBox3.Image.Dispose();
-                            //pictureBox3.Image = null;
-                            //pictureBox4.Image.Dispose();
-                            //pictureBox4.Image = null;
-                            //pictureBox5.Image.Dispose();
-                            //pictureBox5.Image = null;
-                            //pictureBox6.Image.Dispose();
-                            //pictureBox6.Image = null;
-                            //pictureBox7.Image.Dispose();
-                            //pictureBox7.Image = null;
-                            //pictureBox8.Image.Dispose();
-                            //pictureBox8.Image = null;
-                            //pictureBox9.Image.Dispose();
-                            //pictureBox9.Image = null;
-                            //pictureBox10.Image.Dispose();
-                            //pictureBox10.Image = null;
-
-
-                            //buttonCancel.PerformClick();
-                            //int sendFormUtama = 8;
-                            //TransfEventPrint310(sendFormUtama.ToString());
-                            MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        // Log history
+                        HistoryPrintA4(comboBox2.Text);
+                        PopulatePrinterComboBox();
+                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                //}
                 else
                 {
-                    MessageBox.Show("keluhan belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-
-
-
-
             }
 
         }
 
-        private void buttobDeleteFalse()
-        {
-            close1.Visible = false;
-            close2.Visible = false;
-            close3.Visible = false;
-            close4.Visible = false;
-            close5.Visible = false;
-            close6.Visible = false;
-            close7.Visible = false;
-            close8.Visible = false;
-            close9.Visible = false;
-            close10.Visible = false;
-        }
+        //private void buttobDeleteFalse()
+        //{
+        //    close1.Visible = false;
+        //    close2.Visible = false;
+        //    close3.Visible = false;
+        //    close4.Visible = false;
+        //    close5.Visible = false;
+        //    close6.Visible = false;
+        //    close7.Visible = false;
+        //    close8.Visible = false;
+        //    close9.Visible = false;
+        //    close10.Visible = false;
+        //}
 
         private void close1_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox1.Image.Dispose();
-            pictureBox1.Image = null;
-            close1.Visible = false;
+            pictureBox1.Image = null; 
         }
 
         private void close2_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox2.Image.Dispose();
-            pictureBox2.Image = null;
-            close2.Visible = false;
+            pictureBox2.Image = null; 
         }
 
         private void close3_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox3.Image.Dispose();
-            pictureBox3.Image = null;
-            close3.Visible = false;
+            pictureBox3.Image = null; 
         }
 
         private void close5_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox5.Image.Dispose();
-            pictureBox5.Image = null;
-            close5.Visible = false;
+            pictureBox5.Image = null; 
         }
 
         private void close4_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox4.Image.Dispose();
-            pictureBox4.Image = null;
-            close4.Visible = false;
+            pictureBox4.Image = null; 
         }
 
         private void close6_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox6.Image.Dispose();
-            pictureBox6.Image = null;
-            close6.Visible = false;
+            pictureBox6.Image = null; 
         }
 
         private void close7_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox7.Image.Dispose();
-            pictureBox7.Image = null;
-            close7.Visible = false;
+            pictureBox7.Image = null; 
         }
 
         private void close8_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox8.Image.Dispose();
-            pictureBox8.Image = null;
-            close8.Visible = false;
+            pictureBox8.Image = null; 
         }
 
         private void close9_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox9.Image.Dispose();
-            pictureBox9.Image = null;
-            close9.Visible = false;
+            pictureBox9.Image = null; 
         }
 
         private void close10_Click(object sender, EventArgs e)
-        {
-            //comboBox2.SelectedIndex = -1;
+        { 
             pictureBox10.Image.Dispose();
-            pictureBox10.Image = null;
-            close10.Visible = false;
+            pictureBox10.Image = null; 
         }
 
         private void clearTextboxPemeriksaan()
@@ -1318,7 +1207,7 @@ namespace WindowsFormsApp1.Format_3
             e.Graphics.DrawString(richTextBox4.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 403, 202);
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 47);
+            e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
             e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
@@ -1327,40 +1216,50 @@ namespace WindowsFormsApp1.Format_3
             e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
-            e.Graphics.DrawImage(pictureBox1.Image, 270, 300, 252, 135);
-            e.Graphics.DrawImage(pictureBox2.Image, 524, 300, 252, 135);
-            e.Graphics.DrawImage(pictureBox3.Image, 270, 437, 252, 135);
-            e.Graphics.DrawImage(pictureBox4.Image, 524, 437, 252, 135);
-            e.Graphics.DrawImage(pictureBox5.Image, 270, 574, 252, 135);
-            e.Graphics.DrawImage(pictureBox6.Image, 524, 574, 252, 135);
-            e.Graphics.DrawImage(pictureBox7.Image, 270, 711, 252, 135);
-            e.Graphics.DrawImage(pictureBox8.Image, 524, 711, 252, 135);
-            e.Graphics.DrawImage(pictureBox9.Image, 270, 848, 252, 135);
-            e.Graphics.DrawImage(pictureBox10.Image, 524, 848, 252, 135);
+            e.Graphics.DrawImage(pictureBox1.Image, 270, 275, 252, 135);
+            e.Graphics.DrawImage(pictureBox2.Image, 524, 275, 252, 135);
+            e.Graphics.DrawImage(pictureBox3.Image, 270, 412, 252, 135);
+            e.Graphics.DrawImage(pictureBox4.Image, 524, 412, 252, 135);
+            e.Graphics.DrawImage(pictureBox5.Image, 270, 549, 252, 135);
+            e.Graphics.DrawImage(pictureBox6.Image, 524, 549, 252, 135);
+            e.Graphics.DrawImage(pictureBox7.Image, 270, 686, 252, 135);
+            e.Graphics.DrawImage(pictureBox8.Image, 524, 686, 252, 135);
+            e.Graphics.DrawImage(pictureBox9.Image, 270, 823, 252, 135);
+            e.Graphics.DrawImage(pictureBox10.Image, 524, 823, 252, 135);
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 300, 230, 177);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 300);
+            e.Graphics.DrawRectangle(redPen, 30, 275, 237, 378);
+            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
             string combinedText = richTextBox1.Text;
             string hasil = AddNewlinesIfTooLong(combinedText, 34);
             e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
-            e.Graphics.DrawRectangle(redPen, 30, 491, 230, 177);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 492);
+            e.Graphics.DrawRectangle(redPen, 30, 658, 237, 177);
+            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659);
             string combinedText1 = richTextBox2.Text;
             string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
             e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 504);
 
-            e.Graphics.DrawRectangle(redPen, 30, 682, 230, 177);
-            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 683);
+            e.Graphics.DrawRectangle(redPen, 30, 840, 237, 177);
+            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 841);
             string combinedText2 = richTextBox3.Text;
             string saran = AddNewlinesIfTooLong(combinedText2, 34);
             e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 695);
 
-            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 866, SF1);
-            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 880, SF1);
 
-            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 966, SF1);
+
+
+
+
+
+
+
+
+
+            e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
+            e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
+
+            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
         }
 
         private string AddNewlinesIfTooLong(string inputText, int maxLineLength)
@@ -1705,7 +1604,7 @@ namespace WindowsFormsApp1.Format_3
             int kondisi = 17;
             TEClose10Gambar(kondisi.ToString());
             this.Close();
-            buttobDeleteFalse();
+            //buttobDeleteFalse();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -1725,8 +1624,14 @@ namespace WindowsFormsApp1.Format_3
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            string Pname = comboBox1.SelectedItem.ToString();
-            printer.SetDefaultPrinter(Pname);
+            //string Pname = comboBox1.SelectedItem.ToString();
+            //printer.SetDefaultPrinter(Pname);
+            if (comboBox1.SelectedIndex != -1)
+            {
+                selectedPrinter = comboBox1.SelectedItem.ToString();
+                string Pname = comboBox1.SelectedItem.ToString();
+                printer.SetDefaultPrinter(Pname);
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

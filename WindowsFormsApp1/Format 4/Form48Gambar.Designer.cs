@@ -340,7 +340,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(130, 24);
             this.comboBox3.TabIndex = 175;
-            this.comboBox3.Text = "   Pilih Jenis";
+            this.comboBox3.Text = "   Pilih Jenis"; 
             // 
             // panel2
             // 

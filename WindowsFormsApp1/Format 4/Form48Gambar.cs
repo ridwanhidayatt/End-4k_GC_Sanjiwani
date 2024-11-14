@@ -49,6 +49,7 @@ namespace WindowsFormsApp1.Format_4
         public Form48Gambar()
         {
             InitializeComponent();
+
             // Tambahkan item ke ComboBox
             comboBox3.Items.Add("Gastrokopi");
             comboBox3.Items.Add("Kolonoskopi");
@@ -592,133 +593,133 @@ namespace WindowsFormsApp1.Format_4
 
             //doubleklik
             // Deklarasi array PictureBox untuk menyimpan 8 PictureBox
-private PictureBox[] pictureBoxes;
+    private PictureBox[] pictureBoxes;
 
-private void InitializeThumbnailsForToday()
-{
-    // Inisialisasi array PictureBox
-    pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
-
-    // Call the method to read data from the CSV file
-    ReadDataFromCSV(csvFilePath);
-
-    string tanggal = DateTime.Now.ToString("ddMMyyyy");
-    string rootPath = @"D:\GLEndoscope";
-
-    // Bersihkan ComboBox dan FlowLayoutPanel
-    cbx_now.Items.Clear();
-    flowLayoutPanel2.Controls.Clear();
-
-    var culture = new System.Globalization.CultureInfo("id-ID");
-
-    foreach (string yearFolder in Directory.GetDirectories(rootPath))
+    private void InitializeThumbnailsForToday()
     {
-        foreach (string monthFolder in Directory.GetDirectories(yearFolder))
+        // Inisialisasi array PictureBox
+        pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
+
+        // Call the method to read data from the CSV file
+        ReadDataFromCSV(csvFilePath);
+
+        string tanggal = DateTime.Now.ToString("ddMMyyyy");
+        string rootPath = @"D:\GLEndoscope";
+
+        // Bersihkan ComboBox dan FlowLayoutPanel
+        cbx_now.Items.Clear();
+        flowLayoutPanel2.Controls.Clear();
+
+        var culture = new System.Globalization.CultureInfo("id-ID");
+
+        foreach (string yearFolder in Directory.GetDirectories(rootPath))
         {
-            foreach (string dayFolder in Directory.GetDirectories(monthFolder))
+            foreach (string monthFolder in Directory.GetDirectories(yearFolder))
             {
-                foreach (string patientFolder in Directory.GetDirectories(dayFolder))
+                foreach (string dayFolder in Directory.GetDirectories(monthFolder))
                 {
-                    string folderPath = Path.Combine(patientFolder, "Image");
-
-                    if (patientFolder.EndsWith(gabung) && Directory.Exists(folderPath))
+                    foreach (string patientFolder in Directory.GetDirectories(dayFolder))
                     {
-                        string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly)
-                            .Where(file => file.ToLower().EndsWith(".jpg") ||
-                                           file.ToLower().EndsWith(".jpeg") ||
-                                           file.ToLower().EndsWith(".png") ||
-                                           file.ToLower().EndsWith(".bmp") ||
-                                           file.ToLower().EndsWith(".gif"))
-                            .ToArray();
+                        string folderPath = Path.Combine(patientFolder, "Image");
 
-                        if (imageFiles.Length > 0)
+                        if (patientFolder.EndsWith(gabung) && Directory.Exists(folderPath))
                         {
-                            string day = Path.GetFileName(dayFolder);
-                            string dayPart = day.Substring(0, 2);
-                            string monthPart = day.Substring(2, 2);
-                            string yearPart = day.Substring(4, 4);
+                            string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly)
+                                .Where(file => file.ToLower().EndsWith(".jpg") ||
+                                               file.ToLower().EndsWith(".jpeg") ||
+                                               file.ToLower().EndsWith(".png") ||
+                                               file.ToLower().EndsWith(".bmp") ||
+                                               file.ToLower().EndsWith(".gif"))
+                                .ToArray();
 
-                            int monthNumber;
-                            if (int.TryParse(monthPart, out monthNumber) && monthNumber >= 1 && monthNumber <= 12)
+                            if (imageFiles.Length > 0)
                             {
-                                monthPart = culture.DateTimeFormat.GetMonthName(monthNumber);
+                                string day = Path.GetFileName(dayFolder);
+                                string dayPart = day.Substring(0, 2);
+                                string monthPart = day.Substring(2, 2);
+                                string yearPart = day.Substring(4, 4);
+
+                                int monthNumber;
+                                if (int.TryParse(monthPart, out monthNumber) && monthNumber >= 1 && monthNumber <= 12)
+                                {
+                                    monthPart = culture.DateTimeFormat.GetMonthName(monthNumber);
+                                }
+
+                                string formattedDate = $"{dayPart} - {monthPart} - {yearPart}";
+
+                                cbx_now.Items.Add(new ComboBoxItem
+                                {
+                                    FolderPath = folderPath,
+                                    DisplayText = formattedDate
+                                });
                             }
-
-                            string formattedDate = $"{dayPart} - {monthPart} - {yearPart}";
-
-                            cbx_now.Items.Add(new ComboBoxItem
-                            {
-                                FolderPath = folderPath,
-                                DisplayText = formattedDate
-                            });
                         }
                     }
                 }
             }
         }
-    }
 
-    cbx_now.SelectedIndexChanged += (s, e) =>
-    {
-        flowLayoutPanel2.Controls.Clear();
-
-        ComboBoxItem selectedItem = cbx_now.SelectedItem as ComboBoxItem;
-        if (selectedItem != null)
+        cbx_now.SelectedIndexChanged += (s, e) =>
         {
-            string selectedFolder = selectedItem.FolderPath;
-            string[] imageFiles = Directory.GetFiles(selectedFolder, "*.*", SearchOption.TopDirectoryOnly)
-                .Where(file => file.ToLower().EndsWith(".jpg") ||
-                               file.ToLower().EndsWith(".jpeg") ||
-                               file.ToLower().EndsWith(".png") ||
-                               file.ToLower().EndsWith(".bmp") ||
-                               file.ToLower().EndsWith(".gif"))
-                .ToArray();
+            flowLayoutPanel2.Controls.Clear();
 
-            foreach (string file in imageFiles)
+            ComboBoxItem selectedItem = cbx_now.SelectedItem as ComboBoxItem;
+            if (selectedItem != null)
             {
-                try
-                {
-                    Image image = Image.FromFile(file);
-                    PictureBox thumbnail = new PictureBox
-                    {
-                        Image = ResizeImage(image, 271, 134),
-                        SizeMode = PictureBoxSizeMode.StretchImage,
-                        Size = new Size(255, 134),
-                        Margin = new Padding(5),
-                        Tag = file
-                    };
+                string selectedFolder = selectedItem.FolderPath;
+                string[] imageFiles = Directory.GetFiles(selectedFolder, "*.*", SearchOption.TopDirectoryOnly)
+                    .Where(file => file.ToLower().EndsWith(".jpg") ||
+                                   file.ToLower().EndsWith(".jpeg") ||
+                                   file.ToLower().EndsWith(".png") ||
+                                   file.ToLower().EndsWith(".bmp") ||
+                                   file.ToLower().EndsWith(".gif"))
+                    .ToArray();
 
-                    // Event handler untuk klik thumbnail
-                    thumbnail.Click += (sender, args) =>
+                foreach (string file in imageFiles)
+                {
+                    try
                     {
-                        // Cari PictureBox yang kosong dan tampilkan gambar
-                        foreach (PictureBox pb in pictureBoxes)
+                        Image image = Image.FromFile(file);
+                        PictureBox thumbnail = new PictureBox
                         {
-                            if (pb.Image == null) // Jika PictureBox kosong
-                            {
-                                pb.Image = Image.FromFile(file); // Tampilkan gambar
-                                break; // Hentikan setelah menemukan PictureBox kosong
-                            }
-                        }
-                    };
+                            Image = ResizeImage(image, 271, 134),
+                            SizeMode = PictureBoxSizeMode.StretchImage,
+                            Size = new Size(255, 134),
+                            Margin = new Padding(5),
+                            Tag = file
+                        };
 
-                    flowLayoutPanel2.Controls.Add(thumbnail);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error loading image {file}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Event handler untuk klik thumbnail
+                        thumbnail.Click += (sender, args) =>
+                        {
+                            // Cari PictureBox yang kosong dan tampilkan gambar
+                            foreach (PictureBox pb in pictureBoxes)
+                            {
+                                if (pb.Image == null) // Jika PictureBox kosong
+                                {
+                                    pb.Image = Image.FromFile(file); // Tampilkan gambar
+                                    break; // Hentikan setelah menemukan PictureBox kosong
+                                }
+                            }
+                        };
+
+                        flowLayoutPanel2.Controls.Add(thumbnail);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading image {file}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+        };
+
+
+        if (cbx_now.Items.Count == 0)
+        {
+            //MessageBox.Show("Tidak ditemukan folder yang sesuai dengan gabungan NORM dan Nama.", "Folder Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    };
 
-
-    if (cbx_now.Items.Count == 0)
-    {
-        //MessageBox.Show("Tidak ditemukan folder yang sesuai dengan gabungan NORM dan Nama.", "Folder Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
-
-}
 
 
 
@@ -730,10 +731,6 @@ private void InitializeThumbnailsForToday()
                 thumbnail.DoDragDrop(thumbnail.Tag, DragDropEffects.Copy);
             }
         }
-
-
-
-
 
         private void InitializeMainPictureBoxes()
         {
@@ -902,49 +899,7 @@ private void InitializeThumbnailsForToday()
 
 
         private void buttonPrint_Click(object sender, EventArgs e)
-        {
-            //if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
-            //{
-            //    MessageBox.Show("Pilih Jenis terlebih dahulu", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
-            //{
-            //    MessageBox.Show("Pilih Profil yang dipakai", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedItem.ToString() == "Pilih Printer")
-            //{
-            //    MessageBox.Show("Pilih printer yang digunakan", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    PrintDocument pd = new PrintDocument();
-            //    pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-            //    pd.DefaultPageSettings.Landscape = false;
-
-            //    if (comboBox2.Text == "Default")
-            //    {
-            //        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-            //        pd.PrinterSettings.PrinterName = selectedPrinter;
-            //        //pd.Print();
-            //        printPreviewDialog1.Document = pd;
-            //        printPreviewDialog1.ShowDialog();
-            //        HistoryPrintA4(comboBox2.Text); 
-            //        PopulatePrinterComboBox(); 
-            //        comboBox2.SelectedIndex = 0;  
-            //        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //    else if (comboBox2.Text == "Adjust Brightness")
-            //    {
-            //        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-            //        pd.Print(); 
-            //        HistoryPrintA4(comboBox2.Text); 
-            //        PopulatePrinterComboBox(); 
-            //        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //      } 
-            //} 
-
-
-            // Validasi ComboBox sebelum mencetak
+        {  
             if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
             {
                 MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -978,16 +933,15 @@ private void InitializeThumbnailsForToday()
                         pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
 
                         // Menggunakan Print Preview jika diperlukan
-                        printPreviewDialog1.Document = pd;
-                        printPreviewDialog1.ShowDialog();
+                        //printPreviewDialog1.Document = pd;
+                        //printPreviewDialog1.ShowDialog();
 
                         // Proses pencetakan
-                        //pd.Print();
+                        pd.Print();
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-
+                        PopulatePrinterComboBox(); 
                         comboBox2.SelectedIndex = 0; // Reset profil ke default
                         MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -995,17 +949,16 @@ private void InitializeThumbnailsForToday()
                     {
                         pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
 
-
-                        printPreviewDialog1.Document = pd;
-                        printPreviewDialog1.ShowDialog();
+                        // Menggunakan Print Preview jika diperlukan
+                        //printPreviewDialog1.Document = pd;
+                        //printPreviewDialog1.ShowDialog();
 
                         // Langsung cetak tanpa preview
-                        //pd.Print();
+                        pd.Print();
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-
+                        PopulatePrinterComboBox(); 
                         MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -1013,9 +966,7 @@ private void InitializeThumbnailsForToday()
                 {
                     MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-
-
+            } 
         }
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
@@ -2134,7 +2085,8 @@ private void InitializeThumbnailsForToday()
         {
             pictureBox8.Image = null;
         }
-        
+         
+
 
 
 
