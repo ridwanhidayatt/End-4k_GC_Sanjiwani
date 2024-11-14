@@ -512,7 +512,7 @@
             // 
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox3.Location = new System.Drawing.Point(12, 643);
-            this.richTextBox3.MaxLength = 355;
+            this.richTextBox3.MaxLength = 9999;
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(437, 105);
             this.richTextBox3.TabIndex = 165;
@@ -532,7 +532,7 @@
             // 
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox2.Location = new System.Drawing.Point(10, 515);
-            this.richTextBox2.MaxLength = 335;
+            this.richTextBox2.MaxLength = 9999;
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(439, 105);
             this.richTextBox2.TabIndex = 163;
@@ -632,7 +632,7 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(10, 291);
-            this.richTextBox1.MaxLength = 9000;
+            this.richTextBox1.MaxLength = 9999;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(439, 203);
             this.richTextBox1.TabIndex = 151;

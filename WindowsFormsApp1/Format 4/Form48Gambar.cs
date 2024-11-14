@@ -1218,17 +1218,17 @@ private void InitializeThumbnailsForToday()
 
 
 
-                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(404, 228, 195, 94), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(604, 228, 195, 94), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(404, 228, 195, 94), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(604, 228, 195, 94), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
 
-                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(404, 327, 195, 94), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(604, 327, 195, 94), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(404, 327, 195, 94), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(604, 327, 195, 94), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
 
-                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(404, 426, 195, 94), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(604, 426, 195, 94), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(404, 426, 195, 94), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(604, 426, 195, 94), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
 
-                e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(404, 525, 195, 94), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(604, 525, 195, 94), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(404, 525, 195, 94), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+                //e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(604, 525, 195, 94), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
 
 
 
@@ -1256,6 +1256,15 @@ private void InitializeThumbnailsForToday()
                 //e.Graphics.DrawImage(pictureBox6.Image, 509, 708, 184, 92);
                 //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
                 //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
+
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(509, 228, 184, 92), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(509, 324, 184, 92), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(509, 420, 184, 92), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(509, 516, 184, 92), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(509, 612, 184, 92), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(509, 708, 184, 92), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(509, 804, 184, 92), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(509, 900, 184, 92), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
 
 
             }
