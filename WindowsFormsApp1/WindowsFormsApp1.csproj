@@ -194,6 +194,12 @@
     <Compile Include="Format 4\Form48Gambar.Designer.cs">
       <DependentUpon>Form48Gambar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSwitcing\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSwitcing\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSwitcing\FormSwitcing4Gambar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <EmbeddedResource Include="Format 4\Form48Gambar.resx">
       <DependentUpon>Form48Gambar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSwitcing\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSwitcing\FormSwitcing2Gambar.resx">
       <DependentUpon>FormSwitcing2Gambar.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,8 +337,6 @@
   <ItemGroup>
     <None Include="Resources\rsz_icon_delete_image %283%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

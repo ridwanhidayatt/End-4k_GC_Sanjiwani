@@ -1327,11 +1327,11 @@ namespace WindowsFormsApp1.Format_4
             SizeF textSizeSaran = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
 
             // Mengecilkan ukuran font sampai teks sesuai dengan area cetak
-            while (textSizeKesimpulan.Height > printHeightSaran && fontSizeSaran > 1)
+            while (textSizeSaran.Height > printHeightSaran && fontSizeSaran > 1)
             {
                 fontSizeSaran -= 0.5f; // Kurangi ukuran font sedikit demi sedikit
                 fontSaran = new Font("Montserrat", fontSizeSaran, FontStyle.Regular);
-                textSizeKesimpulan = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
+                textSizeSaran = e.Graphics.MeasureString(textSaran, fontSaran, (int)printWidthSaran);
             }
 
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
