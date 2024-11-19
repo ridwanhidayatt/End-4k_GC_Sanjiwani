@@ -1327,3 +1327,4 @@ D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan] - 
 D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan] - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\x86\Debug\AForge.Video.xml
 D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan] - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\x86\Debug\CsvHelper.xml
 D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan] - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\bin\x86\Debug\EPPlus.xml
+D:\ENDSOCOPE\GERLINK\GASTRO COLON\RS Sanjiwani Bali\GASTRO COLON FIX [ridwan] - Copy\WindowsFormsApp1 - Tampilan Kanan [3] - Format 1,2 LogoKotak\WindowsFormsApp1\obj\x86\Release\WindowsFormsApp1.FormSwitcing.Form1.resources
