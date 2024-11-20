@@ -970,11 +970,11 @@ namespace WindowsFormsApp1.Format_3
                         pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
 
                         // Menggunakan Print Preview jika diperlukan
-                        printPreviewDialog1.Document = pd;
-                        printPreviewDialog1.ShowDialog();
+                        //printPreviewDialog1.Document = pd;
+                        //printPreviewDialog1.ShowDialog();
 
                         // Langsung cetak tanpa preview
-                        //pd.Print();
+                        pd.Print();
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
