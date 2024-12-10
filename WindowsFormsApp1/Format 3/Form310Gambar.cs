@@ -1241,7 +1241,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeight = 343;
 
             // Inisialisasi ukuran font awal
-            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSize = 9; // Ukuran font awal, bisa disesuaikan
             Font font = new Font("Montserrat", fontSize);
             string text = richTextBox1.Text;
 
@@ -1270,7 +1270,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeightKesimpulan = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
             Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
             string textKesimpulan = richTextBox2.Text;
 
@@ -1309,7 +1309,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeightSaran = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
             Font fontSaran = new Font("Montserrat", fontSizeSaran);
             string textSaran = richTextBox3.Text;
 
@@ -1545,7 +1545,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeight = 343;
 
             // Inisialisasi ukuran font awal
-            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSize = 9; // Ukuran font awal, bisa disesuaikan
             Font font = new Font("Montserrat", fontSize);
             string text = richTextBox1.Text;
 
@@ -1574,7 +1574,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeightKesimpulan = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
             Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
             string textKesimpulan = richTextBox2.Text;
 
@@ -1613,7 +1613,7 @@ namespace WindowsFormsApp1.Format_3
             float printHeightSaran = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
             Font fontSaran = new Font("Montserrat", fontSizeSaran);
             string textSaran = richTextBox3.Text;
 
