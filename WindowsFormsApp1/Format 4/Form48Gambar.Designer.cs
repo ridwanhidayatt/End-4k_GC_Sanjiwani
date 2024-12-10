@@ -128,7 +128,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1216, 907);
+            this.comboBox1.Location = new System.Drawing.Point(1224, 917);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(280, 24);
             this.comboBox1.TabIndex = 90;
@@ -143,7 +143,7 @@
             this.buttonExportPdf.ForeColor = System.Drawing.Color.White;
             this.buttonExportPdf.Image = ((System.Drawing.Image)(resources.GetObject("buttonExportPdf.Image")));
             this.buttonExportPdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExportPdf.Location = new System.Drawing.Point(632, 907);
+            this.buttonExportPdf.Location = new System.Drawing.Point(624, 917);
             this.buttonExportPdf.Name = "buttonExportPdf";
             this.buttonExportPdf.Size = new System.Drawing.Size(136, 36);
             this.buttonExportPdf.TabIndex = 92;
@@ -158,7 +158,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(1218, 939);
+            this.buttonCancel.Location = new System.Drawing.Point(1226, 949);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(136, 36);
             this.buttonCancel.TabIndex = 91;
@@ -169,7 +169,7 @@
             // cbx_now
             // 
             this.cbx_now.FormattingEnabled = true;
-            this.cbx_now.Location = new System.Drawing.Point(400, 3);
+            this.cbx_now.Location = new System.Drawing.Point(411, 13);
             this.cbx_now.Name = "cbx_now";
             this.cbx_now.Size = new System.Drawing.Size(209, 21);
             this.cbx_now.TabIndex = 107;
@@ -178,15 +178,15 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(209, 24);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 34);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 428);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(617, 427);
             this.flowLayoutPanel2.TabIndex = 106;
             // 
             // cbx_baru
             // 
             this.cbx_baru.FormattingEnabled = true;
-            this.cbx_baru.Location = new System.Drawing.Point(400, 452);
+            this.cbx_baru.Location = new System.Drawing.Point(411, 462);
             this.cbx_baru.Name = "cbx_baru";
             this.cbx_baru.Size = new System.Drawing.Size(209, 21);
             this.cbx_baru.TabIndex = 105;
@@ -195,9 +195,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 473);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 483);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(400, 428);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(617, 428);
             this.flowLayoutPanel1.TabIndex = 102;
             // 
             // richTextBox4
@@ -224,7 +224,6 @@
             // 
             // picLogo2
             // 
-            this.picLogo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picLogo2.Location = new System.Drawing.Point(766, 3);
             this.picLogo2.Name = "picLogo2";
             this.picLogo2.Size = new System.Drawing.Size(100, 100);
@@ -239,7 +238,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Default",
             "Adjust Brightness"});
-            this.comboBox2.Location = new System.Drawing.Point(1080, 907);
+            this.comboBox2.Location = new System.Drawing.Point(1088, 917);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(130, 24);
             this.comboBox2.TabIndex = 93;
@@ -254,7 +253,7 @@
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
             this.buttonPrint.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrint.Image")));
             this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPrint.Location = new System.Drawing.Point(1360, 939);
+            this.buttonPrint.Location = new System.Drawing.Point(1368, 949);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(136, 36);
             this.buttonPrint.TabIndex = 89;
@@ -283,7 +282,7 @@
             this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.buttonExportPdf);
             this.panel1.Controls.Add(this.buttonCancel);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1563, 992);
             this.panel1.TabIndex = 101;
@@ -292,7 +291,7 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1503, 176);
+            this.button4.Location = new System.Drawing.Point(1508, 177);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 185;
@@ -303,7 +302,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1503, 120);
+            this.button3.Location = new System.Drawing.Point(1508, 123);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 184;
@@ -314,7 +313,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1503, 64);
+            this.button2.Location = new System.Drawing.Point(1508, 69);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 183;
@@ -325,7 +324,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1503, 8);
+            this.button1.Location = new System.Drawing.Point(1508, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 182;
@@ -336,7 +335,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(944, 907);
+            this.comboBox3.Location = new System.Drawing.Point(952, 917);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(130, 24);
             this.comboBox3.TabIndex = 175;
@@ -395,7 +394,7 @@
             this.panel2.Controls.Add(this.richTextBoxNRS);
             this.panel2.Controls.Add(this.labelLokTgl);
             this.panel2.Controls.Add(this.picLogo1);
-            this.panel2.Location = new System.Drawing.Point(615, 3);
+            this.panel2.Location = new System.Drawing.Point(624, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(880, 898);
             this.panel2.TabIndex = 39;
@@ -404,7 +403,7 @@
             // 
             this.close7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close7.Image = ((System.Drawing.Image)(resources.GetObject("close7.Image")));
-            this.close7.Location = new System.Drawing.Point(628, 666);
+            this.close7.Location = new System.Drawing.Point(628, 674);
             this.close7.Name = "close7";
             this.close7.Size = new System.Drawing.Size(25, 25);
             this.close7.TabIndex = 194;
@@ -415,7 +414,7 @@
             // 
             this.close8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close8.Image = ((System.Drawing.Image)(resources.GetObject("close8.Image")));
-            this.close8.Location = new System.Drawing.Point(810, 666);
+            this.close8.Location = new System.Drawing.Point(810, 674);
             this.close8.Name = "close8";
             this.close8.Size = new System.Drawing.Size(25, 25);
             this.close8.TabIndex = 193;
@@ -426,7 +425,7 @@
             // 
             this.close5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close5.Image = ((System.Drawing.Image)(resources.GetObject("close5.Image")));
-            this.close5.Location = new System.Drawing.Point(628, 535);
+            this.close5.Location = new System.Drawing.Point(628, 543);
             this.close5.Name = "close5";
             this.close5.Size = new System.Drawing.Size(25, 25);
             this.close5.TabIndex = 192;
@@ -437,7 +436,7 @@
             // 
             this.close6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close6.Image = ((System.Drawing.Image)(resources.GetObject("close6.Image")));
-            this.close6.Location = new System.Drawing.Point(810, 535);
+            this.close6.Location = new System.Drawing.Point(810, 543);
             this.close6.Name = "close6";
             this.close6.Size = new System.Drawing.Size(25, 25);
             this.close6.TabIndex = 191;
@@ -448,7 +447,7 @@
             // 
             this.close3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close3.Image = ((System.Drawing.Image)(resources.GetObject("close3.Image")));
-            this.close3.Location = new System.Drawing.Point(628, 404);
+            this.close3.Location = new System.Drawing.Point(628, 412);
             this.close3.Name = "close3";
             this.close3.Size = new System.Drawing.Size(25, 25);
             this.close3.TabIndex = 190;
@@ -459,7 +458,7 @@
             // 
             this.close4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close4.Image = ((System.Drawing.Image)(resources.GetObject("close4.Image")));
-            this.close4.Location = new System.Drawing.Point(810, 404);
+            this.close4.Location = new System.Drawing.Point(810, 412);
             this.close4.Name = "close4";
             this.close4.Size = new System.Drawing.Size(25, 25);
             this.close4.TabIndex = 189;
@@ -470,7 +469,7 @@
             // 
             this.close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close1.Image = ((System.Drawing.Image)(resources.GetObject("close1.Image")));
-            this.close1.Location = new System.Drawing.Point(628, 273);
+            this.close1.Location = new System.Drawing.Point(628, 281);
             this.close1.Name = "close1";
             this.close1.Size = new System.Drawing.Size(25, 25);
             this.close1.TabIndex = 188;
@@ -481,7 +480,7 @@
             // 
             this.close2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close2.Image = ((System.Drawing.Image)(resources.GetObject("close2.Image")));
-            this.close2.Location = new System.Drawing.Point(810, 273);
+            this.close2.Location = new System.Drawing.Point(810, 281);
             this.close2.Name = "close2";
             this.close2.Size = new System.Drawing.Size(25, 25);
             this.close2.TabIndex = 187;
@@ -491,9 +490,9 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(741, 794);
+            this.pictureBox9.Location = new System.Drawing.Point(758, 804);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox9.Size = new System.Drawing.Size(83, 83);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 174;
             this.pictureBox9.TabStop = false;
@@ -541,7 +540,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(660, 529);
+            this.pictureBox6.Location = new System.Drawing.Point(660, 537);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(181, 130);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +550,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Location = new System.Drawing.Point(660, 660);
+            this.pictureBox8.Location = new System.Drawing.Point(660, 668);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(181, 130);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -561,7 +560,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(478, 529);
+            this.pictureBox5.Location = new System.Drawing.Point(478, 537);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(181, 130);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -571,7 +570,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(478, 660);
+            this.pictureBox7.Location = new System.Drawing.Point(478, 668);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(181, 130);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -581,7 +580,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(660, 398);
+            this.pictureBox4.Location = new System.Drawing.Point(660, 406);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 130);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -591,7 +590,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(478, 398);
+            this.pictureBox3.Location = new System.Drawing.Point(478, 406);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(181, 130);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -601,7 +600,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(660, 267);
+            this.pictureBox2.Location = new System.Drawing.Point(660, 275);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(181, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -611,7 +610,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(478, 267);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 274);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -645,7 +644,7 @@
             this.textBox19.Location = new System.Drawing.Point(116, 241);
             this.textBox19.MaxLength = 65;
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(750, 21);
+            this.textBox19.Size = new System.Drawing.Size(752, 21);
             this.textBox19.TabIndex = 150;
             // 
             // textBox18
@@ -655,7 +654,7 @@
             this.textBox18.Location = new System.Drawing.Point(116, 218);
             this.textBox18.MaxLength = 65;
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(750, 21);
+            this.textBox18.Size = new System.Drawing.Size(752, 21);
             this.textBox18.TabIndex = 149;
             // 
             // textBox17
@@ -874,7 +873,6 @@
             // 
             // picLogo1
             // 
-            this.picLogo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picLogo1.Location = new System.Drawing.Point(10, 3);
             this.picLogo1.Name = "picLogo1";
             this.picLogo1.Size = new System.Drawing.Size(100, 100);

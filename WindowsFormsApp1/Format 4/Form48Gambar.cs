@@ -408,10 +408,10 @@ namespace WindowsFormsApp1.Format_4
                             Image image = Image.FromFile(file);
                             PictureBox thumbnail = new PictureBox
                             {
-                                Image = ResizeImage(image, 271, 134),
+                                Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(255, 134),
-                                Margin = new Padding(5),
+                                Size = new Size(290, 219),
+                                Margin = new Padding(2),
                                 Tag = file
                             };
 
@@ -682,10 +682,10 @@ namespace WindowsFormsApp1.Format_4
                         Image image = Image.FromFile(file);
                         PictureBox thumbnail = new PictureBox
                         {
-                            Image = ResizeImage(image, 271, 134),
+                            Image = ResizeImage(image, 1058, 797),
                             SizeMode = PictureBoxSizeMode.StretchImage,
-                            Size = new Size(181, 130),
-                            Margin = new Padding(5),
+                            Size = new Size(290, 219),
+                            Margin = new Padding(2),
                             Tag = file
                         };
 
@@ -987,27 +987,30 @@ namespace WindowsFormsApp1.Format_4
 
         private void printDocument2_PrintPage(object sender, PrintPageEventArgs e)
         {
-
-
             if (logoValue == "1")
             {
+                //AdjustPictureBoxSize(e.Graphics, "Persegi");
+                //e.Graphics.DrawImage(picLogo1.Image, 30, 3, picLogo1.Width, picLogo1.Height);
 
                 if (jenisValue == "Persegi Panjang")
                 {
+                    // Handle case when logoValue is "1" and jenisValue is "Persegi Panjang"
                     AdjustPictureBoxSize(e.Graphics, jenisValue);
                     e.Graphics.DrawImage(picLogo2.Image, 30, 10, picLogo2.Width, picLogo2.Height);
                 }
                 else
                 {
+                    // Handle case when logoValue is "1" and jenisValue is not "Persegi Panjang"
                     AdjustPictureBoxSize(e.Graphics, "Persegi");
                     e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
                 }
             }
             else if (logoValue == "2")
             {
-                AdjustPictureBoxSize(e.Graphics, jenisValue);
+                AdjustPictureBoxSize(e.Graphics, jenisValue); // Adjust the size based on jenisValue
                 e.Graphics.DrawImage(picLogo1.Image, 30, 10, picLogo1.Width, picLogo1.Height);
 
+                // Adjust the coordinates based on jenisValue
                 if (jenisValue == "Persegi")
                 {
                     e.Graphics.DrawImage(picLogo2.Image, 675, 10, picLogo2.Width, picLogo2.Height);
@@ -1035,7 +1038,7 @@ namespace WindowsFormsApp1.Format_4
 
             e.Graphics.DrawRectangle(redPen, 401, 125, 100, 21);
             e.Graphics.DrawString(textBox5.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 127);
-            e.Graphics.DrawRectangle(redPen, 506, 125, 296, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 125, 269, 21);
             e.Graphics.DrawString(textBox11.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 509, 127);
 
             e.Graphics.DrawRectangle(redPen, 30, 150, 100, 21);
@@ -1045,7 +1048,7 @@ namespace WindowsFormsApp1.Format_4
 
             e.Graphics.DrawRectangle(redPen, 401, 150, 100, 21);
             e.Graphics.DrawString(textBox6.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 152);
-            e.Graphics.DrawRectangle(redPen, 506, 150, 296, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 150, 269, 21);
             e.Graphics.DrawString(textBox12.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 152);
 
             e.Graphics.DrawRectangle(redPen, 30, 175, 100, 21);
@@ -1057,23 +1060,24 @@ namespace WindowsFormsApp1.Format_4
 
             e.Graphics.DrawRectangle(redPen, 401, 175, 100, 21);
             e.Graphics.DrawString(textBox7.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 401, 177);
-            e.Graphics.DrawRectangle(redPen, 506, 175, 296, 21);
+            e.Graphics.DrawRectangle(redPen, 506, 175, 269, 21);
             e.Graphics.DrawString(textBox13.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 508, 177);
 
             StringFormat SF2 = new StringFormat();
             SF2.Alignment = StringAlignment.Near;
             e.Graphics.DrawRectangle(redPen, 30, 200, 362, 21);
-            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 203, SF2);
-            e.Graphics.DrawRectangle(redPen, 401, 200, 401, 21);
+            e.Graphics.DrawString(textBox14.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 270, 200, SF2);
+            e.Graphics.DrawRectangle(redPen, 401, 200, 374, 21);
             e.Graphics.DrawString(richTextBox4.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 403, 202);
 
 
             e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
-            e.Graphics.DrawRectangle(redPen, 135, 225, 257, 21);
-            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
-            e.Graphics.DrawRectangle(redPen, 135, 250, 257, 21);
+
+            e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
+            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227); 
+            e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
             //float contrast = 1.41f;
@@ -1111,12 +1115,10 @@ namespace WindowsFormsApp1.Format_4
             // Memeriksa apakah tombol 2 ditekan
             if (isButton2Pressed == true)
             {
-                //MessageBox.Show("Tombol 2 ditekan!");
-                //e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
-                //e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
+                 
 
-                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(401, 229, 402, 211), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(401, 448, 402, 211), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 275, 420, 317), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(355, 594, 420, 317), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
             // Memeriksa apakah tombol 4 ditekan
@@ -1128,10 +1130,10 @@ namespace WindowsFormsApp1.Format_4
                 //e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
                 //e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
 
-                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(419, 228, 364, 186), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(419, 419, 364, 186), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(419, 610, 364, 186), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(419, 801, 364, 186), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(460, 275, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(460, 434, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(460, 593, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(460, 752, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
             if (isButton6Pressed)
@@ -1144,12 +1146,12 @@ namespace WindowsFormsApp1.Format_4
                 //e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122); 
 
 
-                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(485, 228, 233, 122), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(485, 355, 233, 122), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(485, 482, 233, 122), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(485, 609, 233, 122), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(485, 736, 233, 122), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(485, 863, 233, 122), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 275, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(566, 275, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(355, 434, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(566, 434, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(355, 593, 209, 157), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(566, 593, 209, 157), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
             }
 
             if (isButton8Pressed)
@@ -1208,50 +1210,30 @@ namespace WindowsFormsApp1.Format_4
                 //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
                 //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
 
-                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(509, 228, 184, 92), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(509, 324, 184, 92), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(509, 420, 184, 92), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(509, 516, 184, 92), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(509, 612, 184, 92), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(509, 708, 184, 92), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(509, 804, 184, 92), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
-                e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(509, 900, 184, 92), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 275, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(566, 275, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(355, 434, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(566, 434, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(355, 593, 209, 157), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(566, 593, 209, 157), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(355, 752, 209, 157), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+                e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(566, 752, 209, 157), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
 
 
             }
 
-
-
-
-
-            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
-            {
-                e.Graphics.DrawImage(pictureBox9.Image, 631, 990, 159, 159);
-            }
-            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
-            {
-                e.Graphics.DrawImage(pictureBox9.Image, 522, 990, 159, 159);
-
-            }
-
-
-
-
-
-
-
-            e.Graphics.DrawRectangle(redPen, 30, 275, 362, 420);
-            e.Graphics.DrawString("HASIL :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 275);
+            e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
+            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
             //string combinedText = richTextBox1.Text;
             //string hasil = AddNewlinesIfTooLong(combinedText, 34);
-            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 315);
+            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
             // Ukuran area cetak
-            float printWidth = 362;
-            float printHeight = 413;
+            float printWidth = 237;
+            float printHeight = 343;
 
             // Inisialisasi ukuran font awal
-            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSize = 9; // Ukuran font awal, bisa disesuaikan
             Font font = new Font("Montserrat", fontSize);
             string text = richTextBox1.Text;
 
@@ -1267,27 +1249,20 @@ namespace WindowsFormsApp1.Format_4
             }
 
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
-            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 298, printWidth, printHeight));
+            e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 295, printWidth, printHeight));
 
-
-
-
-
-
-
-
-            e.Graphics.DrawRectangle(redPen, 30, 700, 362, 160);
-            e.Graphics.DrawString("KESIMPULAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 700);
+            e.Graphics.DrawRectangle(redPen, 30, 658, 320, 177);
+            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659);
             //string combinedText1 = richTextBox2.Text;
             //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
-            //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 672);
+            //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 504);
 
             // Ukuran area cetak
-            float printWidthKesimpulan = 362;
-            float printHeightKesimpulan = 140;
+            float printWidthKesimpulan = 320;
+            float printHeightKesimpulan = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
             Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
             string textKesimpulan = richTextBox2.Text;
 
@@ -1303,23 +1278,30 @@ namespace WindowsFormsApp1.Format_4
             }
 
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
-            e.Graphics.DrawString(textKesimpulan, fontKesimpulan, Brushes.Black, new RectangleF(30, 724, printWidthKesimpulan, printHeightKesimpulan));
+            e.Graphics.DrawString(textKesimpulan, fontKesimpulan, Brushes.Black, new RectangleF(30, 678, printWidthKesimpulan, printHeightKesimpulan));
 
 
 
-            //e.Graphics.DrawRectangle(redPen, 30, 770, 362, 75);
-            e.Graphics.DrawRectangle(redPen, 30, 865, 362, 145);
-            e.Graphics.DrawString("SARAN :", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 865);
+
+
+
+
+
+
+
+            e.Graphics.DrawRectangle(redPen, 30, 840, 320, 177);
+            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 841);
             //string combinedText2 = richTextBox3.Text;
             //string saran = AddNewlinesIfTooLong(combinedText2, 34);
-            //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 780);
+            //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 695);
+
 
             // Ukuran area cetak
-            float printWidthSaran = 362;
-            float printHeightSaran = 110;
+            float printWidthSaran = 320;
+            float printHeightSaran = 142;
 
             // Inisialisasi ukuran font awal
-            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
             Font fontSaran = new Font("Montserrat", fontSizeSaran);
             string textSaran = richTextBox3.Text;
 
@@ -1335,7 +1317,19 @@ namespace WindowsFormsApp1.Format_4
             }
 
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
-            e.Graphics.DrawString(textSaran, fontSaran, Brushes.Black, new RectangleF(30, 888, printWidthSaran, printHeightSaran));
+            e.Graphics.DrawString(textSaran, fontSaran, Brushes.Black, new RectangleF(30, 860, printWidthSaran, printHeightSaran));
+
+
+
+
+            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
+            {
+                e.Graphics.DrawImage(pictureBox9.Image, 569, 930, 206, 206);
+            }
+            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
+            {
+                e.Graphics.DrawImage(pictureBox9.Image, 460, 950, 206, 206);
+            }
 
 
 
@@ -1345,7 +1339,6 @@ namespace WindowsFormsApp1.Format_4
 
             e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
             e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
-
             e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
         }
 
@@ -1485,49 +1478,78 @@ namespace WindowsFormsApp1.Format_4
             e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
+            //e.Graphics.DrawRectangle(redPen, 135, 225, 215, 21);
             e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
             e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
             //e.Graphics.DrawRectangle(redPen, 135, 250, 627, 21);
             e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
-
-
-
+            //e.Graphics.DrawImage(pictureBox1.Image, 355, 224, 209, 157);
+            //e.Graphics.DrawImage(pictureBox2.Image, 566, 224, 209, 157);
+            //e.Graphics.DrawImage(pictureBox3.Image, 355, 383, 209, 157);
+            //e.Graphics.DrawImage(pictureBox4.Image, 566, 383, 209, 157);
+            //e.Graphics.DrawImage(pictureBox5.Image, 355, 542, 209, 157);
+            //e.Graphics.DrawImage(pictureBox6.Image, 566, 542, 209, 157);
+            //e.Graphics.DrawImage(pictureBox7.Image, 355, 701, 209, 157);
+            //e.Graphics.DrawImage(pictureBox8.Image, 566, 701, 209, 157);
 
 
             // Memeriksa apakah tombol 2 ditekan
             if (isButton2Pressed == true)
             {
                 //MessageBox.Show("Tombol 2 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 401, 229, 402, 211);
-                e.Graphics.DrawImage(pictureBox2.Image, 401, 448, 402, 211);
-                //isButton2Pressed = false; // Reset setelah digunakan
+                e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 420, 317);
+                e.Graphics.DrawImage(pictureBox2.Image, 355, 594, 420, 317); 
             }
 
             // Memeriksa apakah tombol 4 ditekan
             if (isButton4Pressed == true)
             {
                 //MessageBox.Show("Tombol 4 ditekan!");
-                e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
-                e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
-                e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
-                e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
+                //e.Graphics.DrawImage(pictureBox1.Image, 419, 228, 364, 186);
+                //e.Graphics.DrawImage(pictureBox2.Image, 419, 419, 364, 186);
+                //e.Graphics.DrawImage(pictureBox3.Image, 419, 610, 364, 186);
+                //e.Graphics.DrawImage(pictureBox4.Image, 419, 801, 364, 186);
                 //isButton4Pressed = false; // Reset setelah digunakan
+
+
+                e.Graphics.DrawImage(pictureBox1.Image, 460, 275, 209, 157);
+                e.Graphics.DrawImage(pictureBox2.Image, 460, 434, 209, 157);
+                e.Graphics.DrawImage(pictureBox3.Image, 460, 593, 209, 157);
+                e.Graphics.DrawImage(pictureBox4.Image, 460, 752, 209, 157);
+
+
+                //e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 209, 157);
+                //e.Graphics.DrawImage(pictureBox2.Image, 566, 275, 209, 157);
+                //e.Graphics.DrawImage(pictureBox3.Image, 355, 434, 209, 157);
+                //e.Graphics.DrawImage(pictureBox4.Image, 566, 434, 209, 157); 
+
+
+
             }
 
             if (isButton6Pressed)
             {
-                e.Graphics.DrawImage(pictureBox1.Image, 485, 228, 233, 122);
-                e.Graphics.DrawImage(pictureBox2.Image, 485, 355, 233, 122);
-                e.Graphics.DrawImage(pictureBox3.Image, 485, 482, 233, 122);
-                e.Graphics.DrawImage(pictureBox4.Image, 485, 609, 233, 122);
-                e.Graphics.DrawImage(pictureBox5.Image, 485, 736, 233, 122);
-                e.Graphics.DrawImage(pictureBox6.Image, 485, 863, 233, 122);
+                //e.Graphics.DrawImage(pictureBox1.Image, 485, 275, 146, 110);
+                //e.Graphics.DrawImage(pictureBox2.Image, 485, 387, 146, 110);
+                //e.Graphics.DrawImage(pictureBox3.Image, 485, 499, 146, 110);
+                //e.Graphics.DrawImage(pictureBox4.Image, 485, 611, 146, 110);
+                //e.Graphics.DrawImage(pictureBox5.Image, 485, 723, 146, 110);
+                //e.Graphics.DrawImage(pictureBox6.Image, 485, 835, 146, 110);
 
                 //e.Graphics.DrawImage(pictureBox6.Image, 401, 888, 400, 105);
-
                 //e.Graphics.DrawImage(pictureBox6.Image, 604, 558, 198, 430);
+
+
+                e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 209, 157);
+                e.Graphics.DrawImage(pictureBox2.Image, 566, 275, 209, 157);
+                e.Graphics.DrawImage(pictureBox3.Image, 355, 434, 209, 157);
+                e.Graphics.DrawImage(pictureBox4.Image, 566, 434, 209, 157);
+                e.Graphics.DrawImage(pictureBox5.Image, 355, 593, 209, 157);
+                e.Graphics.DrawImage(pictureBox6.Image, 566, 593, 209, 157);
+
+
             }
 
             if (isButton8Pressed)
@@ -1572,33 +1594,50 @@ namespace WindowsFormsApp1.Format_4
                 //e.Graphics.DrawImage(pictureBox7.Image, 509, 804, 184, 92);
                 //e.Graphics.DrawImage(pictureBox8.Image, 509, 900, 184, 92);
 
-                e.Graphics.DrawImage(pictureBox1.Image, 270, 275, 252, 135);
-                e.Graphics.DrawImage(pictureBox2.Image, 524, 275, 252, 135);
-                e.Graphics.DrawImage(pictureBox3.Image, 270, 412, 252, 135);
-                e.Graphics.DrawImage(pictureBox4.Image, 524, 412, 252, 135);
-                e.Graphics.DrawImage(pictureBox5.Image, 270, 549, 252, 135);
-                e.Graphics.DrawImage(pictureBox6.Image, 524, 549, 252, 135);
-                e.Graphics.DrawImage(pictureBox7.Image, 270, 686, 252, 135);
-                e.Graphics.DrawImage(pictureBox8.Image, 524, 686, 252, 135);
-                //e.Graphics.DrawImage(pictureBox9.Image, 270, 823, 252, 135);
-                //e.Graphics.DrawImage(pictureBox10.Image, 524, 823, 252, 135);
+                //e.Graphics.DrawImage(pictureBox1.Image, 270, 275, 252, 135);
+                //e.Graphics.DrawImage(pictureBox2.Image, 524, 275, 252, 135);
+                //e.Graphics.DrawImage(pictureBox3.Image, 270, 412, 252, 135);
+                //e.Graphics.DrawImage(pictureBox4.Image, 524, 412, 252, 135);
+                //e.Graphics.DrawImage(pictureBox5.Image, 270, 549, 252, 135);
+                //e.Graphics.DrawImage(pictureBox6.Image, 524, 549, 252, 135);
+                //e.Graphics.DrawImage(pictureBox7.Image, 270, 686, 252, 135);
+                //e.Graphics.DrawImage(pictureBox8.Image, 524, 686, 252, 135);
+
+                e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 209, 157);
+                e.Graphics.DrawImage(pictureBox2.Image, 566, 275, 209, 157);
+                e.Graphics.DrawImage(pictureBox3.Image, 355, 434, 209, 157);
+                e.Graphics.DrawImage(pictureBox4.Image, 566, 434, 209, 157);
+                e.Graphics.DrawImage(pictureBox5.Image, 355, 593, 209, 157);
+                e.Graphics.DrawImage(pictureBox6.Image, 566, 593, 209, 157);
+                e.Graphics.DrawImage(pictureBox7.Image, 355, 752, 209, 157);
+                e.Graphics.DrawImage(pictureBox8.Image, 566, 752, 209, 157);
+
 
 
             }
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 275, 237, 378);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 12, FontStyle.Bold), Brushes.Black, 30, 276);
+
+
+
+
+
+
+            //e.Graphics.DrawImage(pictureBox9.Image, 355, 860, 209, 157);
+            //e.Graphics.DrawImage(pictureBox10.Image, 566, 860, 209, 157);
+
+            e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
+            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
             //string combinedText = richTextBox1.Text;
             //string hasil = AddNewlinesIfTooLong(combinedText, 34);
             //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
             // Ukuran area cetak
-            float printWidth = 237;
-            float printHeight = 343;
+            float printWidth = 320;
+            float printHeight = 373;
 
             // Inisialisasi ukuran font awal
-            float fontSize = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSize = 9; // Ukuran font awal, bisa disesuaikan
             Font font = new Font("Montserrat", fontSize);
             string text = richTextBox1.Text;
 
@@ -1616,18 +1655,18 @@ namespace WindowsFormsApp1.Format_4
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
             e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 295, printWidth, printHeight));
 
-            e.Graphics.DrawRectangle(redPen, 30, 658, 237, 177);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 12, FontStyle.Bold), Brushes.Black, 30, 659);
+            e.Graphics.DrawRectangle(redPen, 30, 658, 320, 177);
+            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659);
             //string combinedText1 = richTextBox2.Text;
             //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
             //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 504);
 
             // Ukuran area cetak
-            float printWidthKesimpulan = 237;
-            float printHeightKesimpulan = 142;
+            float printWidthKesimpulan = 320;
+            float printHeightKesimpulan = 177;
 
             // Inisialisasi ukuran font awal
-            float fontSizeKesimpulan = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
             Font fontKesimpulan = new Font("Montserrat", fontSizeKesimpulan);
             string textKesimpulan = richTextBox2.Text;
 
@@ -1654,19 +1693,19 @@ namespace WindowsFormsApp1.Format_4
 
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 840, 237, 177);
-            e.Graphics.DrawString("SARAN", new Font("Montserrat", 12, FontStyle.Bold), Brushes.Black, 30, 841);
+            e.Graphics.DrawRectangle(redPen, 30, 840, 320, 177);
+            e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 841);
             //string combinedText2 = richTextBox3.Text;
             //string saran = AddNewlinesIfTooLong(combinedText2, 34);
             //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 695);
 
 
             // Ukuran area cetak
-            float printWidthSaran = 237;
-            float printHeightSaran = 142;
+            float printWidthSaran = 320;
+            float printHeightSaran = 177;
 
             // Inisialisasi ukuran font awal
-            float fontSizeSaran = 12; // Ukuran font awal, bisa disesuaikan
+            float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
             Font fontSaran = new Font("Montserrat", fontSizeSaran);
             string textSaran = richTextBox3.Text;
 
@@ -1689,16 +1728,22 @@ namespace WindowsFormsApp1.Format_4
 
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
-                e.Graphics.DrawImage(pictureBox9.Image, 631, 990, 159, 159);
+                e.Graphics.DrawImage(pictureBox9.Image, 569, 930, 206, 206);
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
-                e.Graphics.DrawImage(pictureBox9.Image, 445, 990, 159, 159);
-            } 
+                e.Graphics.DrawImage(pictureBox9.Image, 460, 950, 206, 206);
+            }
+
+
+
+
+
+
 
             e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
             e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
-            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1); 
+            e.Graphics.DrawString(labelNamaDokter.Text, new Font("Montserrat", 10, FontStyle.Regular), Brushes.Black, 150, 1125, SF1);
         }
 
         private void close1_Click(object sender, EventArgs e)
@@ -1729,19 +1774,19 @@ namespace WindowsFormsApp1.Format_4
         {
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
             pictureBox1.Visible = true;
-            pictureBox1.Location = new Point(455, 223);
-            pictureBox1.Size = new Size(411, 221);
+            pictureBox1.Location = new Point(491, 275);
+            pictureBox1.Size = new Size(339, 256);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
             pictureBox2.Visible = true;
-            pictureBox2.Location = new Point(455, 452);
-            pictureBox2.Size = new Size(411, 221);
+            pictureBox2.Location = new Point(491, 533);
+            pictureBox2.Size = new Size(339, 256);
 
             close1.Visible = true;
-            close1.Location = new Point(835, 229);
+            close1.Location = new Point(798, 282);
 
             close2.Visible = true;
-            close2.Location = new Point(835, 458);
+            close2.Location = new Point(798, 540);
 
 
             // Menyembunyikan PictureBox3 hingga PictureBox8
@@ -1772,36 +1817,36 @@ namespace WindowsFormsApp1.Format_4
         {
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
             pictureBox1.Visible = true;
-            pictureBox1.Location = new Point(559, 223);
-            pictureBox1.Size = new Size(224, 120);
+            pictureBox1.Location = new Point(569, 276);
+            pictureBox1.Size = new Size(159, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
             pictureBox2.Visible = true;
-            pictureBox2.Location = new Point(559, 348);
-            pictureBox2.Size = new Size(224, 120);
+            pictureBox2.Location = new Point(569, 401);
+            pictureBox2.Size = new Size(159, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
             pictureBox3.Visible = true;
-            pictureBox3.Location = new Point(559, 473);
-            pictureBox3.Size = new Size(224, 120);
+            pictureBox3.Location = new Point(569, 526);
+            pictureBox3.Size = new Size(159, 120);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
             pictureBox4.Visible = true;
             //pictureBox4.Location = new Point(658, 403);
-            pictureBox4.Location = new Point(559, 598);
-            pictureBox4.Size = new Size(224, 120);
+            pictureBox4.Location = new Point(569, 651);
+            pictureBox4.Size = new Size(159, 120);
 
             close1.Visible = true;
-            close1.Location = new Point(751, 229);
+            close1.Location = new Point(697, 282);
 
             close2.Visible = true;
-            close2.Location = new Point(751, 354);
+            close2.Location = new Point(697, 407);
 
             close3.Visible = true;
-            close3.Location = new Point(751, 479);
+            close3.Location = new Point(697, 532);
 
             close4.Visible = true;
-            close4.Location = new Point(751, 604);
+            close4.Location = new Point(697, 657);
 
 
 
@@ -1829,53 +1874,52 @@ namespace WindowsFormsApp1.Format_4
         {
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
             pictureBox1.Visible = true;
-            pictureBox1.Location = new Point(455,291);
-            pictureBox1.Size = new Size(205, 110);
+            pictureBox1.Location = new Point(478, 275);
+            pictureBox1.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
             pictureBox2.Visible = true;
-            pictureBox2.Location = new Point(661, 291);
-            pictureBox2.Size = new Size(205, 110);
+            pictureBox2.Location = new Point(660, 275);
+            pictureBox2.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
             pictureBox3.Visible = true;
-            pictureBox3.Location = new Point(455, 431);
-            pictureBox3.Size = new Size(205, 110);
+            pictureBox3.Location = new Point(478, 406);
+            pictureBox3.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
             pictureBox4.Visible = true;
-            pictureBox4.Location = new Point(661, 431);
-            pictureBox4.Size = new Size(205, 110);
+            pictureBox4.Location = new Point(660, 406);
+            pictureBox4.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox5
             pictureBox5.Visible = true;
-            pictureBox5.Location = new Point(455, 571);
-            pictureBox5.Size = new Size(205, 110);
+            pictureBox5.Location = new Point(478, 537);
+            pictureBox5.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox6
             pictureBox6.Visible = true;
-            pictureBox6.Location = new Point(661, 571);
-            pictureBox6.Size = new Size(205, 110);
-
+            pictureBox6.Location = new Point(660, 537);
+            pictureBox6.Size = new Size(181, 130); 
 
 
             close1.Visible = true;
-            close1.Location = new Point(630, 296);
+            close1.Location = new Point(628, 281);
 
             close2.Visible = true;
-            close2.Location = new Point(836, 296);
+            close2.Location = new Point(810, 281);
 
             close3.Visible = true;
-            close3.Location = new Point(630, 436);
+            close3.Location = new Point(628, 412);
 
             close4.Visible = true;
-            close4.Location = new Point(836, 436);
+            close4.Location = new Point(810, 412);
 
             close5.Visible = true;
-            close5.Location = new Point(630, 576);
+            close5.Location = new Point(628, 543);
 
             close6.Visible = true;
-            close6.Location = new Point(836, 576);
+            close6.Location = new Point(810, 543); 
 
 
 
@@ -1901,68 +1945,68 @@ namespace WindowsFormsApp1.Format_4
         {
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox1
             pictureBox1.Visible = true;
-            pictureBox1.Location = new Point(455, 223);
-            pictureBox1.Size = new Size(206, 108);
+            pictureBox1.Location = new Point(478, 275);
+            pictureBox1.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox2
             pictureBox2.Visible = true;
-            pictureBox2.Location = new Point(662, 223);
-            pictureBox2.Size = new Size(206, 108);
+            pictureBox2.Location = new Point(660, 275);
+            pictureBox2.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox3
             pictureBox3.Visible = true;
-            pictureBox3.Location = new Point(455, 337);
-            pictureBox3.Size = new Size(206, 108);
+            pictureBox3.Location = new Point(478, 406);
+            pictureBox3.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox4
             pictureBox4.Visible = true;
-            pictureBox4.Location = new Point(662, 337);
-            pictureBox4.Size = new Size(206, 108);
+            pictureBox4.Location = new Point(660, 406);
+            pictureBox4.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox5
             pictureBox5.Visible = true;
-            pictureBox5.Location = new Point(455, 450);
-            pictureBox5.Size = new Size(206, 108);
+            pictureBox5.Location = new Point(478, 537);
+            pictureBox5.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox6
             pictureBox6.Visible = true;
-            pictureBox6.Location = new Point(662, 450);
-            pictureBox6.Size = new Size(206, 108);
+            pictureBox6.Location = new Point(660, 537);
+            pictureBox6.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox7
             pictureBox7.Visible = true;
-            pictureBox7.Location = new Point(455, 564);
-            pictureBox7.Size = new Size(206, 108);
+            pictureBox7.Location = new Point(478, 668);
+            pictureBox7.Size = new Size(181, 130);
 
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox8
             pictureBox8.Visible = true;
-            pictureBox8.Location = new Point(662, 564);
-            pictureBox8.Size = new Size(206, 108);
+            pictureBox8.Location = new Point(660, 668);
+            pictureBox8.Size = new Size(181, 130);
 
 
             close1.Visible = true;
-            close1.Location = new Point(630, 229);
+            close1.Location = new Point(628, 281);
 
             close2.Visible = true;
-            close2.Location = new Point(837, 229);
+            close2.Location = new Point(810, 281);
 
             close3.Visible = true;
-            close3.Location = new Point(630, 343);
+            close3.Location = new Point(628, 412);
 
             close4.Visible = true;
-            close4.Location = new Point(837, 343);
+            close4.Location = new Point(810, 412);
 
             close5.Visible = true;
-            close5.Location = new Point(630, 456);
+            close5.Location = new Point(628, 543);
 
             close6.Visible = true;
-            close6.Location = new Point(837, 456);
+            close6.Location = new Point(810, 543);
 
             close7.Visible = true;
-            close7.Location = new Point(630, 570);
+            close7.Location = new Point(628, 674);
 
             close8.Visible = true;
-            close8.Location = new Point(837, 570);
+            close8.Location = new Point(810, 674);
 
             ClearImages();
 
@@ -2049,6 +2093,7 @@ namespace WindowsFormsApp1.Format_4
             public Control CloseControl { get; set; }
             public Control AddControl { get; set; }
         }
+         
 
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -2066,12 +2111,12 @@ namespace WindowsFormsApp1.Format_4
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
                 pictureBox9.Image = Image.FromFile(gastroImagePath);
-                pictureBox9.Location = new Point(705, 734);
+                pictureBox9.Location = new Point(757, 808);
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
                 pictureBox9.Image = Image.FromFile(colonImagePath);
-                pictureBox9.Location = new Point(580, 734);
+                pictureBox9.Location = new Point(615, 808);
             }
         }
 
@@ -2177,6 +2222,31 @@ namespace WindowsFormsApp1.Format_4
 
             //buttobDeleteFalse();
             pictureBox9.Image = null;
+
+            falseAll();
+
+            button4.PerformClick();
+        }
+
+        private void falseAll()
+        {
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+
+            close1.Visible = false;
+            close2.Visible = false;
+            close3.Visible = false;
+            close4.Visible = false;
+            close5.Visible = false;
+            close6.Visible = false;
+            close7.Visible = false;
+            close8.Visible = false; 
         }
 
         private void LoadAndSetValues()

@@ -118,9 +118,30 @@ namespace WindowsFormsApp1
 
             _instance = this;
 
-            // Set default crop area (example values)
-            SetCropRectangle(0, 0, 1460, 1080); // Set your custom values here 
+
+            SetCropRectangle(-10, 0, 1465, 1200);
+            //SetCropRectangle(310, 36, 1300, 1010);
+
+
+            //videoSourcePlayer.Paint += VideoSourcePlayer_Paint;
+
         }
+
+        //private void VideoSourcePlayer_Paint(object sender, PaintEventArgs e)
+        //{
+        //    // Tentukan ukuran kotak
+        //    int boxWidth = 100;
+        //    int boxHeight = 100;
+        //    int boxX = 50; // Posisi X
+        //    int boxY = 50; // Posisi Y
+
+        //    // Buat pena untuk menggambar kotak
+        //    using (Pen pen = new Pen(Color.Red, 2)) // Warna merah dengan ketebalan 2px
+        //    {
+        //        // Gambar kotak di dalam VideoSourcePlayer
+        //        e.Graphics.DrawRectangle(pen, boxX, boxY, boxWidth, boxHeight);
+        //    }
+        //}
 
         private void SetCropRectangle(int x, int y, int width, int height)
         {
@@ -1191,8 +1212,8 @@ namespace WindowsFormsApp1
                 pictureBox1.Image.Save(imageFilePath, ImageFormat.Bmp);
 
                 // Define the target resolution (e.g., same as video resolution)
-                int targetWidth = 1920; // Replace with the actual width of your video
-                int targetHeight = 1080; // Replace with the actual height of your video
+                int targetWidth = 1058; // Replace with the actual width of your video
+                int targetHeight = 797; // Replace with the actual height of your video
 
                 using (var originalImage = System.Drawing.Image.FromFile(imageFilePath))
                 {
@@ -1441,9 +1462,65 @@ namespace WindowsFormsApp1
                 // Save the image as BMP
                 pictureBox1.Image.Save(imageFilePath, ImageFormat.Bmp);
 
+                //// Define the target resolution (e.g., same as video resolution)
+                //int targetWidth = 1315; // Replace with the actual width of your video
+                //int targetHeight = 748; // Replace with the actual height of your video
+
+                //using (var originalImage = System.Drawing.Image.FromFile(imageFilePath))
+                //{
+                //    // Ensure crop rectangle is within the bounds of the original image
+                //    Rectangle validCropRectangle = new Rectangle(
+                //        Math.Max(0, cropRectangle.X),
+                //        Math.Max(0, cropRectangle.Y),
+                //        Math.Min(cropRectangle.Width, originalImage.Width - cropRectangle.X),
+                //        Math.Min(cropRectangle.Height, originalImage.Height - cropRectangle.Y)
+                //    );
+
+                //    using (var croppedBitmap = new Bitmap(validCropRectangle.Width, validCropRectangle.Height))
+                //    using (Graphics graphics = Graphics.FromImage(croppedBitmap))
+                //    {
+                //        graphics.DrawImage(originalImage, new Rectangle(0, 0, validCropRectangle.Width, validCropRectangle.Height),
+                //                            validCropRectangle, GraphicsUnit.Pixel);
+
+                //        // Calculate the cropping rectangle to fit the target resolution
+                //        float ratioX = (float)targetWidth / croppedBitmap.Width;
+                //        float ratioY = (float)targetHeight / croppedBitmap.Height;
+                //        float ratio = Math.Max(ratioX, ratioY); // Choose the larger ratio to fill the target size
+
+                //        int newWidth = (int)(croppedBitmap.Width * ratio);
+                //        int newHeight = (int)(croppedBitmap.Height * ratio);
+
+                //        int xOffset = (newWidth - targetWidth) / 2;
+                //        int yOffset = (newHeight - targetHeight) / 2;
+
+                //        using (var resizedBitmap = new Bitmap(targetWidth, targetHeight))
+                //        using (Graphics resizeGraphics = Graphics.FromImage(resizedBitmap))
+                //        {
+                //            resizeGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                //            resizeGraphics.DrawImage(croppedBitmap, -xOffset, -yOffset, newWidth, newHeight);
+
+                //            // Optionally add text to the resized image
+                //            using (Font arialFont = new Font("Arial", 15))
+                //            {
+                //                //resizeGraphics.DrawString(tanggalHari, arialFont, Brushes.White, new PointF(30f, 25f));
+                //                //resizeGraphics.DrawString(Name, arialFont, Brushes.White, new PointF(1550f, 25f));
+                //                //resizeGraphics.DrawString(action1, arialFont, Brushes.White, new PointF(1550f, 50f));
+                //            }
+
+                //            // Save the resized image as JPG
+                //            resizedBitmap.Save(imageFilePathJPG, ImageFormat.Jpeg);
+                //        }
+                //    }
+                //}
+                //// Hapus file BMP setelah menyimpan JPEG
+                //File.Delete(imageFilePath);
+
+                //AddImageToFlowLayoutPanel(imageFilePathJPG);
+                //btn_Capture.BackColor = Color.FromArgb(0, 107, 150);
+
                 // Define the target resolution (e.g., same as video resolution)
-                int targetWidth = 1920; // Replace with the actual width of your video
-                int targetHeight = 1080; // Replace with the actual height of your video
+                int targetWidth = 1058; // Replace with the actual width of your video
+                int targetHeight = 797; // Replace with the actual height of your video
 
                 using (var originalImage = System.Drawing.Image.FromFile(imageFilePath))
                 {

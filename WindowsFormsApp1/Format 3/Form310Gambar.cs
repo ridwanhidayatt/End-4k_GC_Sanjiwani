@@ -56,33 +56,33 @@ namespace WindowsFormsApp1.Format_3
             comboBox2.KeyPress += new KeyPressEventHandler(ComboBox_KeyPress);
 
 
-            // Tambahkan item ke ComboBox
-            comboBox3.Items.Add("Gastrokopi");
-            comboBox3.Items.Add("Kolonoskopi");
+            //// Tambahkan item ke ComboBox
+            //comboBox3.Items.Add("Gastrokopi");
+            //comboBox3.Items.Add("Kolonoskopi");
 
-            // Event ketika item di ComboBox berubah
-            comboBox3.SelectedIndexChanged += ComboBox3_SelectedIndexChanged;
+            //// Event ketika item di ComboBox berubah
+            //comboBox3.SelectedIndexChanged += ComboBox3_SelectedIndexChanged;
 
 
         }
 
         private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Path gambar yang ingin Anda tampilkan
-            string gastroImagePath = @"D:\GLEndoscope\LogoKOP\aset-02.png";
-            string colonImagePath = @"D:\GLEndoscope\LogoKOP\aset-01.png";
+            //// Path gambar yang ingin Anda tampilkan
+            //string gastroImagePath = @"D:\GLEndoscope\LogoKOP\aset-02.png";
+            //string colonImagePath = @"D:\GLEndoscope\LogoKOP\aset-01.png";
 
-            // Cek item yang dipilih
-            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
-            {
-                pictureBox11.Image = Image.FromFile(gastroImagePath);
-                pictureBox11.Location = new Point(748, 787);
-            }
-            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
-            {
-                pictureBox11.Image = Image.FromFile(colonImagePath);
-                pictureBox11.Location = new Point(599, 787);
-            }
+            //// Cek item yang dipilih
+            //if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
+            //{
+            //    pictureBox11.Image = Image.FromFile(gastroImagePath);
+            //    pictureBox11.Location = new Point(748, 787);
+            //}
+            //else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
+            //{
+            //    pictureBox11.Image = Image.FromFile(colonImagePath);
+            //    pictureBox11.Location = new Point(599, 787);
+            //}
         }
 
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -373,10 +373,10 @@ namespace WindowsFormsApp1.Format_3
                             Image image = Image.FromFile(file);
                             PictureBox thumbnail = new PictureBox
                             {
-                                Image = ResizeImage(image, 271, 134),
+                                Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(255, 134),
-                                Margin = new Padding(5),
+                                Size = new Size(290, 219),
+                                Margin = new Padding(2),
                                 Tag = file
                             };
 
@@ -488,10 +488,10 @@ namespace WindowsFormsApp1.Format_3
                             Image image = Image.FromFile(file);
                             PictureBox thumbnail = new PictureBox
                             {
-                                Image = ResizeImage(image, 271, 134),
+                                Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(255, 134),
-                                Margin = new Padding(5),
+                                Size = new Size(290, 219),
+                                Margin = new Padding(2),
                                 Tag = file
                             };
 
@@ -1213,24 +1213,24 @@ namespace WindowsFormsApp1.Format_3
             e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
-            e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 225, 215, 21);
             e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
             //e.Graphics.DrawRectangle(redPen, 135, 250, 627, 21);
-            e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 250, 215, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
-            e.Graphics.DrawImage(pictureBox1.Image, 270, 275, 252, 135);
-            e.Graphics.DrawImage(pictureBox2.Image, 524, 275, 252, 135);
-            e.Graphics.DrawImage(pictureBox3.Image, 270, 412, 252, 135);
-            e.Graphics.DrawImage(pictureBox4.Image, 524, 412, 252, 135);
-            e.Graphics.DrawImage(pictureBox5.Image, 270, 549, 252, 135);
-            e.Graphics.DrawImage(pictureBox6.Image, 524, 549, 252, 135);
-            e.Graphics.DrawImage(pictureBox7.Image, 270, 686, 252, 135);
-            e.Graphics.DrawImage(pictureBox8.Image, 524, 686, 252, 135);
-            e.Graphics.DrawImage(pictureBox9.Image, 270, 823, 252, 135);
-            e.Graphics.DrawImage(pictureBox10.Image, 524, 823, 252, 135);
+            e.Graphics.DrawImage(pictureBox1.Image, 355, 224, 209, 157);
+            e.Graphics.DrawImage(pictureBox2.Image, 566, 224, 209, 157);
+            e.Graphics.DrawImage(pictureBox3.Image, 355, 383, 209, 157);
+            e.Graphics.DrawImage(pictureBox4.Image, 566, 383, 209, 157);
+            e.Graphics.DrawImage(pictureBox5.Image, 355, 542, 209, 157);
+            e.Graphics.DrawImage(pictureBox6.Image, 566, 542, 209, 157);
+            e.Graphics.DrawImage(pictureBox7.Image, 355, 701, 209, 157);
+            e.Graphics.DrawImage(pictureBox8.Image, 566, 701, 209, 157);
+            e.Graphics.DrawImage(pictureBox9.Image, 355, 860, 209, 157);
+            e.Graphics.DrawImage(pictureBox10.Image, 566, 860, 209, 157);
 
-            e.Graphics.DrawRectangle(redPen, 30, 275, 237, 378);
+            e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
             e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
             //string combinedText = richTextBox1.Text;
             //string hasil = AddNewlinesIfTooLong(combinedText, 34);
@@ -1259,14 +1259,14 @@ namespace WindowsFormsApp1.Format_3
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
             e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 295, printWidth, printHeight));
 
-            e.Graphics.DrawRectangle(redPen, 30, 658, 237, 177);
+            e.Graphics.DrawRectangle(redPen, 30, 658, 320, 177);
             e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659);
             //string combinedText1 = richTextBox2.Text;
             //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
             //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 504);
 
             // Ukuran area cetak
-            float printWidthKesimpulan = 237;
+            float printWidthKesimpulan = 320;
             float printHeightKesimpulan = 142;
 
             // Inisialisasi ukuran font awal
@@ -1297,7 +1297,7 @@ namespace WindowsFormsApp1.Format_3
 
 
 
-            e.Graphics.DrawRectangle(redPen, 30, 840, 237, 177);
+            e.Graphics.DrawRectangle(redPen, 30, 840, 320, 177);
             e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 841);
             //string combinedText2 = richTextBox3.Text;
             //string saran = AddNewlinesIfTooLong(combinedText2, 34);
@@ -1305,7 +1305,7 @@ namespace WindowsFormsApp1.Format_3
 
 
             // Ukuran area cetak
-            float printWidthSaran = 237;
+            float printWidthSaran = 320;
             float printHeightSaran = 142;
 
             // Inisialisasi ukuran font awal
@@ -1330,14 +1330,14 @@ namespace WindowsFormsApp1.Format_3
 
 
 
-            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
-            {
-                e.Graphics.DrawImage(pictureBox11.Image, 631, 990, 159, 159);
-            }
-            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
-            {
-                e.Graphics.DrawImage(pictureBox11.Image, 445, 990, 159, 159); 
-            }
+            //if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
+            //{
+            //    e.Graphics.DrawImage(pictureBox11.Image, 631, 990, 159, 159);
+            //}
+            //else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
+            //{
+            //    e.Graphics.DrawImage(pictureBox11.Image, 504, 990, 159, 159); 
+            //}
 
 
 
@@ -1491,10 +1491,10 @@ namespace WindowsFormsApp1.Format_3
             e.Graphics.DrawRectangle(redPen, 30, 225, 100, 46);
             e.Graphics.DrawString(" Obat \r\n Premedikasi", new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 227);
 
-            e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 225, 215, 21);
             e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
             //e.Graphics.DrawRectangle(redPen, 135, 250, 627, 21);
-            e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
+            e.Graphics.DrawRectangle(redPen, 135, 250, 215, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
 
@@ -1522,20 +1522,23 @@ namespace WindowsFormsApp1.Format_3
             ia.ClearColorMatrix();
             ia.SetColorMatrix(new ColorMatrix(ptsarray), ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
             ia.SetGamma(gamma, ColorAdjustType.Bitmap);
-            e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(270, 275, 252, 135), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(524, 275, 252, 135), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(270, 412, 252, 135), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(524, 412, 252, 135), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(270, 549, 252, 135), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(524, 549, 252, 135), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(270, 686, 252, 135), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(524, 686, 252, 135), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox9.Image, new Rectangle(270, 823, 252, 135), 0, 0, pictureBox9.Image.Width, pictureBox9.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox10.Image, new Rectangle(524, 823, 252, 135), 0, 0, pictureBox10.Image.Width, pictureBox10.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 224, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(566, 224, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(355, 383, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(566, 383, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(355, 542, 209, 157), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(566, 542, 209, 157), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(355, 701, 209, 157), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(566, 701, 209, 157), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox9.Image, new Rectangle(355, 860, 209, 157), 0, 0, pictureBox9.Image.Width, pictureBox9.Image.Height, GraphicsUnit.Pixel, ia);
+            e.Graphics.DrawImage(pictureBox10.Image, new Rectangle(566, 860, 209, 157), 0, 0, pictureBox10.Image.Width, pictureBox10.Image.Height, GraphicsUnit.Pixel, ia);
             ia.Dispose();
 
-            e.Graphics.DrawRectangle(redPen, 30, 275, 237, 378);
-            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276); 
+            e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
+            e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
+            //string combinedText = richTextBox1.Text;
+            //string hasil = AddNewlinesIfTooLong(combinedText, 34);
+            //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
             // Ukuran area cetak
             float printWidth = 237;
@@ -1560,11 +1563,14 @@ namespace WindowsFormsApp1.Format_3
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
             e.Graphics.DrawString(text, font, Brushes.Black, new RectangleF(30, 295, printWidth, printHeight));
 
-            e.Graphics.DrawRectangle(redPen, 30, 658, 237, 177);
-            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659); 
+            e.Graphics.DrawRectangle(redPen, 30, 658, 320, 177);
+            e.Graphics.DrawString("KESIMPULAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 659);
+            //string combinedText1 = richTextBox2.Text;
+            //string kesimpulan = AddNewlinesIfTooLong(combinedText1, 34);
+            //e.Graphics.DrawString(kesimpulan, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 504);
 
             // Ukuran area cetak
-            float printWidthKesimpulan = 237;
+            float printWidthKesimpulan = 320;
             float printHeightKesimpulan = 142;
 
             // Inisialisasi ukuran font awal
@@ -1586,11 +1592,24 @@ namespace WindowsFormsApp1.Format_3
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
             e.Graphics.DrawString(textKesimpulan, fontKesimpulan, Brushes.Black, new RectangleF(30, 678, printWidthKesimpulan, printHeightKesimpulan));
 
-            e.Graphics.DrawRectangle(redPen, 30, 840, 237, 177);
+
+
+
+
+
+
+
+
+
+            e.Graphics.DrawRectangle(redPen, 30, 840, 320, 177);
             e.Graphics.DrawString("SARAN", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 841);
+            //string combinedText2 = richTextBox3.Text;
+            //string saran = AddNewlinesIfTooLong(combinedText2, 34);
+            //e.Graphics.DrawString(saran, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 695);
+
 
             // Ukuran area cetak
-            float printWidthSaran = 237;
+            float printWidthSaran = 320;
             float printHeightSaran = 142;
 
             // Inisialisasi ukuran font awal
@@ -1612,14 +1631,23 @@ namespace WindowsFormsApp1.Format_3
             // Cetak teks di area yang ditentukan dengan ukuran font yang sesuai
             e.Graphics.DrawString(textSaran, fontSaran, Brushes.Black, new RectangleF(30, 860, printWidthSaran, printHeightSaran));
 
-            if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
-            {
-                e.Graphics.DrawImage(pictureBox11.Image, 631, 990, 159, 159);
-            }
-            else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
-            {
-                e.Graphics.DrawImage(pictureBox11.Image, 445, 990, 159, 159);
-            }
+
+
+
+            //if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
+            //{
+            //    e.Graphics.DrawImage(pictureBox11.Image, 631, 990, 159, 159);
+            //}
+            //else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
+            //{
+            //    e.Graphics.DrawImage(pictureBox11.Image, 504, 990, 159, 159); 
+            //}
+
+
+
+
+
+
 
             e.Graphics.DrawString(labelLokTgl.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1021, SF1);
             e.Graphics.DrawString(label30.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 150, 1035, SF1);
