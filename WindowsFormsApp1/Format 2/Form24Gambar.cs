@@ -1471,6 +1471,22 @@ namespace WindowsFormsApp1.Format_2
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (panel1.BorderStyle == BorderStyle.FixedSingle)
+            {
+                int thickness = 2;//it's up to you
+                int halfThickness = thickness / 2;
+                using (Pen p = new Pen(Color.Black, thickness))
+                {
+                    e.Graphics.DrawRectangle(p, new System.Drawing.Rectangle(halfThickness,
+                                                              halfThickness,
+                                                              panel1.ClientSize.Width - thickness,
+                                                              panel1.ClientSize.Height - thickness));
+                }
+            }
+        }
+
         private void button12_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.icon;

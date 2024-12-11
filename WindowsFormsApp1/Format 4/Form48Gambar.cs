@@ -684,7 +684,7 @@ namespace WindowsFormsApp1.Format_4
                         {
                             Image = ResizeImage(image, 1058, 797),
                             SizeMode = PictureBoxSizeMode.StretchImage,
-                            Size = new Size(290, 219),
+                            Size = new Size(293, 219),
                             Margin = new Padding(2),
                             Tag = file
                         };
@@ -2093,7 +2093,22 @@ namespace WindowsFormsApp1.Format_4
             public Control CloseControl { get; set; }
             public Control AddControl { get; set; }
         }
-         
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (panel1.BorderStyle == BorderStyle.FixedSingle)
+            {
+                int thickness = 2;//it's up to you
+                int halfThickness = thickness / 2;
+                using (Pen p = new Pen(Color.Black, thickness))
+                {
+                    e.Graphics.DrawRectangle(p, new System.Drawing.Rectangle(halfThickness,
+                                                              halfThickness,
+                                                              panel1.ClientSize.Width - thickness,
+                                                              panel1.ClientSize.Height - thickness));
+                }
+            }
+        }
 
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -2111,12 +2126,12 @@ namespace WindowsFormsApp1.Format_4
             if (comboBox3.SelectedItem.ToString() == "Gastrokopi")
             {
                 pictureBox9.Image = Image.FromFile(gastroImagePath);
-                pictureBox9.Location = new Point(757, 808);
+                pictureBox9.Location = new Point(757, 804);
             }
             else if (comboBox3.SelectedItem.ToString() == "Kolonoskopi")
             {
                 pictureBox9.Image = Image.FromFile(colonImagePath);
-                pictureBox9.Location = new Point(615, 808);
+                pictureBox9.Location = new Point(615, 804);
             }
         }
 
@@ -2318,7 +2333,7 @@ namespace WindowsFormsApp1.Format_4
                     {
                         picLogo1.Size = new Size(150, 100);
                         picLogo2.Size = new Size(150, 100);
-                        picLogo2.Location = new Point(705, 5);
+                        picLogo2.Location = new Point(717, 5);
 
                         richTextBoxNRS.Size = new Size(544, 20);
                         richTextBoxBE.Size = new Size(544, 20);

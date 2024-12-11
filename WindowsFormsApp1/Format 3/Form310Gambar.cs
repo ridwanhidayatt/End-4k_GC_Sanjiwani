@@ -375,7 +375,7 @@ namespace WindowsFormsApp1.Format_3
                             {
                                 Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(290, 219),
+                                Size = new Size(222, 153),
                                 Margin = new Padding(2),
                                 Tag = file
                             };
@@ -490,7 +490,8 @@ namespace WindowsFormsApp1.Format_3
                             {
                                 Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(290, 219),
+                                //Size = new Size(281, 212),
+                                Size = new Size(222, 153),
                                 Margin = new Padding(2),
                                 Tag = file
                             };
@@ -814,17 +815,18 @@ namespace WindowsFormsApp1.Format_3
                     {
                         picLogo1.Size = new Size(100, 100);
                         picLogo2.Size = new Size(100, 100);
+                        picLogo2.Location = new Point(738, 5);
 
-                        richTextBoxNRS.Size = new Size(644, 20);
+                        richTextBoxNRS.Size = new Size(570, 20);
                         richTextBoxNRS.Location = new Point(109, 12);
 
-                        richTextBoxBE.Size = new Size(644, 20);
+                        richTextBoxBE.Size = new Size(570, 20);
                         richTextBoxBE.Location = new Point(109, 34);
 
-                        richTextBoxJalan.Size = new Size(644, 18);
+                        richTextBoxJalan.Size = new Size(570, 18);
                         richTextBoxJalan.Location = new Point(109, 55);
 
-                        richTextBoxEmail.Size = new Size(644, 18);
+                        richTextBoxEmail.Size = new Size(570, 18);
                         richTextBoxEmail.Location = new Point(109, 71);
 
                         //label1.Size = new Size(538, 23);
@@ -837,12 +839,12 @@ namespace WindowsFormsApp1.Format_3
                     {
                         picLogo1.Size = new Size(150, 100);
                         picLogo2.Size = new Size(150, 100);
-                        picLogo2.Location = new Point(705, 5);
+                        picLogo2.Location = new Point(686, 5);
 
-                        richTextBoxNRS.Size = new Size(544, 20);
-                        richTextBoxBE.Size = new Size(544, 20);
-                        richTextBoxJalan.Size = new Size(544, 18);
-                        richTextBoxEmail.Size = new Size(544, 18);
+                        richTextBoxNRS.Size = new Size(521, 20);
+                        richTextBoxBE.Size = new Size(521, 20);
+                        richTextBoxJalan.Size = new Size(521, 18);
+                        richTextBoxEmail.Size = new Size(521, 18);
 
                         richTextBoxNRS.Location = new Point(159, 12);
                         richTextBoxBE.Location = new Point(159, 34);
@@ -1237,8 +1239,8 @@ namespace WindowsFormsApp1.Format_3
             //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
             // Ukuran area cetak
-            float printWidth = 237;
-            float printHeight = 343;
+            float printWidth = 320;
+            float printHeight = 375;
 
             // Inisialisasi ukuran font awal
             float fontSize = 9; // Ukuran font awal, bisa disesuaikan
@@ -1267,7 +1269,7 @@ namespace WindowsFormsApp1.Format_3
 
             // Ukuran area cetak
             float printWidthKesimpulan = 320;
-            float printHeightKesimpulan = 142;
+            float printHeightKesimpulan = 177;
 
             // Inisialisasi ukuran font awal
             float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
@@ -1306,7 +1308,7 @@ namespace WindowsFormsApp1.Format_3
 
             // Ukuran area cetak
             float printWidthSaran = 320;
-            float printHeightSaran = 142;
+            float printHeightSaran = 177;
 
             // Inisialisasi ukuran font awal
             float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
@@ -1541,8 +1543,8 @@ namespace WindowsFormsApp1.Format_3
             //e.Graphics.DrawString(hasil, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 30, 313);
 
             // Ukuran area cetak
-            float printWidth = 237;
-            float printHeight = 343;
+            float printWidth = 320;
+            float printHeight = 375;
 
             // Inisialisasi ukuran font awal
             float fontSize = 9; // Ukuran font awal, bisa disesuaikan
@@ -1571,7 +1573,7 @@ namespace WindowsFormsApp1.Format_3
 
             // Ukuran area cetak
             float printWidthKesimpulan = 320;
-            float printHeightKesimpulan = 142;
+            float printHeightKesimpulan = 177;
 
             // Inisialisasi ukuran font awal
             float fontSizeKesimpulan = 9; // Ukuran font awal, bisa disesuaikan
@@ -1610,7 +1612,7 @@ namespace WindowsFormsApp1.Format_3
 
             // Ukuran area cetak
             float printWidthSaran = 320;
-            float printHeightSaran = 142;
+            float printHeightSaran = 177;
 
             // Inisialisasi ukuran font awal
             float fontSizeSaran = 9; // Ukuran font awal, bisa disesuaikan
@@ -1807,6 +1809,38 @@ namespace WindowsFormsApp1.Format_3
               SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern Boolean SetDefaultPrinter(String name);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (panel1.BorderStyle == BorderStyle.FixedSingle)
+            {
+                int thickness = 2;//it's up to you
+                int halfThickness = thickness / 2;
+                using (Pen p = new Pen(Color.Black, thickness))
+                {
+                    e.Graphics.DrawRectangle(p, new System.Drawing.Rectangle(halfThickness,
+                                                              halfThickness,
+                                                              panel1.ClientSize.Width - thickness,
+                                                              panel1.ClientSize.Height - thickness));
+                }
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            //if (panel2.BorderStyle == BorderStyle.FixedSingle)
+            //{
+            //    int thickness = 2;//it's up to you
+            //    int halfThickness = thickness / 2;
+            //    using (Pen p = new Pen(Color.Black, thickness))
+            //    {
+            //        e.Graphics.DrawRectangle(p, new System.Drawing.Rectangle(halfThickness,
+            //                                                  halfThickness,
+            //                                                  panel2.ClientSize.Width - thickness,
+            //                                                  panel2.ClientSize.Height - thickness));
+            //    }
+            //}
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
