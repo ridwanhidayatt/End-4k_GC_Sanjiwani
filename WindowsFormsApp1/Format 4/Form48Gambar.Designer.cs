@@ -128,7 +128,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1224, 917);
+            this.comboBox1.Location = new System.Drawing.Point(1194, 922);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(280, 24);
             this.comboBox1.TabIndex = 90;
@@ -143,13 +143,14 @@
             this.buttonExportPdf.ForeColor = System.Drawing.Color.White;
             this.buttonExportPdf.Image = ((System.Drawing.Image)(resources.GetObject("buttonExportPdf.Image")));
             this.buttonExportPdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExportPdf.Location = new System.Drawing.Point(624, 917);
+            this.buttonExportPdf.Location = new System.Drawing.Point(654, 924);
             this.buttonExportPdf.Name = "buttonExportPdf";
             this.buttonExportPdf.Size = new System.Drawing.Size(136, 36);
             this.buttonExportPdf.TabIndex = 92;
             this.buttonExportPdf.Text = "       Ekspor PDF";
             this.buttonExportPdf.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExportPdf.UseVisualStyleBackColor = false;
+            this.buttonExportPdf.Click += new System.EventHandler(this.buttonExportPdf_Click);
             // 
             // buttonCancel
             // 
@@ -158,7 +159,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(1226, 949);
+            this.buttonCancel.Location = new System.Drawing.Point(1196, 950);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(136, 36);
             this.buttonCancel.TabIndex = 91;
@@ -169,7 +170,7 @@
             // cbx_now
             // 
             this.cbx_now.FormattingEnabled = true;
-            this.cbx_now.Location = new System.Drawing.Point(411, 13);
+            this.cbx_now.Location = new System.Drawing.Point(439, 4);
             this.cbx_now.Name = "cbx_now";
             this.cbx_now.Size = new System.Drawing.Size(209, 21);
             this.cbx_now.TabIndex = 107;
@@ -178,15 +179,15 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 34);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 25);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(617, 427);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(645, 435);
             this.flowLayoutPanel2.TabIndex = 106;
             // 
             // cbx_baru
             // 
             this.cbx_baru.FormattingEnabled = true;
-            this.cbx_baru.Location = new System.Drawing.Point(411, 462);
+            this.cbx_baru.Location = new System.Drawing.Point(439, 460);
             this.cbx_baru.Name = "cbx_baru";
             this.cbx_baru.Size = new System.Drawing.Size(209, 21);
             this.cbx_baru.TabIndex = 105;
@@ -195,15 +196,15 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 483);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 481);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(617, 428);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(645, 435);
             this.flowLayoutPanel1.TabIndex = 102;
             // 
             // richTextBox4
             // 
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Location = new System.Drawing.Point(507, 197);
+            this.richTextBox4.Location = new System.Drawing.Point(480, 196);
             this.richTextBox4.MaxLength = 55;
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -219,14 +220,14 @@
             this.richTextBoxEmail.Location = new System.Drawing.Point(113, 89);
             this.richTextBoxEmail.Name = "richTextBoxEmail";
             this.richTextBoxEmail.ReadOnly = true;
-            this.richTextBoxEmail.Size = new System.Drawing.Size(644, 20);
+            this.richTextBoxEmail.Size = new System.Drawing.Size(624, 20);
             this.richTextBoxEmail.TabIndex = 170;
             this.richTextBoxEmail.Text = "Email : xxxxxx          Website : xxxxx";
             // 
             // picLogo2
             // 
             this.picLogo2.BackColor = System.Drawing.Color.White;
-            this.picLogo2.Location = new System.Drawing.Point(770, 9);
+            this.picLogo2.Location = new System.Drawing.Point(743, 9);
             this.picLogo2.Name = "picLogo2";
             this.picLogo2.Size = new System.Drawing.Size(100, 100);
             this.picLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +241,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Default",
             "Adjust Brightness"});
-            this.comboBox2.Location = new System.Drawing.Point(1088, 917);
+            this.comboBox2.Location = new System.Drawing.Point(1058, 922);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(130, 24);
             this.comboBox2.TabIndex = 93;
@@ -255,7 +256,7 @@
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
             this.buttonPrint.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrint.Image")));
             this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPrint.Location = new System.Drawing.Point(1368, 949);
+            this.buttonPrint.Location = new System.Drawing.Point(1338, 950);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(136, 36);
             this.buttonPrint.TabIndex = 89;
@@ -294,7 +295,7 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1508, 177);
+            this.button4.Location = new System.Drawing.Point(1508, 169);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 185;
@@ -305,7 +306,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1508, 123);
+            this.button3.Location = new System.Drawing.Point(1508, 115);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 184;
@@ -316,7 +317,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1508, 69);
+            this.button2.Location = new System.Drawing.Point(1508, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 183;
@@ -327,7 +328,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1508, 13);
+            this.button1.Location = new System.Drawing.Point(1508, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 182;
@@ -338,7 +339,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(952, 917);
+            this.comboBox3.Location = new System.Drawing.Point(922, 922);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(130, 24);
             this.comboBox3.TabIndex = 175;
@@ -358,7 +359,6 @@
             this.panel2.Controls.Add(this.close2);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.richTextBox4);
-            this.panel2.Controls.Add(this.richTextBoxEmail);
             this.panel2.Controls.Add(this.picLogo2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.richTextBox3);
@@ -398,16 +398,17 @@
             this.panel2.Controls.Add(this.richTextBoxNRS);
             this.panel2.Controls.Add(this.labelLokTgl);
             this.panel2.Controls.Add(this.picLogo1);
-            this.panel2.Location = new System.Drawing.Point(624, 13);
+            this.panel2.Controls.Add(this.richTextBoxEmail);
+            this.panel2.Location = new System.Drawing.Point(654, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(880, 898);
+            this.panel2.Size = new System.Drawing.Size(850, 913);
             this.panel2.TabIndex = 39;
             // 
             // close7
             // 
             this.close7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close7.Image = ((System.Drawing.Image)(resources.GetObject("close7.Image")));
-            this.close7.Location = new System.Drawing.Point(660, 674);
+            this.close7.Location = new System.Drawing.Point(633, 679);
             this.close7.Name = "close7";
             this.close7.Size = new System.Drawing.Size(25, 25);
             this.close7.TabIndex = 194;
@@ -418,7 +419,7 @@
             // 
             this.close8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close8.Image = ((System.Drawing.Image)(resources.GetObject("close8.Image")));
-            this.close8.Location = new System.Drawing.Point(842, 674);
+            this.close8.Location = new System.Drawing.Point(815, 679);
             this.close8.Name = "close8";
             this.close8.Size = new System.Drawing.Size(25, 25);
             this.close8.TabIndex = 193;
@@ -429,7 +430,7 @@
             // 
             this.close5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close5.Image = ((System.Drawing.Image)(resources.GetObject("close5.Image")));
-            this.close5.Location = new System.Drawing.Point(657, 543);
+            this.close5.Location = new System.Drawing.Point(630, 548);
             this.close5.Name = "close5";
             this.close5.Size = new System.Drawing.Size(25, 25);
             this.close5.TabIndex = 192;
@@ -440,7 +441,7 @@
             // 
             this.close6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close6.Image = ((System.Drawing.Image)(resources.GetObject("close6.Image")));
-            this.close6.Location = new System.Drawing.Point(839, 543);
+            this.close6.Location = new System.Drawing.Point(812, 548);
             this.close6.Name = "close6";
             this.close6.Size = new System.Drawing.Size(25, 25);
             this.close6.TabIndex = 191;
@@ -451,7 +452,7 @@
             // 
             this.close3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close3.Image = ((System.Drawing.Image)(resources.GetObject("close3.Image")));
-            this.close3.Location = new System.Drawing.Point(657, 412);
+            this.close3.Location = new System.Drawing.Point(630, 417);
             this.close3.Name = "close3";
             this.close3.Size = new System.Drawing.Size(25, 25);
             this.close3.TabIndex = 190;
@@ -462,7 +463,7 @@
             // 
             this.close4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close4.Image = ((System.Drawing.Image)(resources.GetObject("close4.Image")));
-            this.close4.Location = new System.Drawing.Point(839, 412);
+            this.close4.Location = new System.Drawing.Point(812, 417);
             this.close4.Name = "close4";
             this.close4.Size = new System.Drawing.Size(25, 25);
             this.close4.TabIndex = 189;
@@ -473,7 +474,7 @@
             // 
             this.close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close1.Image = ((System.Drawing.Image)(resources.GetObject("close1.Image")));
-            this.close1.Location = new System.Drawing.Point(657, 281);
+            this.close1.Location = new System.Drawing.Point(630, 286);
             this.close1.Name = "close1";
             this.close1.Size = new System.Drawing.Size(25, 25);
             this.close1.TabIndex = 188;
@@ -484,7 +485,7 @@
             // 
             this.close2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close2.Image = ((System.Drawing.Image)(resources.GetObject("close2.Image")));
-            this.close2.Location = new System.Drawing.Point(839, 281);
+            this.close2.Location = new System.Drawing.Point(812, 286);
             this.close2.Name = "close2";
             this.close2.Size = new System.Drawing.Size(25, 25);
             this.close2.TabIndex = 187;
@@ -495,7 +496,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.White;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(755, 804);
+            this.pictureBox9.Location = new System.Drawing.Point(716, 809);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(83, 83);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -518,7 +519,7 @@
             this.richTextBox3.Location = new System.Drawing.Point(9, 649);
             this.richTextBox3.MaxLength = 9999;
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(485, 105);
+            this.richTextBox3.Size = new System.Drawing.Size(465, 105);
             this.richTextBox3.TabIndex = 165;
             this.richTextBox3.Text = "";
             // 
@@ -538,7 +539,7 @@
             this.richTextBox2.Location = new System.Drawing.Point(7, 521);
             this.richTextBox2.MaxLength = 9999;
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(487, 105);
+            this.richTextBox2.Size = new System.Drawing.Size(467, 105);
             this.richTextBox2.TabIndex = 163;
             this.richTextBox2.Text = "";
             // 
@@ -546,7 +547,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(689, 537);
+            this.pictureBox6.Location = new System.Drawing.Point(662, 542);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(181, 130);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -557,7 +558,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.White;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Location = new System.Drawing.Point(689, 668);
+            this.pictureBox8.Location = new System.Drawing.Point(662, 673);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(181, 130);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -568,7 +569,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(507, 537);
+            this.pictureBox5.Location = new System.Drawing.Point(480, 542);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(181, 130);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -579,7 +580,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(507, 668);
+            this.pictureBox7.Location = new System.Drawing.Point(480, 673);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(181, 130);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -590,7 +591,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(689, 406);
+            this.pictureBox4.Location = new System.Drawing.Point(662, 411);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 130);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -601,7 +602,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(507, 406);
+            this.pictureBox3.Location = new System.Drawing.Point(480, 411);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(181, 130);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -612,7 +613,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(689, 275);
+            this.pictureBox2.Location = new System.Drawing.Point(662, 280);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(181, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -623,7 +624,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(507, 274);
+            this.pictureBox1.Location = new System.Drawing.Point(480, 279);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -646,7 +647,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(7, 297);
             this.richTextBox1.MaxLength = 9999;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(487, 203);
+            this.richTextBox1.Size = new System.Drawing.Size(467, 203);
             this.richTextBox1.TabIndex = 151;
             this.richTextBox1.Text = "";
             // 
@@ -654,27 +655,27 @@
             // 
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(113, 247);
+            this.textBox19.Location = new System.Drawing.Point(104, 247);
             this.textBox19.MaxLength = 65;
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(757, 21);
+            this.textBox19.Size = new System.Drawing.Size(739, 21);
             this.textBox19.TabIndex = 150;
             // 
             // textBox18
             // 
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(113, 224);
+            this.textBox18.Location = new System.Drawing.Point(104, 224);
             this.textBox18.MaxLength = 65;
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(757, 21);
+            this.textBox18.Size = new System.Drawing.Size(739, 21);
             this.textBox18.TabIndex = 149;
             // 
             // textBox17
             // 
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(7, 224);
+            this.textBox17.Location = new System.Drawing.Point(3, 224);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(100, 44);
@@ -685,7 +686,7 @@
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(359, 174);
+            this.textBox16.Location = new System.Drawing.Point(339, 170);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(135, 21);
             this.textBox16.TabIndex = 147;
@@ -694,9 +695,9 @@
             // 
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(7, 199);
+            this.textBox14.Location = new System.Drawing.Point(3, 197);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(487, 21);
+            this.textBox14.Size = new System.Drawing.Size(471, 21);
             this.textBox14.TabIndex = 145;
             this.textBox14.Text = "Hasil Pemeriksaan";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -705,7 +706,7 @@
             // 
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(571, 174);
+            this.textBox13.Location = new System.Drawing.Point(544, 170);
             this.textBox13.MaxLength = 45;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(299, 21);
@@ -715,7 +716,7 @@
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(571, 147);
+            this.textBox12.Location = new System.Drawing.Point(544, 143);
             this.textBox12.MaxLength = 45;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(299, 21);
@@ -725,7 +726,7 @@
             // 
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(571, 120);
+            this.textBox11.Location = new System.Drawing.Point(544, 116);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(299, 21);
             this.textBox11.TabIndex = 142;
@@ -734,7 +735,7 @@
             // 
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(109, 174);
+            this.textBox10.Location = new System.Drawing.Point(89, 170);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(248, 21);
             this.textBox10.TabIndex = 141;
@@ -743,7 +744,7 @@
             // 
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(109, 147);
+            this.textBox9.Location = new System.Drawing.Point(89, 143);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(385, 21);
             this.textBox9.TabIndex = 140;
@@ -752,7 +753,7 @@
             // 
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(109, 120);
+            this.textBox8.Location = new System.Drawing.Point(89, 116);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(385, 21);
             this.textBox8.TabIndex = 139;
@@ -761,7 +762,7 @@
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(507, 174);
+            this.textBox7.Location = new System.Drawing.Point(480, 170);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(62, 21);
             this.textBox7.TabIndex = 138;
@@ -771,7 +772,7 @@
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(507, 147);
+            this.textBox6.Location = new System.Drawing.Point(480, 143);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(62, 21);
             this.textBox6.TabIndex = 137;
@@ -781,7 +782,7 @@
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(507, 120);
+            this.textBox5.Location = new System.Drawing.Point(480, 116);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(62, 21);
             this.textBox5.TabIndex = 136;
@@ -791,9 +792,9 @@
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(7, 174);
+            this.textBox4.Location = new System.Drawing.Point(3, 170);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
+            this.textBox4.Size = new System.Drawing.Size(84, 21);
             this.textBox4.TabIndex = 135;
             this.textBox4.Text = "Umur / JK";
             // 
@@ -801,9 +802,9 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(7, 147);
+            this.textBox3.Location = new System.Drawing.Point(3, 143);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.Size = new System.Drawing.Size(84, 21);
             this.textBox3.TabIndex = 134;
             this.textBox3.Text = "Nama Pasien";
             // 
@@ -811,9 +812,9 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 120);
+            this.textBox1.Location = new System.Drawing.Point(3, 116);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(84, 21);
             this.textBox1.TabIndex = 133;
             this.textBox1.Text = "No. RM";
             // 
@@ -836,7 +837,7 @@
             this.richTextBoxJalan.Location = new System.Drawing.Point(113, 69);
             this.richTextBoxJalan.Name = "richTextBoxJalan";
             this.richTextBoxJalan.ReadOnly = true;
-            this.richTextBoxJalan.Size = new System.Drawing.Size(644, 20);
+            this.richTextBoxJalan.Size = new System.Drawing.Size(624, 20);
             this.richTextBoxJalan.TabIndex = 131;
             this.richTextBoxJalan.Text = "Jl. xxxxx No. xxxxx";
             // 
@@ -848,7 +849,7 @@
             this.richTextBoxBE.Location = new System.Drawing.Point(113, 39);
             this.richTextBoxBE.Name = "richTextBoxBE";
             this.richTextBoxBE.ReadOnly = true;
-            this.richTextBoxBE.Size = new System.Drawing.Size(644, 30);
+            this.richTextBoxBE.Size = new System.Drawing.Size(624, 30);
             this.richTextBoxBE.TabIndex = 130;
             this.richTextBoxBE.Text = "BAGIAN ENDOSKOPI";
             // 
@@ -870,7 +871,7 @@
             this.richTextBoxNRS.Location = new System.Drawing.Point(113, 9);
             this.richTextBoxNRS.Name = "richTextBoxNRS";
             this.richTextBoxNRS.ReadOnly = true;
-            this.richTextBoxNRS.Size = new System.Drawing.Size(642, 37);
+            this.richTextBoxNRS.Size = new System.Drawing.Size(624, 37);
             this.richTextBoxNRS.TabIndex = 129;
             this.richTextBoxNRS.Text = "NAMA RUMAH SAKIT";
             // 

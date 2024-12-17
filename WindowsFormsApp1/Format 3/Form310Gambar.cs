@@ -1659,11 +1659,10 @@ namespace WindowsFormsApp1.Format_3
 
         private void buttonExportPdf_Click(object sender, EventArgs e)
         {
-            // Validasi: Periksa apakah semua PictureBox memiliki gambar
             if (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null ||
-                pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null ||
-                pictureBox7.Image == null || pictureBox8.Image == null || pictureBox9.Image == null ||
-                pictureBox10.Image == null)
+               pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null ||
+               pictureBox7.Image == null || pictureBox8.Image == null || pictureBox9.Image == null ||
+               pictureBox10.Image == null)
             {
                 // Tampilkan pesan peringatan jika ada PictureBox yang belum diisi
                 MessageBox.Show("Semua gambar harus terisi", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1716,34 +1715,7 @@ namespace WindowsFormsApp1.Format_3
                             pdoc.DefaultPageSettings.Landscape = false;
                             pdoc.PrintPage += printDocument1_PrintPage;
                             pdoc.Print();
-                            //clearTextboxPemeriksaan();
-                            //pictureBox1.Image.Dispose();
-                            //pictureBox1.Image = null;
-                            //pictureBox2.Image.Dispose();
-                            //pictureBox2.Image = null;
-                            //pictureBox3.Image.Dispose();
-                            //pictureBox3.Image = null;
-                            //pictureBox4.Image.Dispose();
-                            //pictureBox4.Image = null;
-                            //pictureBox5.Image.Dispose();
-                            //pictureBox5.Image = null;
-                            //pictureBox6.Image.Dispose();
-                            //pictureBox6.Image = null;
-                            //pictureBox7.Image.Dispose();
-                            //pictureBox7.Image = null;
-                            //pictureBox8.Image.Dispose();
-                            //pictureBox8.Image = null;
-                            //pictureBox9.Image.Dispose();
-                            //pictureBox9.Image = null;
-                            //pictureBox10.Image.Dispose();
-                            //pictureBox10.Image = null;
-                            //buttobDeleteFalse();
                         }
-
-                        //buttonCancel.PerformClick();
-
-                        //int kondisi1 = 8;
-                        //TransfEventPrint310Print(kondisi1.ToString());
                         MessageBox.Show("Proses ekspor file berhasil diselesaikan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -1752,7 +1724,6 @@ namespace WindowsFormsApp1.Format_3
                     MessageBox.Show("keluhan belum diisi ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

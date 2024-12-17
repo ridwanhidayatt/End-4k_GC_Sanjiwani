@@ -76,7 +76,7 @@ namespace WindowsFormsApp1.Format_4
         //{
         //    richTextBox1.Clear();
         //    //richTextBox1.Font = new Font("Consolas", 10);
-             
+
         //    richTextBox1.AppendText("ESOFAGUS :\n\n");
         //    richTextBox1.AppendText("GASTER    \n");
         //    richTextBox1.AppendText("CARDIA :\n");
@@ -410,7 +410,7 @@ namespace WindowsFormsApp1.Format_4
                             {
                                 Image = ResizeImage(image, 1058, 797),
                                 SizeMode = PictureBoxSizeMode.StretchImage,
-                                Size = new Size(290, 219),
+                                Size = new Size(203, 134),
                                 Margin = new Padding(2),
                                 Tag = file
                             };
@@ -591,135 +591,135 @@ namespace WindowsFormsApp1.Format_4
 
 
 
-            //doubleklik
-            // Deklarasi array PictureBox untuk menyimpan 8 PictureBox
-    private PictureBox[] pictureBoxes;
+        //doubleklik
+        // Deklarasi array PictureBox untuk menyimpan 8 PictureBox
+        private PictureBox[] pictureBoxes;
 
-    private void InitializeThumbnailsForToday()
-    {
-        // Inisialisasi array PictureBox
-        pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
-
-        // Call the method to read data from the CSV file
-        ReadDataFromCSV(csvFilePath);
-
-        string tanggal = DateTime.Now.ToString("ddMMyyyy");
-        string rootPath = @"D:\GLEndoscope";
-
-        // Bersihkan ComboBox dan FlowLayoutPanel
-        cbx_now.Items.Clear();
-        flowLayoutPanel2.Controls.Clear();
-
-        var culture = new System.Globalization.CultureInfo("id-ID");
-
-        foreach (string yearFolder in Directory.GetDirectories(rootPath))
+        private void InitializeThumbnailsForToday()
         {
-            foreach (string monthFolder in Directory.GetDirectories(yearFolder))
+            // Inisialisasi array PictureBox
+            pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
+
+            // Call the method to read data from the CSV file
+            ReadDataFromCSV(csvFilePath);
+
+            string tanggal = DateTime.Now.ToString("ddMMyyyy");
+            string rootPath = @"D:\GLEndoscope";
+
+            // Bersihkan ComboBox dan FlowLayoutPanel
+            cbx_now.Items.Clear();
+            flowLayoutPanel2.Controls.Clear();
+
+            var culture = new System.Globalization.CultureInfo("id-ID");
+
+            foreach (string yearFolder in Directory.GetDirectories(rootPath))
             {
-                foreach (string dayFolder in Directory.GetDirectories(monthFolder))
+                foreach (string monthFolder in Directory.GetDirectories(yearFolder))
                 {
-                    foreach (string patientFolder in Directory.GetDirectories(dayFolder))
+                    foreach (string dayFolder in Directory.GetDirectories(monthFolder))
                     {
-                        string folderPath = Path.Combine(patientFolder, "Image");
-
-                        if (patientFolder.EndsWith(gabung) && Directory.Exists(folderPath))
+                        foreach (string patientFolder in Directory.GetDirectories(dayFolder))
                         {
-                            string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly)
-                                .Where(file => file.ToLower().EndsWith(".jpg") ||
-                                               file.ToLower().EndsWith(".jpeg") ||
-                                               file.ToLower().EndsWith(".png") ||
-                                               file.ToLower().EndsWith(".bmp") ||
-                                               file.ToLower().EndsWith(".gif"))
-                                .ToArray();
+                            string folderPath = Path.Combine(patientFolder, "Image");
 
-                            if (imageFiles.Length > 0)
+                            if (patientFolder.EndsWith(gabung) && Directory.Exists(folderPath))
                             {
-                                string day = Path.GetFileName(dayFolder);
-                                string dayPart = day.Substring(0, 2);
-                                string monthPart = day.Substring(2, 2);
-                                string yearPart = day.Substring(4, 4);
+                                string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly)
+                                    .Where(file => file.ToLower().EndsWith(".jpg") ||
+                                                   file.ToLower().EndsWith(".jpeg") ||
+                                                   file.ToLower().EndsWith(".png") ||
+                                                   file.ToLower().EndsWith(".bmp") ||
+                                                   file.ToLower().EndsWith(".gif"))
+                                    .ToArray();
 
-                                int monthNumber;
-                                if (int.TryParse(monthPart, out monthNumber) && monthNumber >= 1 && monthNumber <= 12)
+                                if (imageFiles.Length > 0)
                                 {
-                                    monthPart = culture.DateTimeFormat.GetMonthName(monthNumber);
+                                    string day = Path.GetFileName(dayFolder);
+                                    string dayPart = day.Substring(0, 2);
+                                    string monthPart = day.Substring(2, 2);
+                                    string yearPart = day.Substring(4, 4);
+
+                                    int monthNumber;
+                                    if (int.TryParse(monthPart, out monthNumber) && monthNumber >= 1 && monthNumber <= 12)
+                                    {
+                                        monthPart = culture.DateTimeFormat.GetMonthName(monthNumber);
+                                    }
+
+                                    string formattedDate = $"{dayPart} - {monthPart} - {yearPart}";
+
+                                    cbx_now.Items.Add(new ComboBoxItem
+                                    {
+                                        FolderPath = folderPath,
+                                        DisplayText = formattedDate
+                                    });
                                 }
-
-                                string formattedDate = $"{dayPart} - {monthPart} - {yearPart}";
-
-                                cbx_now.Items.Add(new ComboBoxItem
-                                {
-                                    FolderPath = folderPath,
-                                    DisplayText = formattedDate
-                                });
                             }
                         }
                     }
                 }
             }
-        }
 
-        cbx_now.SelectedIndexChanged += (s, e) =>
-        {
-            flowLayoutPanel2.Controls.Clear();
-
-            ComboBoxItem selectedItem = cbx_now.SelectedItem as ComboBoxItem;
-            if (selectedItem != null)
+            cbx_now.SelectedIndexChanged += (s, e) =>
             {
-                string selectedFolder = selectedItem.FolderPath;
-                string[] imageFiles = Directory.GetFiles(selectedFolder, "*.*", SearchOption.TopDirectoryOnly)
-                    .Where(file => file.ToLower().EndsWith(".jpg") ||
-                                   file.ToLower().EndsWith(".jpeg") ||
-                                   file.ToLower().EndsWith(".png") ||
-                                   file.ToLower().EndsWith(".bmp") ||
-                                   file.ToLower().EndsWith(".gif"))
-                    .ToArray();
+                flowLayoutPanel2.Controls.Clear();
 
-                foreach (string file in imageFiles)
+                ComboBoxItem selectedItem = cbx_now.SelectedItem as ComboBoxItem;
+                if (selectedItem != null)
                 {
-                    try
-                    {
-                        Image image = Image.FromFile(file);
-                        PictureBox thumbnail = new PictureBox
-                        {
-                            Image = ResizeImage(image, 1058, 797),
-                            SizeMode = PictureBoxSizeMode.StretchImage,
-                            Size = new Size(293, 219),
-                            Margin = new Padding(2),
-                            Tag = file
-                        };
+                    string selectedFolder = selectedItem.FolderPath;
+                    string[] imageFiles = Directory.GetFiles(selectedFolder, "*.*", SearchOption.TopDirectoryOnly)
+                        .Where(file => file.ToLower().EndsWith(".jpg") ||
+                                       file.ToLower().EndsWith(".jpeg") ||
+                                       file.ToLower().EndsWith(".png") ||
+                                       file.ToLower().EndsWith(".bmp") ||
+                                       file.ToLower().EndsWith(".gif"))
+                        .ToArray();
 
-                        // Event handler untuk klik thumbnail
-                        thumbnail.Click += (sender, args) =>
+                    foreach (string file in imageFiles)
+                    {
+                        try
                         {
-                            // Cari PictureBox yang kosong dan tampilkan gambar
-                            foreach (PictureBox pb in pictureBoxes)
+                            Image image = Image.FromFile(file);
+                            PictureBox thumbnail = new PictureBox
                             {
-                                if (pb.Image == null) // Jika PictureBox kosong
-                                {
-                                    pb.Image = Image.FromFile(file); // Tampilkan gambar
-                                    break; // Hentikan setelah menemukan PictureBox kosong
-                                }
-                            }
-                        };
+                                Image = ResizeImage(image, 1058, 797),
+                                SizeMode = PictureBoxSizeMode.StretchImage,
+                                Size = new Size(203, 134),
+                                Margin = new Padding(2),
+                                Tag = file
+                            };
 
-                        flowLayoutPanel2.Controls.Add(thumbnail);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error loading image {file}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Event handler untuk klik thumbnail
+                            thumbnail.Click += (sender, args) =>
+                            {
+                                // Cari PictureBox yang kosong dan tampilkan gambar
+                                foreach (PictureBox pb in pictureBoxes)
+                                {
+                                    if (pb.Image == null) // Jika PictureBox kosong
+                                    {
+                                        pb.Image = Image.FromFile(file); // Tampilkan gambar
+                                        break; // Hentikan setelah menemukan PictureBox kosong
+                                    }
+                                }
+                            };
+
+                            flowLayoutPanel2.Controls.Add(thumbnail);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error loading image {file}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            };
+
+
+            if (cbx_now.Items.Count == 0)
+            {
+                //MessageBox.Show("Tidak ditemukan folder yang sesuai dengan gabungan NORM dan Nama.", "Folder Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        };
 
-
-        if (cbx_now.Items.Count == 0)
-        {
-            //MessageBox.Show("Tidak ditemukan folder yang sesuai dengan gabungan NORM dan Nama.", "Folder Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-    }
 
 
 
@@ -735,7 +735,7 @@ namespace WindowsFormsApp1.Format_4
         private void InitializeMainPictureBoxes()
         {
             // Daftar semua PictureBox yang akan digunakan
-            PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8};
+            PictureBox[] pictureBoxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
 
             // Inisialisasi kontrol untuk setiap PictureBox
             for (int i = 0; i < pictureBoxes.Length; i++)
@@ -874,7 +874,7 @@ namespace WindowsFormsApp1.Format_4
 
 
 
-            
+
 
             if (comboBox1.SelectedIndex != -1)
             {
@@ -899,7 +899,7 @@ namespace WindowsFormsApp1.Format_4
 
 
         private void buttonPrint_Click(object sender, EventArgs e)
-        {  
+        {
             if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
             {
                 MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -941,7 +941,7 @@ namespace WindowsFormsApp1.Format_4
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox(); 
+                        PopulatePrinterComboBox();
                         comboBox2.SelectedIndex = 0; // Reset profil ke default
                         MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -958,7 +958,7 @@ namespace WindowsFormsApp1.Format_4
 
                         // Log history
                         HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox(); 
+                        PopulatePrinterComboBox();
                         MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -966,7 +966,7 @@ namespace WindowsFormsApp1.Format_4
                 {
                     MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            } 
+            }
         }
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
@@ -1076,7 +1076,7 @@ namespace WindowsFormsApp1.Format_4
 
 
             e.Graphics.DrawRectangle(redPen, 135, 225, 640, 21);
-            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227); 
+            e.Graphics.DrawString(textBox18.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 227);
             e.Graphics.DrawRectangle(redPen, 135, 250, 640, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
@@ -1115,7 +1115,7 @@ namespace WindowsFormsApp1.Format_4
             // Memeriksa apakah tombol 2 ditekan
             if (isButton2Pressed == true)
             {
-                 
+
 
                 e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 275, 420, 317), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
                 e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(355, 594, 420, 317), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
@@ -1350,42 +1350,167 @@ namespace WindowsFormsApp1.Format_4
             string splitTahun = arr[1];
             string tanggal = DateTime.Now.ToString("ddMMyyy");
 
-            string dir = @"D:\GLEndoscope\" + splitTahun + @"\" + splitBulan + @"\" + tanggal + @"\" + gabung + @"\History Print\Format-3" + @"\10-Gambar\";
-            if (!Directory.Exists(dir))
+
+            if (isButton2Pressed == true)
             {
-                Directory.CreateDirectory(dir);
+                string dir = @"D:\GLEndoscope\" + splitTahun + @"\" + splitBulan + @"\" + tanggal + @"\" + gabung + @"\History Print\Format-4" + @"\2-Gambar\";
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+
+                string existingPathName = dir;
+                string notExistingFileName;
+
+                if (profile == "Default")
+                {
+                    notExistingFileName = dir + gabung1 + ".pdf";
+                }
+                else if (profile == "Adjust Brightness")
+                {
+                    notExistingFileName = dir + gabung1 + "_Adjust_Brightness.pdf";
+                }
+                else
+                {
+                    // Handle the case where the profile is not recognized
+                    MessageBox.Show("Profile tidak dikenali", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (Directory.Exists(existingPathName) && !File.Exists(notExistingFileName))
+                {
+                    PrintDocument pdoc = new PrintDocument();
+                    pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                    pdoc.PrinterSettings.PrintFileName = notExistingFileName;
+                    pdoc.PrinterSettings.PrintToFile = true;
+                    pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                    pdoc.DefaultPageSettings.Landscape = false;
+                    //pdoc.PrintPage += pdoc_PrintPage;
+                    pdoc.PrintPage += printDocument1_PrintPage;
+                    pdoc.Print();
+                }
             }
 
-            string existingPathName = dir;
-            string notExistingFileName;
+            if (isButton4Pressed == true)
+            {
+                string dir = @"D:\GLEndoscope\" + splitTahun + @"\" + splitBulan + @"\" + tanggal + @"\" + gabung + @"\History Print\Format-4" + @"\4-Gambar\";
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
 
-            if (profile == "Default")
-            {
-                notExistingFileName = dir + gabung1 + ".pdf";
-            }
-            else if (profile == "Adjust Brightness")
-            {
-                notExistingFileName = dir + gabung1 + "_Adjust_Brightness.pdf";
-            }
-            else
-            {
-                // Handle the case where the profile is not recognized
-                MessageBox.Show("Profile tidak dikenali", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                string existingPathName = dir;
+                string notExistingFileName;
+
+                if (profile == "Default")
+                {
+                    notExistingFileName = dir + gabung1 + ".pdf";
+                }
+                else if (profile == "Adjust Brightness")
+                {
+                    notExistingFileName = dir + gabung1 + "_Adjust_Brightness.pdf";
+                }
+                else
+                {
+                    // Handle the case where the profile is not recognized
+                    MessageBox.Show("Profile tidak dikenali", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (Directory.Exists(existingPathName) && !File.Exists(notExistingFileName))
+                {
+                    PrintDocument pdoc = new PrintDocument();
+                    pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                    pdoc.PrinterSettings.PrintFileName = notExistingFileName;
+                    pdoc.PrinterSettings.PrintToFile = true;
+                    pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                    pdoc.DefaultPageSettings.Landscape = false;
+                    //pdoc.PrintPage += pdoc_PrintPage;
+                    pdoc.PrintPage += printDocument1_PrintPage;
+                    pdoc.Print();
+                }
             }
 
-            if (Directory.Exists(existingPathName) && !File.Exists(notExistingFileName))
+            if (isButton6Pressed == true)
             {
-                PrintDocument pdoc = new PrintDocument();
-                pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-                pdoc.PrinterSettings.PrintFileName = notExistingFileName;
-                pdoc.PrinterSettings.PrintToFile = true;
-                pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-                pdoc.DefaultPageSettings.Landscape = false;
-                //pdoc.PrintPage += pdoc_PrintPage;
-                pdoc.PrintPage += printDocument1_PrintPage;                
-                pdoc.Print();
+                string dir = @"D:\GLEndoscope\" + splitTahun + @"\" + splitBulan + @"\" + tanggal + @"\" + gabung + @"\History Print\Format-4" + @"\6-Gambar\";
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+
+                string existingPathName = dir;
+                string notExistingFileName;
+
+                if (profile == "Default")
+                {
+                    notExistingFileName = dir + gabung1 + ".pdf";
+                }
+                else if (profile == "Adjust Brightness")
+                {
+                    notExistingFileName = dir + gabung1 + "_Adjust_Brightness.pdf";
+                }
+                else
+                {
+                    // Handle the case where the profile is not recognized
+                    MessageBox.Show("Profile tidak dikenali", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (Directory.Exists(existingPathName) && !File.Exists(notExistingFileName))
+                {
+                    PrintDocument pdoc = new PrintDocument();
+                    pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                    pdoc.PrinterSettings.PrintFileName = notExistingFileName;
+                    pdoc.PrinterSettings.PrintToFile = true;
+                    pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                    pdoc.DefaultPageSettings.Landscape = false;
+                    //pdoc.PrintPage += pdoc_PrintPage;
+                    pdoc.PrintPage += printDocument1_PrintPage;
+                    pdoc.Print();
+                }
             }
+
+            if (isButton8Pressed == true)
+            {
+                string dir = @"D:\GLEndoscope\" + splitTahun + @"\" + splitBulan + @"\" + tanggal + @"\" + gabung + @"\History Print\Format-4" + @"\8-Gambar\";
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+
+                string existingPathName = dir;
+                string notExistingFileName;
+
+                if (profile == "Default")
+                {
+                    notExistingFileName = dir + gabung1 + ".pdf";
+                }
+                else if (profile == "Adjust Brightness")
+                {
+                    notExistingFileName = dir + gabung1 + "_Adjust_Brightness.pdf";
+                }
+                else
+                {
+                    // Handle the case where the profile is not recognized
+                    MessageBox.Show("Profile tidak dikenali", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (Directory.Exists(existingPathName) && !File.Exists(notExistingFileName))
+                {
+                    PrintDocument pdoc = new PrintDocument();
+                    pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                    pdoc.PrinterSettings.PrintFileName = notExistingFileName;
+                    pdoc.PrinterSettings.PrintToFile = true;
+                    pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                    pdoc.DefaultPageSettings.Landscape = false;
+                    //pdoc.PrintPage += pdoc_PrintPage;
+                    pdoc.PrintPage += printDocument1_PrintPage;
+                    pdoc.Print();
+                }
+            }
+
 
         }
 
@@ -1500,7 +1625,7 @@ namespace WindowsFormsApp1.Format_4
             {
                 //MessageBox.Show("Tombol 2 ditekan!");
                 e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 420, 317);
-                e.Graphics.DrawImage(pictureBox2.Image, 355, 594, 420, 317); 
+                e.Graphics.DrawImage(pictureBox2.Image, 355, 594, 420, 317);
             }
 
             // Memeriksa apakah tombol 4 ditekan
@@ -1753,7 +1878,7 @@ namespace WindowsFormsApp1.Format_4
             //close1.Visible = false;
         }
 
-        
+
 
 
         private void ClearImages()
@@ -1807,7 +1932,7 @@ namespace WindowsFormsApp1.Format_4
             //ShowMessageForButton(2); // Panggil metode untuk menampilkan MessageBox
             ClearImages();
 
-            isButton2Pressed = true;  
+            isButton2Pressed = true;
             isButton4Pressed = false;
             isButton6Pressed = false;
             isButton8Pressed = false;
@@ -1900,7 +2025,7 @@ namespace WindowsFormsApp1.Format_4
             // Menampilkan dan mengatur lokasi serta ukuran PictureBox6
             pictureBox6.Visible = true;
             pictureBox6.Location = new Point(660, 537);
-            pictureBox6.Size = new Size(181, 130); 
+            pictureBox6.Size = new Size(181, 130);
 
 
             close1.Visible = true;
@@ -1919,7 +2044,7 @@ namespace WindowsFormsApp1.Format_4
             close5.Location = new Point(628, 543);
 
             close6.Visible = true;
-            close6.Location = new Point(810, 543); 
+            close6.Location = new Point(810, 543);
 
 
 
@@ -2016,7 +2141,7 @@ namespace WindowsFormsApp1.Format_4
             isButton6Pressed = false;
             isButton8Pressed = true;
 
-        } 
+        }
 
         private void close1_Click_1(object sender, EventArgs e)
         {
@@ -2057,7 +2182,7 @@ namespace WindowsFormsApp1.Format_4
         {
             pictureBox8.Image = null;
         }
-         
+
 
 
 
@@ -2110,6 +2235,91 @@ namespace WindowsFormsApp1.Format_4
             }
         }
 
+        private void buttonExportPdf_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now;
+            jam = today.ToString("hhmmss");
+
+            if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
+            {
+                MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Proses berdasarkan tombol yang ditekan
+            if (isButton2Pressed)
+            {
+                ExportToPDF("2-Gambar");
+            }
+            if (isButton4Pressed)
+            {
+                ExportToPDF("4-Gambar");
+            }
+            if (isButton6Pressed)
+            {
+                ExportToPDF("6-Gambar");
+            }
+            if (isButton8Pressed)
+            {
+                ExportToPDF("8-Gambar");
+            }
+        }
+
+
+
+        private void ExportToPDF(string folderName)
+        {
+            string baseDir = $@"D:\GLEndoscope\{splitTahun}\{splitBulan}\{tanggal}\{gabung}\EksporPDF\Format-4\{folderName}\";
+
+            // Membuat direktori jika belum ada
+            if (!Directory.Exists(baseDir))
+            {
+                Directory.CreateDirectory(baseDir);
+            }
+
+            // Tambahkan jam, menit, dan detik pada nama file
+            string currentTime = DateTime.Now.ToString("HHmmss"); // Format waktu: HHmmss (24 jam)
+            string filePath = baseDir + $"{gabung1}_{currentTime}.pdf";
+
+            // Cek apakah file sudah ada
+            if (File.Exists(filePath))
+            {
+                DialogResult result = MessageBox.Show(
+                    $"File {gabung1}_{currentTime}.pdf sudah ada di folder {folderName}. Apakah Anda ingin menimpa file tersebut?",
+                    "File Sudah Ada",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            // Proses pencetakan ke PDF
+            using (PrintDocument pdoc = new PrintDocument())
+            {
+                try
+                {
+                    pdoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                    pdoc.PrinterSettings.PrintFileName = filePath;
+                    pdoc.PrinterSettings.PrintToFile = true;
+                    pdoc.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+                    pdoc.DefaultPageSettings.Landscape = false;
+                    pdoc.PrintPage += printDocument1_PrintPage;
+
+                    // Cetak dokumen
+                    pdoc.Print();
+                    MessageBox.Show($"Export PDF ke {folderName} berhasil!\n", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Terjadi kesalahan saat mencetak PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true; // Mencegah karakter yang diketik ditampilkan di ComboBox
@@ -2144,7 +2354,7 @@ namespace WindowsFormsApp1.Format_4
             pictureBox5.Image = Properties.Resources.icon;
             pictureBox6.Image = Properties.Resources.icon;
             pictureBox7.Image = Properties.Resources.icon;
-            pictureBox8.Image = Properties.Resources.icon; 
+            pictureBox8.Image = Properties.Resources.icon;
 
             pictureBox1.Image.Dispose();
             pictureBox1.Image = null;
@@ -2161,7 +2371,7 @@ namespace WindowsFormsApp1.Format_4
             pictureBox7.Image.Dispose();
             pictureBox7.Image = null;
             pictureBox8.Image.Dispose();
-            pictureBox8.Image = null; 
+            pictureBox8.Image = null;
 
             comboBox1.Items.Clear();
             comboBox1.ResetText();
@@ -2261,7 +2471,7 @@ namespace WindowsFormsApp1.Format_4
             close5.Visible = false;
             close6.Visible = false;
             close7.Visible = false;
-            close8.Visible = false; 
+            close8.Visible = false;
         }
 
         private void LoadAndSetValues()

@@ -653,7 +653,13 @@ namespace WindowsFormsApp1
 
 
             DisableButtons();
+
+            
+
         }
+
+        
+
 
         private void DisableButtons()
         {

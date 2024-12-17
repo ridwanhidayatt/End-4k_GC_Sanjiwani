@@ -825,31 +825,62 @@ namespace WindowsFormsApp1
 
         void FinalVideo_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
+            //try
+            //{
+            //    if (buttonRecStop.Text == "Hentikan Rekam")
+            //    {
+            //        using (Bitmap videoFrame = (Bitmap)eventArgs.Frame.Clone())
+            //        {
+            //            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+
+            //            if (FileWriter != null)
+            //            {
+            //                // Crop the frame based on the user-defined area
+            //                using (Bitmap croppedFrame = CropFrame(videoFrame, cropRectangle))
+            //                {
+            //                    // Write the cropped frame to the video file
+            //                    FileWriter.WriteVideoFrame(croppedFrame);
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else //Stop
+            //    {
+            //        using (Bitmap videoFrame = (Bitmap)eventArgs.Frame.Clone())
+            //        {
+            //            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+            //        }
+            //    }
+            //}
+            //catch (System.AccessViolationException ex)
+            //{
+            //    // Tangani pengecualian dengan mencetak pesan kesalahan atau log
+            //    Console.WriteLine("Terjadi kesalahan Access Violation:");
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Tangani pengecualian umum lainnya di sini
+            //    Console.WriteLine("Terjadi kesalahan lain saat menangani frame video:");
+            //    Console.WriteLine(ex.Message);
+            //}
+
             try
             {
                 if (buttonRecStop.Text == "Hentikan Rekam")
                 {
-                    using (Bitmap videoFrame = (Bitmap)eventArgs.Frame.Clone())
-                    {
-                        pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+                    video = (Bitmap)eventArgs.Frame.Clone();
+                    pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
 
-                        if (FileWriter != null)
-                        {
-                            // Crop the frame based on the user-defined area
-                            using (Bitmap croppedFrame = CropFrame(videoFrame, cropRectangle))
-                            {
-                                // Write the cropped frame to the video file
-                                FileWriter.WriteVideoFrame(croppedFrame);
-                            }
-                        }
+                    if (FileWriter != null && video != null)
+                    {
+                        FileWriter.WriteVideoFrame(video);
                     }
                 }
                 else //Stop
                 {
-                    using (Bitmap videoFrame = (Bitmap)eventArgs.Frame.Clone())
-                    {
-                        pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
-                    }
+                    video = (Bitmap)eventArgs.Frame.Clone();
+                    pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
                 }
             }
             catch (System.AccessViolationException ex)
@@ -857,13 +888,17 @@ namespace WindowsFormsApp1
                 // Tangani pengecualian dengan mencetak pesan kesalahan atau log
                 Console.WriteLine("Terjadi kesalahan Access Violation:");
                 Console.WriteLine(ex.Message);
+                // Tambahkan langkah-langkah penanganan tambahan jika diperlukan
             }
             catch (Exception ex)
             {
                 // Tangani pengecualian umum lainnya di sini
                 Console.WriteLine("Terjadi kesalahan lain saat menangani frame video:");
                 Console.WriteLine(ex.Message);
+                // Tambahkan langkah-langkah penanganan tambahan jika diperlukan
             }
+
+
         }
 
         //13/08/2024
@@ -973,10 +1008,8 @@ namespace WindowsFormsApp1
             ellipseRadius2.AddArc(new Rectangle(0, panelPatientData.Height - 10, 10, 10), 90, 90);
             ellipseRadius2.CloseAllFigures();
             panelPatientData.Region = new Region(ellipseRadius2);
+
         }
-
-
-
 
         private void T1_Tick(object sender, EventArgs e)
         {
@@ -986,9 +1019,6 @@ namespace WindowsFormsApp1
             ts.Milliseconds / 10);
             lblRec1.Text = elapsedTime;
         }
-
-
-
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -1101,11 +1131,11 @@ namespace WindowsFormsApp1
                 // Pastikan FinalVideo dan VideoResolution tidak null sebelum mengakses FrameSize
                 if (FinalVideo != null && FinalVideo.VideoResolution != null)
                 {
-                    int h = cropRectangle.Height;
-                    int w = cropRectangle.Width;
+                    int h = FinalVideo.VideoResolution.FrameSize.Height;
+                    int w = FinalVideo.VideoResolution.FrameSize.Width;
 
-                    FileWriter = new VideoFileWriter();
                     FileWriter.Open(saveAvi.FileName, w, h, 30, VideoCodec.Default, 50000000);
+                    FileWriter.WriteVideoFrame(video);
                 }
                 else
                 {
@@ -1122,6 +1152,7 @@ namespace WindowsFormsApp1
                 buttonRecSave.BackColor = Color.FromArgb(0, 85, 119);
                 vRecord = true;
             }
+
 
         }
         //private void btn_Record_Click_1(object sender, EventArgs e)
