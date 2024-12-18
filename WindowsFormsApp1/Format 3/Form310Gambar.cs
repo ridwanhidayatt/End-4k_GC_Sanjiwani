@@ -100,11 +100,16 @@ namespace WindowsFormsApp1.Format_3
                 // Get the list of installed printers
                 foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
                 {
-                    if (printer != "Canon SELPHY CP1300")
+                    //// Only add "HP Smart Tank 660-670 series" to the ComboBox
+                    //if (printer.Contains("HP Smart Tank 660-670 series"))
+                    //if (printer.Contains("Microsoft IPP Class Driver"))
+                    if (printer.Contains("EPSON L3210 Series (Copy 1)"))
                     {
-                        // Add the printer to the ComboBox
                         comboBox1.Items.Add(printer);
+                        break; // Stop after adding the specific printer
                     }
+
+                    //comboBox1.Items.Add(printer);
                 }
 
                 // Optionally, set default selection (e.g., -1 to not select any printer)
@@ -926,68 +931,78 @@ namespace WindowsFormsApp1.Format_3
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-           if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
+            if (pictureBox1.Image == null && pictureBox2.Image == null && pictureBox3.Image == null &&
+                pictureBox4.Image == null && pictureBox5.Image == null && pictureBox6.Image == null &&
+                pictureBox7.Image == null && pictureBox8.Image == null && pictureBox9.Image == null &&
+                pictureBox10.Image == null)
+            {
+                MessageBox.Show("Semua PictureBox kosong. Harap tambahkan gambar sebelum mencetak.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Optimasi: keluar dari fungsi jika semua PictureBox kosong
+            }
+
+            if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
             {
                 MessageBox.Show("Pilih Profil yang dipakai", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Optimasi: keluar dari fungsi jika profil belum dipilih
             }
-            else if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
+
+            if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
             {
                 MessageBox.Show("Pilih printer yang digunakan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Optimasi: keluar dari fungsi jika printer belum dipilih
+            }
+
+            // Simpan pilihan printer dari ComboBox1 jika belum ada printer yang dipilih sebelumnya
+            if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
+            {
+                selectedPrinter = comboBox1.SelectedItem.ToString();
+            }
+
+            PrintDocument pd = new PrintDocument();
+            pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
+            pd.DefaultPageSettings.Landscape = false;
+
+            if (!string.IsNullOrEmpty(selectedPrinter))
+            {
+                pd.PrinterSettings.PrinterName = selectedPrinter; // Menggunakan printer yang telah dipilih
+
+                if (comboBox2.Text == "Default")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+
+                    // Menggunakan Print Preview jika diperlukan
+                    //printPreviewDialog1.Document = pd;
+                    //printPreviewDialog1.ShowDialog();
+
+                    // Proses pencetakan
+                    pd.Print();
+
+                    // Log history
+                    HistoryPrintA4(comboBox2.Text);
+                    PopulatePrinterComboBox();
+                    comboBox2.SelectedIndex = 0; // Reset profil ke default
+                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (comboBox2.Text == "Adjust Brightness")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+
+                    // Menggunakan Print Preview jika diperlukan
+                    //printPreviewDialog1.Document = pd;
+                    //printPreviewDialog1.ShowDialog();
+
+                    // Langsung cetak tanpa preview
+                    pd.Print();
+
+                    // Log history
+                    HistoryPrintA4(comboBox2.Text);
+                    PopulatePrinterComboBox();
+                    MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                // Simpan pilihan printer dari ComboBox1 jika belum ada printer yang dipilih sebelumnya
-                if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
-                {
-                    selectedPrinter = comboBox1.SelectedItem.ToString();
-                }
-
-                PrintDocument pd = new PrintDocument();
-                pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-                pd.DefaultPageSettings.Landscape = false;
-
-                if (!string.IsNullOrEmpty(selectedPrinter))
-                {
-                    pd.PrinterSettings.PrinterName = selectedPrinter; // Menggunakan printer yang telah dipilih
-
-                    if (comboBox2.Text == "Default")
-                    {
-                        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-
-                        // Menggunakan Print Preview jika diperlukan
-                        //printPreviewDialog1.Document = pd;
-                        //printPreviewDialog1.ShowDialog();
-
-                        // Proses pencetakan
-                        pd.Print();
-
-                        // Log history
-                        HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-                        comboBox2.SelectedIndex = 0; // Reset profil ke default
-                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else if (comboBox2.Text == "Adjust Brightness")
-                    {
-                        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-
-                        // Menggunakan Print Preview jika diperlukan
-                        //printPreviewDialog1.Document = pd;
-                        //printPreviewDialog1.ShowDialog();
-
-                        // Langsung cetak tanpa preview
-                        pd.Print();
-
-                        // Log history
-                        HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -1221,16 +1236,58 @@ namespace WindowsFormsApp1.Format_3
             e.Graphics.DrawRectangle(redPen, 135, 250, 215, 21);
             e.Graphics.DrawString(textBox19.Text, new Font("Montserrat", 9, FontStyle.Regular), Brushes.Black, 137, 252);
 
-            e.Graphics.DrawImage(pictureBox1.Image, 355, 224, 209, 157);
-            e.Graphics.DrawImage(pictureBox2.Image, 566, 224, 209, 157);
-            e.Graphics.DrawImage(pictureBox3.Image, 355, 383, 209, 157);
-            e.Graphics.DrawImage(pictureBox4.Image, 566, 383, 209, 157);
-            e.Graphics.DrawImage(pictureBox5.Image, 355, 542, 209, 157);
-            e.Graphics.DrawImage(pictureBox6.Image, 566, 542, 209, 157);
-            e.Graphics.DrawImage(pictureBox7.Image, 355, 701, 209, 157);
-            e.Graphics.DrawImage(pictureBox8.Image, 566, 701, 209, 157);
-            e.Graphics.DrawImage(pictureBox9.Image, 355, 860, 209, 157);
-            e.Graphics.DrawImage(pictureBox10.Image, 566, 860, 209, 157);
+            //e.Graphics.DrawImage(pictureBox1.Image, 355, 224, 209, 157);
+            //e.Graphics.DrawImage(pictureBox2.Image, 566, 224, 209, 157);
+            //e.Graphics.DrawImage(pictureBox3.Image, 355, 383, 209, 157);
+            //e.Graphics.DrawImage(pictureBox4.Image, 566, 383, 209, 157);
+            //e.Graphics.DrawImage(pictureBox5.Image, 355, 542, 209, 157);
+            //e.Graphics.DrawImage(pictureBox6.Image, 566, 542, 209, 157);
+            //e.Graphics.DrawImage(pictureBox7.Image, 355, 701, 209, 157);
+            //e.Graphics.DrawImage(pictureBox8.Image, 566, 701, 209, 157);
+            //e.Graphics.DrawImage(pictureBox9.Image, 355, 860, 209, 157);
+            //e.Graphics.DrawImage(pictureBox10.Image, 566, 860, 209, 157);
+
+
+            // List untuk menyimpan PictureBox yang memiliki gambar
+            List<PictureBox> pictureBoxes = new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
+
+            //// Cek apakah semua PictureBox kosong
+            //if (pictureBoxes.All(pb => pb.Image == null))
+            //{
+            //    MessageBox.Show("Tidak ada gambar yang diisi. Harap tambahkan gambar sebelum mencetak.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            // Variabel untuk posisi gambar
+            int startX1 = 355;
+            int startX2 = 566;
+            int startY = 224;
+            int width = 209;
+            int height = 157;
+            int verticalSpacing = 159;
+
+            // Counter untuk menentukan posisi vertikal
+            int row = 0;
+
+            foreach (var pictureBox in pictureBoxes)
+            {
+                if (pictureBox.Image != null)
+                {
+                    // Tentukan posisi gambar berdasarkan kolom dan baris
+                    int x = (row % 2 == 0) ? startX1 : startX2;
+                    int y = startY + (row / 2) * verticalSpacing;
+
+                    // Gambar di posisi yang sesuai
+                    e.Graphics.DrawImage(pictureBox.Image, x, y, width, height);
+                }
+
+                // Tambah counter hanya jika gambar diisi
+                if (pictureBox.Image != null)
+                    row++;
+            }
+
+
+
 
             e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
             e.Graphics.DrawString("HASIL", new Font("Montserrat", 9, FontStyle.Bold), Brushes.Black, 30, 276);
@@ -1524,16 +1581,65 @@ namespace WindowsFormsApp1.Format_3
             ia.ClearColorMatrix();
             ia.SetColorMatrix(new ColorMatrix(ptsarray), ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
             ia.SetGamma(gamma, ColorAdjustType.Bitmap);
-            e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 224, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(566, 224, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(355, 383, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(566, 383, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(355, 542, 209, 157), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(566, 542, 209, 157), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(355, 701, 209, 157), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(566, 701, 209, 157), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox9.Image, new Rectangle(355, 860, 209, 157), 0, 0, pictureBox9.Image.Width, pictureBox9.Image.Height, GraphicsUnit.Pixel, ia);
-            e.Graphics.DrawImage(pictureBox10.Image, new Rectangle(566, 860, 209, 157), 0, 0, pictureBox10.Image.Width, pictureBox10.Image.Height, GraphicsUnit.Pixel, ia);
+
+            //e.Graphics.DrawImage(pictureBox1.Image, new Rectangle(355, 224, 209, 157), 0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox2.Image, new Rectangle(566, 224, 209, 157), 0, 0, pictureBox2.Image.Width, pictureBox2.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox3.Image, new Rectangle(355, 383, 209, 157), 0, 0, pictureBox3.Image.Width, pictureBox3.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox4.Image, new Rectangle(566, 383, 209, 157), 0, 0, pictureBox4.Image.Width, pictureBox4.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox5.Image, new Rectangle(355, 542, 209, 157), 0, 0, pictureBox5.Image.Width, pictureBox5.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox6.Image, new Rectangle(566, 542, 209, 157), 0, 0, pictureBox6.Image.Width, pictureBox6.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox7.Image, new Rectangle(355, 701, 209, 157), 0, 0, pictureBox7.Image.Width, pictureBox7.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox8.Image, new Rectangle(566, 701, 209, 157), 0, 0, pictureBox8.Image.Width, pictureBox8.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox9.Image, new Rectangle(355, 860, 209, 157), 0, 0, pictureBox9.Image.Width, pictureBox9.Image.Height, GraphicsUnit.Pixel, ia);
+            //e.Graphics.DrawImage(pictureBox10.Image, new Rectangle(566, 860, 209, 157), 0, 0, pictureBox10.Image.Width, pictureBox10.Image.Height, GraphicsUnit.Pixel, ia);
+
+            // List untuk menyimpan PictureBox yang memiliki gambar
+            List<PictureBox> pictureBoxes = new List<PictureBox>
+            {
+                pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6,
+                pictureBox7, pictureBox8, pictureBox9, pictureBox10
+            };
+
+            //// Cek apakah ada gambar yang diisi
+            //if (!pictureBoxes.Any(pb => pb.Image != null))
+            //{
+            //    MessageBox.Show("Tidak ada gambar yang diisi. Harap tambahkan gambar sebelum mencetak.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            // Variabel untuk posisi gambar
+            int startX1 = 355;
+            int startX2 = 566;
+            int startY = 224;
+            int width = 209;
+            int height = 157;
+            int verticalSpacing = 159;
+
+            int row = 0;
+
+            foreach (var pictureBox in pictureBoxes)
+            {
+                // Jika PictureBox memiliki gambar
+                if (pictureBox.Image != null)
+                {
+                    // Tentukan posisi gambar berdasarkan kolom (X) dan baris (Y)
+                    int x = (row % 2 == 0) ? startX1 : startX2;
+                    int y = startY + (row / 2) * verticalSpacing;
+
+                    // Gambar di posisi yang sesuai dengan ukuran dan posisi yang ditentukan
+                    e.Graphics.DrawImage(
+                        pictureBox.Image,
+                        new Rectangle(x, y, width, height),
+                        0, 0, pictureBox.Image.Width, pictureBox.Image.Height,
+                        GraphicsUnit.Pixel, ia
+                    );
+
+                    // Tambah counter setelah gambar diproses
+                    row++;
+                }
+            }
+
+
             ia.Dispose();
 
             e.Graphics.DrawRectangle(redPen, 30, 275, 320, 378);
@@ -1819,12 +1925,13 @@ namespace WindowsFormsApp1.Format_3
             //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             //string Pname = comboBox1.SelectedItem.ToString();
             //printer.SetDefaultPrinter(Pname);
+
             if (comboBox1.SelectedIndex != -1)
             {
                 selectedPrinter = comboBox1.SelectedItem.ToString();
                 string Pname = comboBox1.SelectedItem.ToString();
                 printer.SetDefaultPrinter(Pname);
-            }
+            } 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

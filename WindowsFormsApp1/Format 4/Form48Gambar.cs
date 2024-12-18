@@ -841,13 +841,14 @@ namespace WindowsFormsApp1.Format_4
                 {
                     //// Only add "HP Smart Tank 660-670 series" to the ComboBox
                     //if (printer.Contains("HP Smart Tank 660-670 series"))
-                    ////if (printer.Contains("Microsoft IPP Class Driver"))
-                    //{
-                    //    comboBox1.Items.Add(printer);
-                    //    break; // Stop after adding the specific printer
-                    //}
+                    //if (printer.Contains("Microsoft IPP Class Driver"))
+                    if (printer.Contains("EPSON L3210 Series (Copy 1)"))
+                        {
+                        comboBox1.Items.Add(printer);
+                        break; // Stop after adding the specific printer
+                    }
 
-                    comboBox1.Items.Add(printer);
+                    //comboBox1.Items.Add(printer);
                 }
 
                 // Optionally, set default selection (e.g., -1 to not select any printer)
@@ -871,12 +872,7 @@ namespace WindowsFormsApp1.Format_4
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-
-
-
-
-
+           
             if (comboBox1.SelectedIndex != -1)
             {
                 selectedPrinter = comboBox1.SelectedItem.ToString();
@@ -901,74 +897,118 @@ namespace WindowsFormsApp1.Format_4
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
+            // Check if the images are valid based on the button pressed
+            if (!AreImagesValid())
             {
-                MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit early if images are invalid
             }
-            else if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
+
+            // Check if ComboBoxes are correctly selected
+            if (!AreComboBoxesValid())
             {
-                MessageBox.Show("Pilih Profil yang dipakai", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit early if ComboBox selections are invalid
             }
-            else if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
+
+            // Check if printer is selected
+            if (!IsPrinterValid())
             {
-                MessageBox.Show("Pilih printer yang digunakan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit early if the printer selection is invalid
+            }
+
+            // Store the selected printer if not already selected
+            if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
+            {
+                selectedPrinter = comboBox1.SelectedItem.ToString();
+            }
+
+            // Set up the print document
+            PrintDocument pd = new PrintDocument
+            {
+                DefaultPageSettings = { PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180), Landscape = false }
+            };
+
+            if (!string.IsNullOrEmpty(selectedPrinter))
+            {
+                pd.PrinterSettings.PrinterName = selectedPrinter;
+
+                if (comboBox2.Text == "Default")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+                }
+                else if (comboBox2.Text == "Adjust Brightness")
+                {
+                    pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+                }
+
+                // Print the document
+                pd.Print();
+
+                // Log history and update UI
+                HistoryPrintA4(comboBox2.Text);
+                PopulatePrinterComboBox();
+                //comboBox2.SelectedIndex = 0; // Reset profile to default
+
+                MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                // Simpan pilihan printer dari ComboBox1 jika belum ada printer yang dipilih sebelumnya
-                if (selectedPrinter == null && comboBox1.SelectedIndex != -1)
-                {
-                    selectedPrinter = comboBox1.SelectedItem.ToString();
-                }
-
-                PrintDocument pd = new PrintDocument();
-                pd.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("PaperA4", 840, 1180);
-                pd.DefaultPageSettings.Landscape = false;
-
-                if (!string.IsNullOrEmpty(selectedPrinter))
-                {
-                    pd.PrinterSettings.PrinterName = selectedPrinter; // Menggunakan printer yang telah dipilih
-
-                    if (comboBox2.Text == "Default")
-                    {
-                        pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
-
-                        // Menggunakan Print Preview jika diperlukan
-                        //printPreviewDialog1.Document = pd;
-                        //printPreviewDialog1.ShowDialog();
-
-                        // Proses pencetakan
-                        pd.Print();
-
-                        // Log history
-                        HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-                        comboBox2.SelectedIndex = 0; // Reset profil ke default
-                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else if (comboBox2.Text == "Adjust Brightness")
-                    {
-                        pd.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-
-                        // Menggunakan Print Preview jika diperlukan
-                        //printPreviewDialog1.Document = pd;
-                        //printPreviewDialog1.ShowDialog();
-
-                        // Langsung cetak tanpa preview
-                        pd.Print();
-
-                        // Log history
-                        HistoryPrintA4(comboBox2.Text);
-                        PopulatePrinterComboBox();
-                        MessageBox.Show("Dokumen berhasil diprint.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Printer yang dipilih tidak valid atau tidak tersedia.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        // Helper method to validate image inputs based on button states
+        private bool AreImagesValid()
+        {
+            if (isButton2Pressed && pictureBox1.Image == null && pictureBox2.Image == null)
+            {
+                MessageBox.Show("Gambar harus diisi semua", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (isButton4Pressed && (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null || pictureBox4.Image == null))
+            {
+                MessageBox.Show("Gambar harus diisi semua", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (isButton6Pressed && (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null || pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null))
+            {
+                MessageBox.Show("Gambar harus diisi semua", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (isButton8Pressed && (pictureBox1.Image == null || pictureBox2.Image == null || pictureBox3.Image == null || pictureBox4.Image == null || pictureBox5.Image == null || pictureBox6.Image == null || pictureBox7.Image == null || pictureBox8.Image == null))
+            {
+                MessageBox.Show("Gambar harus diisi semua", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
+        }
+
+        // Helper method to validate ComboBox selections
+        private bool AreComboBoxesValid()
+        {
+            if (comboBox3.SelectedIndex == -1 || comboBox3.SelectedItem.ToString() == "Pilih Jenis")
+            {
+                MessageBox.Show("Pilih Jenis terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (comboBox2.SelectedIndex == -1 || comboBox2.SelectedItem.ToString() == "Pilih Profil")
+            {
+                MessageBox.Show("Pilih Profil yang dipakai", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        // Helper method to validate the printer selection
+        private bool IsPrinterValid()
+        {
+            if (comboBox1.SelectedIndex == -1 && string.IsNullOrEmpty(selectedPrinter))
+            {
+                MessageBox.Show("Pilih printer yang digunakan", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
 
         private void AdjustPictureBoxSize(Graphics graphics, string jenis)
         {
@@ -1623,10 +1663,11 @@ namespace WindowsFormsApp1.Format_4
 
             // Memeriksa apakah tombol 2 ditekan
             if (isButton2Pressed == true)
-            {
+            { 
                 //MessageBox.Show("Tombol 2 ditekan!");
                 e.Graphics.DrawImage(pictureBox1.Image, 355, 275, 420, 317);
-                e.Graphics.DrawImage(pictureBox2.Image, 355, 594, 420, 317);
+                e.Graphics.DrawImage(pictureBox2.Image, 355, 594, 420, 317); 
+               
             }
 
             // Memeriksa apakah tombol 4 ditekan
