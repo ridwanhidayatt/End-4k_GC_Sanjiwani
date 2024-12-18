@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using CsvHelper;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using OfficeOpenXml;
@@ -136,6 +137,47 @@ namespace WindowsFormsApp1
 
             comboBoxDokter.KeyPress += new KeyPressEventHandler(comboBoxDokter_KeyPress);
 
+            SetPlaceholder(textBox6, "Masukkan teks di sini...");
+        }
+
+        private void SetPlaceholder(System.Windows.Forms.TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
+
+            textBox.GotFocus += (sender, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.LostFocus += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+
+            // Tambahkan event untuk menangani reset
+            textBox.TextChanged += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text) && !textBox.Focused)
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+        }
+
+        // Tombol Reset
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = ""; // Reset isi TextBox
         }
 
         //baru
@@ -167,148 +209,6 @@ namespace WindowsFormsApp1
             btn_Save.Enabled = allFieldsFilled;
             btn_Cancel.Enabled = allFieldsFilled;
         }
-        //baru
-
-        private void LoadLastSelectedResolution()
-        {
-            // Membaca nilai lebar dan tinggi terakhir dari file teks
-            string filePath = Path.Combine(Application.StartupPath, "last_selected_resolution.txt");
-            if (File.Exists(filePath))
-            {
-                int width, height; // Deklarasi variabel sebelum blok if
-                string[] resolution = File.ReadAllText(filePath).Split(',');
-                if (resolution.Length == 2 && int.TryParse(resolution[0], out width) && int.TryParse(resolution[1], out height))
-                {
-                    SetFormResolution(width, height);
-                    AdjustControlsLayout(width, height);
-                }
-            }
-        }
-
-        public void SetFormResolution(int lastSelectedWidth, int lastSelectedHeight)
-        {
-            this.Width = lastSelectedWidth;
-            this.Height = lastSelectedHeight;
-        }
-
-            private void AdjustControlsLayout(int screenWidth, int screenHeight)
-            {
-
-                // Menghitung faktor skalasi untuk menyesuaikan tata letak komponen
-                float scaleX = (float)screenWidth / 1107 * 0.76f; // Mengurangi ukuran sebesar 25%
-                float scaleY = (float)screenHeight / 835 * 0.96f; // Mengurangi ukuran sebesar 25%
-
-
-                // Mengatur posisi relatif setiap komponen berdasarkan faktor skalasi
-                // Contoh: Memperbesar atau memperkecil posisi komponen
-                //btnsetting.Location = new Point((int)(703 * scaleX), (int)(22 * scaleY)); // Default location untuk cb1
-                //bt1.Location = new Point((int)(708 * scaleX), (int)(75 * scaleY));     // Default location untuk bt1
-                //bt2.Location = new Point((int)(50 * scaleX), (int)(413 * scaleY));    // Default location untuk bt2
-                //cmb1.Location = new Point((int)(50 * scaleX), (int)(40 * scaleY));
-
-                label5.Location = new Point((int)(456 * scaleX), (int)(5 * scaleY));
-                label5.Size = new Size((int)(173 * scaleX), (int)(31 * scaleY));
-
-                label9.Location = new Point((int)(14 * scaleX), (int)(56 * scaleY));
-                label9.Size = new Size((int)(60 * scaleX), (int)(18 * scaleY));
-
-                txt_Rm.Location = new Point((int)(177 * scaleX), (int)(56 * scaleY));
-                txt_Rm.Size = new Size((int)(384 * scaleX), (int)(24 * scaleY));
-
-                label1.Location = new Point((int)(14 * scaleX), (int)(85 * scaleY));
-                label1.Size = new Size((int)(48 * scaleX), (int)(18 * scaleY));
-
-                txt_Nama.Location = new Point((int)(177 * scaleX), (int)(85 * scaleY));
-                txt_Nama.Size = new Size((int)(384 * scaleX), (int)(24 * scaleY));
-
-                label6.Location = new Point((int)(14 * scaleX), (int)(115 * scaleY));
-                label6.Size = new Size((int)(96 * scaleX), (int)(18 * scaleY));
-
-                dateTimePicker1.Location = new Point((int)(176 * scaleX), (int)(119 * scaleY));
-                dateTimePicker1.Size = new Size((int)(385 * scaleX), (int)(22 * scaleY));
-
-                label3.Location = new Point((int)(14 * scaleX), (int)(147 * scaleY));
-                label3.Size = new Size((int)(45 * scaleX), (int)(18 * scaleY));
-
-                txt_Umur.Location = new Point((int)(177 * scaleX), (int)(147 * scaleY));
-                txt_Umur.Size = new Size((int)(384 * scaleX), (int)(24 * scaleY));
-
-                label10.Location = new Point((int)(14 * scaleX), (int)(180 * scaleY));
-                label10.Size = new Size((int)(100 * scaleX), (int)(18 * scaleY));
-
-                panelUser.Location = new Point((int)(12 * scaleX), (int)(12 * scaleY));
-                panelUser.Size = new Size((int)(1083 * scaleX), (int)(811 * scaleY));
-
-                radioButtonPria.Location = new Point((int)(177 * scaleX), (int)(182 * scaleY));
-                radioButtonPria.Size = new Size((int)(99 * scaleX), (int)(22 * scaleY));
-
-                radioButtonWanita.Location = new Point((int)(311 * scaleX), (int)(182 * scaleY));
-                radioButtonWanita.Size = new Size((int)(111 * scaleX), (int)(22 * scaleY));
-
-                label11.Location = new Point((int)(14 * scaleX), (int)(220 * scaleY));
-                label11.Size = new Size((int)(97 * scaleX), (int)(18 * scaleY));
-
-                comboBoxDokter.Location = new Point((int)(177 * scaleX), (int)(217 * scaleY));
-                comboBoxDokter.Size = new Size((int)(384 * scaleX), (int)(26 * scaleY));
-
-                label8.Location = new Point((int)(567 * scaleX), (int)(58 * scaleY));
-                label8.Size = new Size((int)(133 * scaleX), (int)(18 * scaleY));
-
-                dateTimePicker2.Location = new Point((int)(710 * scaleX), (int)(57 * scaleY));
-                dateTimePicker2.Size = new Size((int)(355 * scaleX), (int)(22 * scaleY));
-
-                label7.Location = new Point((int)(572 * scaleX), (int)(89 * scaleY));
-                label7.Size = new Size((int)(53 * scaleX), (int)(18 * scaleY));
-
-                richTextBox1.Location = new Point((int)(710 * scaleX), (int)(86 * scaleY));
-                richTextBox1.Size = new Size((int)(355 * scaleX), (int)(127 * scaleY));
-
-                label4.Location = new Point((int)(564 * scaleX), (int)(221 * scaleY));
-                label4.Size = new Size((int)(134 * scaleX), (int)(18 * scaleY));
-
-                //txt_Tindakan.Location = new Point((int)(710 * scaleX), (int)(219 * scaleY));
-                //txt_Tindakan.Size = new Size((int)(355 * scaleX), (int)(24 * scaleY));
-
-
-
-
-
-                btn_Save.Location = new Point((int)(925 * scaleX), (int)(284 * scaleY));
-                btn_Save.Size = new Size((int)(141 * scaleX), (int)(38 * scaleY));
-
-                btn_DeleteForm.Location = new Point((int)(778 * scaleX), (int)(284 * scaleY));
-                btn_DeleteForm.Size = new Size((int)(141 * scaleX), (int)(38 * scaleY));
-
-                button5.Location = new Point((int)(631 * scaleX), (int)(284 * scaleY));
-                button5.Size = new Size((int)(141 * scaleX), (int)(38 * scaleY));
-
-                btn_Cancel.Location = new Point((int)(483 * scaleX), (int)(284 * scaleY));
-                btn_Cancel.Size = new Size((int)(141 * scaleX), (int)(38 * scaleY));
-
-                button4.Location = new Point((int)(12 * scaleX), (int)(341 * scaleY));
-                button4.Size = new Size((int)(232 * scaleX), (int)(36 * scaleY));
-
-                button2.Location = new Point((int)(12 * scaleX), (int)(768 * scaleY));
-                button2.Size = new Size((int)(232 * scaleX), (int)(36 * scaleY));
-
-                button3.Location = new Point((int)(833 * scaleX), (int)(768 * scaleY));
-                button3.Size = new Size((int)(232 * scaleX), (int)(36 * scaleY));
-
-                btn_Search1.Location = new Point((int)(966 * scaleX), (int)(8 * scaleY));
-                btn_Search1.Size = new Size((int)(30 * scaleX), (int)(30 * scaleY));
-
-                btn_Refresh.Location = new Point((int)(1005 * scaleX), (int)(9 * scaleY));
-                btn_Refresh.Size = new Size((int)(30 * scaleX), (int)(30 * scaleY));
-
-                txt_Search1.Location = new Point((int)(668 * scaleX), (int)(12 * scaleY));
-                txt_Search1.Size = new Size((int)(288 * scaleX), (int)(24 * scaleY));
-
-                panel1.Location = new Point((int)(12 * scaleX), (int)(383 * scaleY));
-                panel1.Size = new Size((int)(1053 * scaleX), (int)(372 * scaleY));
-
-                dataGridView1.Location = new Point((int)(21 * scaleX), (int)(64 * scaleY));
-                dataGridView1.Size = new Size((int)(1499 * scaleX), (int)(381 * scaleY));
-            }
 
 
         private void PopulateComboBox(string filePath)
@@ -1639,10 +1539,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-
-
         private void button6_Click(object sender, EventArgs e)
         {
             ExportLastRowToCSV(filePath1, dataList.LastOrDefault());
@@ -1755,7 +1651,7 @@ namespace WindowsFormsApp1
         {
             //refreshsql();
             btn_Refresh.Enabled = false;
-            txt_Search1.Clear();
+            textBox6.Clear();
         }
 
         //private void CodeTambah()
@@ -2019,8 +1915,7 @@ namespace WindowsFormsApp1
             // Write the CSV content to the file
             File.WriteAllText(csvFilePath, csvContent.ToString());
         }
-
-
+        
         private void btn_Search1_Click(object sender, EventArgs e)
         {
             PerformSearch();
@@ -2031,7 +1926,7 @@ namespace WindowsFormsApp1
 
         private void PerformSearch()
         {
-            string keyword = txt_Search1.Text.ToLower();
+            string keyword = textBox6.Text.ToLower();
 
             List<DataItem> searchResults = dataList
                 .Where(item =>
@@ -2083,12 +1978,10 @@ namespace WindowsFormsApp1
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            // Refresh the DataGridView after saving or updating
-            RefreshDataGridView();
-            txt_Search1.Clear();
+            RefreshDataGridView(); 
             isEditing = false;
             DisableButtons();
-            txt_Search1.Clear();
+            textBox6.Text="";
             ClearTextBoxes();
         }
 

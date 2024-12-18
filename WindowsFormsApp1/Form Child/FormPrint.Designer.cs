@@ -95,9 +95,7 @@ namespace WindowsFormsApp1
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Format 1",
-            "Format 2",
-            "Format 3",
-            "Format 4"});
+            "Format 2"});
             this.comboBox1.Location = new System.Drawing.Point(138, 53);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(206, 24);

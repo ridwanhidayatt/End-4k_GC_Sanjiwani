@@ -30,36 +30,48 @@ namespace WindowsFormsApp1
         {
             if (comboBox1.Text == "Format 1")
             {
+                //comboBox1.SelectedIndex = -1;
+                //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+                //int kondisi = 1;
+                //TransfEventPrint1(kondisi.ToString());
+                //this.Close();
+
                 comboBox1.SelectedIndex = -1;
                 comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-                int kondisi = 1;
+                int kondisi = 8;
                 TransfEventPrint1(kondisi.ToString());
                 this.Close();
             }
             else if (comboBox1.Text == "Format 2")
             {
-                comboBox1.SelectedIndex = -1;
-                comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-                int sendFormUtama = 4;
-                TransfEventPrint1(sendFormUtama.ToString());
-                this.Close();
-            }
-            else if (comboBox1.Text == "Format 3")
-            {
-                comboBox1.SelectedIndex = -1;
-                comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-                int sendFormUtama = 8;
-                TransfEventPrint1(sendFormUtama.ToString());
-                this.Close();
-            }
-            else if (comboBox1.Text == "Format 4")
-            {
+                //comboBox1.SelectedIndex = -1;
+                //comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+                //int sendFormUtama = 4;
+                //TransfEventPrint1(sendFormUtama.ToString());
+                //this.Close();
+
                 comboBox1.SelectedIndex = -1;
                 comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
                 int sendFormUtama = 9;
                 TransfEventPrint1(sendFormUtama.ToString());
                 this.Close();
             }
+            //else if (comboBox1.Text == "Format 3")
+            //{
+            //    comboBox1.SelectedIndex = -1;
+            //    comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            //    int sendFormUtama = 8;
+            //    TransfEventPrint1(sendFormUtama.ToString());
+            //    this.Close();
+            //}
+            //else if (comboBox1.Text == "Format 4")
+            //{
+            //    comboBox1.SelectedIndex = -1;
+            //    comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            //    int sendFormUtama = 9;
+            //    TransfEventPrint1(sendFormUtama.ToString());
+            //    this.Close();
+            //}
             else
             {
                 MessageBox.Show("Pilih format print");

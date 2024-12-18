@@ -57,8 +57,6 @@ namespace WindowsFormsApp1.Form_Utama
             }
         }
 
-
-        // Fungsi untuk memuat data dari file CSV ke dalam list of Dokter
         public List<Dokter> MuatDataDariCSV()
         {
             string directoryPath = @"D:\GLEndoscope\Database\dataDokter";
@@ -109,24 +107,9 @@ namespace WindowsFormsApp1.Form_Utama
             return dokters;
         }
 
-
-
-
-
         public FormDokter()
         {
             InitializeComponent();
-
-            // Initialize columns for dt
-            //dt.Columns.Add("No", typeof(int));
-            //dt.Columns.Add("NIP", typeof(string));
-            //dt.Columns.Add("Nama", typeof(string));
-            //dt.Columns.Add("JenisKelamin", typeof(string));
-            //dt.Columns.Add("Alamat", typeof(string));
-
-            //// Set DataGridView1 to use dt as its data source
-            //dataGridView1.DataSource = dt; 
-
             // Mengatur event handler untuk double-click pada sel DataGridView
             dataGridView1.CellDoubleClick += DataGridView1_CellDoubleClick;
 
@@ -136,26 +119,44 @@ namespace WindowsFormsApp1.Form_Utama
             txt_AlamatDokter.TextChanged += new EventHandler(AnyFieldChanged);
             radioButtonPria.CheckedChanged += new EventHandler(AnyFieldChanged);
             radioButtonWanita.CheckedChanged += new EventHandler(AnyFieldChanged);
-
             btn_Save.Enabled = false;
             btn_Cancel.Enabled = false;
-
-            //// Menetapkan event handler ke setiap TextBox dan RadioButton
-            //txt_NipDokter.TextChanged += textBox_TextChanged;
-            //txt_NamaDokter.TextChanged += textBox_TextChanged;
-            //txt_AlamatDokter.TextChanged += textBox_TextChanged;
-            //radioButtonPria.CheckedChanged += radioButton_CheckedChanged;
-            //radioButtonWanita.CheckedChanged += radioButton_CheckedChanged;
-
-            //// Inisialisasi status tombol "Save"
-            //UpdateSaveButtonStatus();
-
-
-
             RefreshDataGridView();
-
-            // Bind DataGridView ke sumber data BindingList
             dataGridView1.DataSource = dataSource;
+            SetPlaceholder(txt_Search1, "Masukkan teks di sini...");
+        }
+
+        private void SetPlaceholder(System.Windows.Forms.TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
+
+            textBox.GotFocus += (sender, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.LostFocus += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+
+            textBox.TextChanged += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text) && !textBox.Focused)
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
         }
 
         private void AnyFieldChanged(object sender, EventArgs e)
@@ -181,60 +182,6 @@ namespace WindowsFormsApp1.Form_Utama
             btn_Save.Enabled = allFieldsFilled;
             btn_Cancel.Enabled = allFieldsFilled;
         }
-        //baru
-
-        private void LoadLastSelectedResolution()
-        {
-            // Membaca nilai lebar dan tinggi terakhir dari file teks
-            string filePath = Path.Combine(Application.StartupPath, "last_selected_resolution.txt");
-            if (File.Exists(filePath))
-            {
-                int width, height; // Deklarasi variabel sebelum blok if
-                string[] resolution = File.ReadAllText(filePath).Split(',');
-                if (resolution.Length == 2 && int.TryParse(resolution[0], out width) && int.TryParse(resolution[1], out height))
-                {
-                    SetFormResolution(width, height);
-                    AdjustControlsLayout(width, height);
-                }
-            }
-        }
-
-        private void AdjustControlsLayout(int width, int height)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetFormResolution(int lastSelectedWidth, int lastSelectedHeight)
-        {
-            this.Width = lastSelectedWidth;
-            this.Height = lastSelectedHeight;
-        }
-
-        // Event handler untuk memperbarui status tombol "Save" setiap kali isi dari TextBox atau RadioButton berubah
-        //private void textBox_TextChanged(object sender, EventArgs e)
-        //{
-        //    UpdateSaveButtonStatus();
-        //}
-
-        //private void radioButton_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    UpdateSaveButtonStatus();
-        //}
-
-        //private void UpdateSaveButtonStatus()
-        //{
-        //    // Periksa apakah semua TextBox telah diisi
-        //    bool allTextBoxesFilled = !String.IsNullOrEmpty(txt_NipDokter.Text) &&
-        //                     !String.IsNullOrEmpty(txt_NamaDokter.Text) &&
-        //                     !String.IsNullOrEmpty(txt_AlamatDokter.Text);
-
-        //    // Periksa apakah RadioButton telah dipilih
-        //    bool radioButtonSelected = radioButtonPria.Checked || radioButtonWanita.Checked;
-
-        //    // Aktifkan tombol "Save" hanya jika semua TextBox telah diisi dan RadioButton telah dipilih
-        //    btn_Save.Enabled = allTextBoxesFilled && radioButtonSelected;
-        //    btn_Cancel.Enabled = btn_Save.Enabled;
-        //}
 
         private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -275,10 +222,6 @@ namespace WindowsFormsApp1.Form_Utama
 
         private void FormDokter_Load(object sender, EventArgs e)
         {
-
-
-
-
             this.ActiveControl = label1;
             DisableButtons();
             // Isi BindingList dengan data dari CSV atau sumber data lainnya
@@ -300,8 +243,6 @@ namespace WindowsFormsApp1.Form_Utama
             dataGridView1.DataSource = bindingList;
 
             RefreshDataGridView();
-
-
         }
 
         private void DisableButtons()
@@ -639,14 +580,7 @@ namespace WindowsFormsApp1.Form_Utama
             }
         }
 
-
-        private void btn_Cancel_Click(object sender, EventArgs e)
-        {
-            ResetFormMode();
-            txt_NipDokter.Enabled = true;
-            DisableButtons();
-            isEditing = false;
-        }
+         
 
         private void btn_Search1_Click(object sender, EventArgs e)
         {
@@ -679,7 +613,12 @@ namespace WindowsFormsApp1.Form_Utama
                 {
                     MessageBox.Show("Tidak ada hasil yang ditemukan.", "Pencarian", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                txt_NamaDokter.SelectionStart = txt_NamaDokter.Text.Length;
             }
+            
+            txt_NamaDokter.SelectionStart = txt_NamaDokter.Text.Length;
+            txt_NamaDokter.SelectionLength = 0;
+
         }
 
         private void ClearTextBoxes()
@@ -725,8 +664,173 @@ namespace WindowsFormsApp1.Form_Utama
             ResetFormMode();
             DisableButtons();
             RefreshDataGridView();
-            txt_Search1.Clear();
+            txt_Search1.Text="";
             ClearTextBoxes();
+        }  
+
+
+        private void FormDokter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormClosedEvent?.Invoke();
+        }
+
+
+        private List<Dokter> GetDataFromDataGridView(DataGridView dataGridView)
+        {
+            List<Dokter> data = new List<Dokter>();
+
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                string nip = row.Cells["NIP"].Value.ToString();
+                string nama = row.Cells["Nama"].Value.ToString();
+                string jenisKelamin = row.Cells["JenisKelamin"].Value.ToString();
+                string alamat = row.Cells["Alamat"].Value.ToString();
+
+                Dokter dokter = new Dokter
+                {
+                    NIP = nip,
+                    Nama = nama,
+                    JenisKelamin = jenisKelamin,
+                    Alamat = alamat
+                };
+
+                data.Add(dokter);
+            }
+
+            return data;
+        }
+
+        private void SimpanDataKeCSV(List<Dokter> data, string filePath)
+        {
+            // Perbarui nomor urut (No) untuk setiap item dalam list
+            for (int i = 0; i < data.Count; i++)
+            {
+                data[i].No = i + 1; // Atur nilai No sesuai dengan urutan dalam list
+            }
+
+            // Tulis data ke file CSV menggunakan CsvWriter
+            using (var writer = new StreamWriter(filePath))
+            using (var csv = new CsvHelper.CsvWriter(writer))
+            {
+                // Tulis header jika perlu (untuk versi CsvHelper yang lebih lama)
+                csv.WriteHeader<Dokter>();
+
+                // Tulis data dari objek List<Dokter> ke file CSV
+                csv.WriteRecords(data);
+            }
+        }
+        
+        private string RemoveExtraSpaces(string input)
+        {
+            return string.Join(" ", input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+        }    
+
+        private bool IsDataValid(string nip, string nama, string jenisKelamin, string alamat)
+        {
+            if (string.IsNullOrEmpty(nip))
+            {
+                MessageBox.Show("NIP harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(nama))
+            {
+                MessageBox.Show("Nama Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(jenisKelamin))
+            {
+                MessageBox.Show("Jenis Kelamin harus dipilih.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(alamat))
+            {
+                MessageBox.Show("Alamat Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void panelUser_Paint(object sender, PaintEventArgs e)
+        {
+            if (panelUser.BorderStyle == BorderStyle.FixedSingle)
+            {
+                int thickness = 2;//it's up to you
+                int halfThickness = thickness / 2;
+                using (Pen p = new Pen(Color.Black, thickness))
+                {
+                    e.Graphics.DrawRectangle(p, new System.Drawing.Rectangle(halfThickness,
+                                                              halfThickness,
+                                                              panelUser.ClientSize.Width - thickness,
+                                                              panelUser.ClientSize.Height - thickness));
+                }
+            }
+        } 
+         
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            // Ambil data dari kontrol UI dengan Trim dan RemoveExtraSpaces
+            string nip = txt_NipDokter.Text.Trim();
+            string nama = RemoveExtraSpaces(txt_NamaDokter.Text);
+            string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : (radioButtonWanita.Checked ? "Perempuan" : "");
+            string alamat = RemoveExtraSpaces(txt_AlamatDokter.Text);
+
+            // Periksa apakah semua data telah diisi
+            if (!IsDataValid(nip, nama, jenisKelamin, alamat))
+            {
+                MessageBox.Show("Harap lengkapi semua data sebelum menyimpan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Hentikan proses penyimpanan jika data tidak valid
+            }
+
+            // Periksa apakah NIP sudah ada di DataGridView
+            if (IsNIPAlreadyExistsSimpan(nip))
+            {
+                MessageBox.Show("NIP sudah ada di dalam DataGridView. Harap masukkan NIP yang berbeda.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Hentikan proses penyimpanan jika NIP sudah ada
+            }
+
+            // Simpan data ke file CSV
+
+
+            bindingList.Add(new Dokter
+            {
+
+                No = bindingList.Count + 1,
+                NIP = nip,
+                Nama = nama,
+                JenisKelamin = jenisKelamin,
+                Alamat = alamat
+            });
+
+            // Simpan data ke file CSV setelah penghapusan selesai
+            List<Dokter> dataList = bindingList.ToList(); // Konversi BindingList ke List
+            SimpanDataKeCSV(dataList, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
+
+            // Tampilkan data di DataGridView setelah simpan
+            TampilkanDataKeDataGridView();
+
+            // Bersihkan kontrol setelah menyimpan
+            txt_NipDokter.Clear();
+            txt_NamaDokter.Clear();
+            radioButtonPria.Checked = false;
+            radioButtonWanita.Checked = false;
+            txt_AlamatDokter.Clear();
+
+            // Clear the DataTable (assuming it's the data source)
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+            }
+
+            // Call the event to notify Form1 that Form2 is closed
+            FormClosedEvent?.Invoke();
+
+            // Kembalikan kontrol NIPDokter ke keadaan aktif
+            txt_NipDokter.Enabled = true;
         }
 
         private void btn_DeleteForm_Click(object sender, EventArgs e)
@@ -775,192 +879,10 @@ namespace WindowsFormsApp1.Form_Utama
             DisableButtons();
             // Clear the TextBoxes after deletion
             ClearTextBoxes();
-
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            // Ambil NIP baru dari TextBox
-            string newNIP = txt_NipDokter.Text;
-
-            // Iterasi melalui setiap baris dalam DataGridView
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Ambil NIP dari baris saat ini
-                string currentNIP = row.Cells["NIP"].Value.ToString();
-
-                // Jika NIP di baris saat ini cocok dengan NIP yang baru dimasukkan pengguna
-                if (currentNIP == newNIP)
-                {
-                    // Perbarui nilai di DataGridView berdasarkan nilai dalam TextBox dan RadioButton
-                    row.Cells["Nama"].Value = txt_NamaDokter.Text;
-                    row.Cells["Alamat"].Value = txt_AlamatDokter.Text;
-
-                    // Perbarui nilai jenis kelamin berdasarkan radio button
-                    string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-                    row.Cells["JenisKelamin"].Value = jenisKelamin;
-
-                    ResetFormMode();
-
-                    // Tampilkan pesan keberhasilan
-                    MessageBox.Show("Data berhasil diubah.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Simpan data ke CSV setelah perubahan
-                    List<Dokter> data = GetDataFromDataGridView(dataGridView1);
-                    SimpanDataKeCSV(data, @"D:\dokter.csv");
-
-                    // Keluar dari iterasi setelah menemukan NIP yang cocok
-                    return;
-
-                }
-            }
-
-            // Jika tidak ada baris dengan NIP yang sesuai
-            MessageBox.Show("Tidak ada data dengan NIP yang dimasukkan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-
-
-        private void FormDokter_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormClosedEvent?.Invoke();
-        }
-
-        private void txt_NamaDokter_TextChanged(object sender, EventArgs e)
-        {
-            int maxLength = 45;
-
-            if (txt_NamaDokter.Text.Length > maxLength)
-            {
-                lbl_error.Visible = true;  // Tampilkan label
-                lbl_error.Text = "*Maksimal 33 karakter!";  // Ubah teks label
-            }
-            else
-            {
-                lbl_error.Visible = false;  // Sembunyikan label jika tidak ada error
-            }
-        }
-
-
-        private List<Dokter> GetDataFromDataGridView(DataGridView dataGridView)
-        {
-            List<Dokter> data = new List<Dokter>();
-
-            foreach (DataGridViewRow row in dataGridView.Rows)
-            {
-                string nip = row.Cells["NIP"].Value.ToString();
-                string nama = row.Cells["Nama"].Value.ToString();
-                string jenisKelamin = row.Cells["JenisKelamin"].Value.ToString();
-                string alamat = row.Cells["Alamat"].Value.ToString();
-
-                Dokter dokter = new Dokter
-                {
-                    NIP = nip,
-                    Nama = nama,
-                    JenisKelamin = jenisKelamin,
-                    Alamat = alamat
-                };
-
-                data.Add(dokter);
-            }
-
-            return data;
-        }
-
-        private void SimpanDataKeCSV(List<Dokter> data, string filePath)
-        {
-            // Perbarui nomor urut (No) untuk setiap item dalam list
-            for (int i = 0; i < data.Count; i++)
-            {
-                data[i].No = i + 1; // Atur nilai No sesuai dengan urutan dalam list
-            }
-
-            // Tulis data ke file CSV menggunakan CsvWriter
-            using (var writer = new StreamWriter(filePath))
-            using (var csv = new CsvHelper.CsvWriter(writer))
-            {
-                // Tulis header jika perlu (untuk versi CsvHelper yang lebih lama)
-                csv.WriteHeader<Dokter>();
-
-                // Tulis data dari objek List<Dokter> ke file CSV
-                csv.WriteRecords(data);
-            }
-        }
-
-
-        //private void button5_Click_1(object sender, EventArgs e)
-        //{
-        //    isEditing = false;
-
-        //    // Ambil NIP baru dari TextBox
-        //    string newNIP = txt_NipDokter.Text.Trim();
-
-        //    // Validasi setiap entri data
-        //    if (string.IsNullOrEmpty(newNIP))
-        //    {
-        //        MessageBox.Show("NIP harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    string nama = RemoveExtraSpaces(txt_NamaDokter.Text);
-        //    if (string.IsNullOrEmpty(nama))
-        //    {
-        //        MessageBox.Show("Nama harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    string alamat = RemoveExtraSpaces(txt_AlamatDokter.Text);
-        //    if (string.IsNullOrEmpty(alamat))
-        //    {
-        //        MessageBox.Show("Alamat harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-        //    if (!radioButtonPria.Checked && !radioButtonWanita.Checked)
-        //    {
-        //        MessageBox.Show("Jenis Kelamin harus dipilih.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    // Iterasi melalui setiap baris dalam DataGridView
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        // Ambil NIP dari baris saat ini
-        //        string currentNIP = row.Cells["NIP"].Value.ToString();
-
-        //        // Jika NIP di baris saat ini cocok dengan NIP yang baru dimasukkan pengguna
-        //        if (currentNIP == newNIP)
-        //        {
-        //            // Perbarui nilai di DataGridView berdasarkan nilai dalam TextBox dan RadioButton
-        //            row.Cells["Nama"].Value = nama;
-        //            row.Cells["Alamat"].Value = alamat;
-        //            row.Cells["JenisKelamin"].Value = jenisKelamin;
-
-        //            ResetFormMode();
-        //            DisableButtons();
-        //            // Tampilkan pesan keberhasilan
-        //            MessageBox.Show("Data berhasil diubah.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //            // Simpan data ke CSV setelah perubahan
-        //            List<Dokter> data = GetDataFromDataGridView(dataGridView1);
-        //            SimpanDataKeCSV(data, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
-
-        //            // Keluar dari iterasi setelah menemukan NIP yang cocok
-        //            return;
-        //        }
-        //    }
-
-        //    // Jika tidak ditemukan NIP yang cocok, tampilkan pesan
-        //    MessageBox.Show("NIP tidak ditemukan dalam data. Silakan periksa kembali NIP yang Anda masukkan.", "NIP Tidak Ditemukan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //}
-
-        private string RemoveExtraSpaces(string input)
-        {
-            return string.Join(" ", input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
-        }
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            // Validasi setiap entri data
             string nip = txt_NipDokter.Text.Trim();
             if (string.IsNullOrEmpty(nip))
             {
@@ -1028,356 +950,25 @@ namespace WindowsFormsApp1.Form_Utama
                     return;
                 }
             }
-
-            // Jika tidak ada NIP yang cocok, tampilkan pesan kesalahan
             MessageBox.Show("NIP tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        //private void button5_Click_1(object sender, EventArgs e)
-        //{
-        //    // Validasi setiap entri data
-        //    string nip = txt_NipDokter.Text.Trim();
-        //    if (string.IsNullOrEmpty(nip))
-        //    {
-        //        MessageBox.Show("NIP harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
 
-        //    string namaDokter = RemoveExtraSpaces(txt_NamaDokter.Text);
-        //    if (string.IsNullOrEmpty(namaDokter))
-        //    {
-        //        MessageBox.Show("Nama Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    string alamatDokter = RemoveExtraSpaces(txt_AlamatDokter.Text);
-        //    if (string.IsNullOrEmpty(alamatDokter))
-        //    {
-        //        MessageBox.Show("Alamat Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : (radioButtonWanita.Checked ? "Perempuan" : "");
-        //    if (string.IsNullOrEmpty(jenisKelamin))
-        //    {
-        //        MessageBox.Show("Jenis Kelamin harus dipilih.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    isEditing = false;
-
-        //    // Iterasi melalui setiap baris dalam DataGridView
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        // Ambil NIP dari baris saat ini
-        //        string currentNIP = row.Cells["NIP"].Value.ToString();
-
-        //        // Jika NIP di baris saat ini cocok dengan NIP yang baru dimasukkan pengguna
-        //        if (currentNIP == nip)
-        //        {
-        //            // Perbarui nilai di DataGridView berdasarkan nilai dalam TextBox dan RadioButton
-        //            row.Cells["Nama"].Value = namaDokter;
-        //            row.Cells["Alamat"].Value = alamatDokter;
-        //            row.Cells["JenisKelamin"].Value = jenisKelamin;
-
-        //            ResetFormMode();
-        //            DisableButtons();
-
-        //            // Tampilkan pesan keberhasilan
-        //            MessageBox.Show("Data berhasil diubah.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //            // Simpan data ke CSV setelah perubahan
-        //            List<Dokter> data = GetDataFromDataGridView(dataGridView1);
-        //            SimpanDataKeCSV(data, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
-
-        //            // Keluar dari iterasi setelah menemukan NIP yang cocok
-        //            return;
-        //        }
-        //    }
-
-        //    // Jika tidak ada NIP yang cocok, tampilkan pesan kesalahan
-        //    MessageBox.Show("NIP tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //}
-
-
-        //tanpa required
-        //private void button5_Click_1(object sender, EventArgs e)
-        //{
-        //    isEditing = false;
-
-        //    // Ambil NIP baru dari TextBox
-        //    string newNIP = txt_NipDokter.Text.Trim();
-
-        //    // Iterasi melalui setiap baris dalam DataGridView
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        // Ambil NIP dari baris saat ini
-        //        string currentNIP = row.Cells["NIP"].Value.ToString();
-
-        //        // Jika NIP di baris saat ini cocok dengan NIP yang baru dimasukkan pengguna
-        //        if (currentNIP == newNIP)
-        //        {
-        //            // Perbarui nilai di DataGridView berdasarkan nilai dalam TextBox dan RadioButton
-        //            row.Cells["Nama"].Value = RemoveExtraSpaces(txt_NamaDokter.Text);
-        //            row.Cells["Alamat"].Value = RemoveExtraSpaces(txt_AlamatDokter.Text);
-
-        //            // Perbarui nilai jenis kelamin berdasarkan radio button
-        //            string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-        //            row.Cells["JenisKelamin"].Value = jenisKelamin;
-
-        //            ResetFormMode();
-        //            DisableButtons();
-        //            // Tampilkan pesan keberhasilan
-        //            MessageBox.Show("Data berhasil diubah.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //            // Simpan data ke CSV setelah perubahan
-        //            List<Dokter> data = GetDataFromDataGridView(dataGridView1);
-        //            SimpanDataKeCSV(data, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
-
-        //            // Keluar dari iterasi setelah menemukan NIP yang cocok
-        //            return;
-        //        }
-        //    }
-        //}
-
-
-        //tanpa menggunakan Trim
-        //private void button5_Click_1(object sender, EventArgs e)
-        //{
-
-        //    isEditing = false;
-        //    // Ambil NIP baru dari TextBox
-        //    string newNIP = txt_NipDokter.Text;
-
-        //    // Iterasi melalui setiap baris dalam DataGridView
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        // Ambil NIP dari baris saat ini
-        //        string currentNIP = row.Cells["NIP"].Value.ToString();
-
-        //        // Jika NIP di baris saat ini cocok dengan NIP yang baru dimasukkan pengguna
-        //        if (currentNIP == newNIP)
-        //        {
-        //            // Perbarui nilai di DataGridView berdasarkan nilai dalam TextBox dan RadioButton
-        //            row.Cells["Nama"].Value = txt_NamaDokter.Text;
-        //            row.Cells["Alamat"].Value = txt_AlamatDokter.Text;
-
-        //            // Perbarui nilai jenis kelamin berdasarkan radio button
-        //            string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-        //            row.Cells["JenisKelamin"].Value = jenisKelamin;
-
-        //            ResetFormMode();
-        //            DisableButtons();
-        //            // Tampilkan pesan keberhasilan
-        //            MessageBox.Show("Data berhasil diubah.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //            // Simpan data ke CSV setelah perubahan
-        //            List<Dokter> data = GetDataFromDataGridView(dataGridView1);
-        //            SimpanDataKeCSV(data, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
-
-        //            // Keluar dari iterasi setelah menemukan NIP yang cocok
-
-        //            return;
-        //        }
-        //    }
-
-
-
-        //}
-
-        private void btn_Save_Click(object sender, EventArgs e)
+        private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            // Ambil data dari kontrol UI dengan Trim dan RemoveExtraSpaces
-            string nip = txt_NipDokter.Text.Trim();
-            string nama = RemoveExtraSpaces(txt_NamaDokter.Text);
-            string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : (radioButtonWanita.Checked ? "Perempuan" : "");
-            string alamat = RemoveExtraSpaces(txt_AlamatDokter.Text);
-
-            // Periksa apakah semua data telah diisi
-            if (!IsDataValid(nip, nama, jenisKelamin, alamat))
-            {
-                MessageBox.Show("Harap lengkapi semua data sebelum menyimpan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return; // Hentikan proses penyimpanan jika data tidak valid
-            }
-
-            // Periksa apakah NIP sudah ada di DataGridView
-            if (IsNIPAlreadyExistsSimpan(nip))
-            {
-                MessageBox.Show("NIP sudah ada di dalam DataGridView. Harap masukkan NIP yang berbeda.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Hentikan proses penyimpanan jika NIP sudah ada
-            }
-
-            // Simpan data ke file CSV
-
-
-            bindingList.Add(new Dokter
-            {
-
-                No = bindingList.Count + 1,
-                NIP = nip,
-                Nama = nama,
-                JenisKelamin = jenisKelamin,
-                Alamat = alamat
-            });
-
-            // Simpan data ke file CSV setelah penghapusan selesai
-            List<Dokter> dataList = bindingList.ToList(); // Konversi BindingList ke List
-            SimpanDataKeCSV(dataList, @"D:\GLEndoscope\Database\dataDokter\namaDokter.csv");
-
-
-            //SimpanDataKeCSV(nip, nama, jenisKelamin, alamat);
-
-            // Tampilkan data di DataGridView setelah simpan
-            TampilkanDataKeDataGridView();
-
-            // Bersihkan kontrol setelah menyimpan
-            txt_NipDokter.Clear();
-            txt_NamaDokter.Clear();
-            radioButtonPria.Checked = false;
-            radioButtonWanita.Checked = false;
-            txt_AlamatDokter.Clear();
-
-            // Clear the DataTable (assuming it's the data source)
-            if (dataTable != null)
-            {
-                dataTable.Rows.Clear();
-            }
-
-            // Call the event to notify Form1 that Form2 is closed
-            FormClosedEvent?.Invoke();
-
-            // Kembalikan kontrol NIPDokter ke keadaan aktif
+            ResetFormMode();
             txt_NipDokter.Enabled = true;
+            DisableButtons();
+            isEditing = false;
         }
 
-        private bool IsDataValid(string nip, string nama, string jenisKelamin, string alamat)
+        private void txt_NamaDokter_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(nip))
+            if (txt_NamaDokter.Text.Length > 33)
             {
-                MessageBox.Show("NIP harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                MessageBox.Show("Maksimal 33 huruf!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_NamaDokter.Text = txt_NamaDokter.Text.Substring(0, 33);
+                txt_NamaDokter.SelectionStart = txt_NamaDokter.Text.Length;
             }
-
-            if (string.IsNullOrEmpty(nama))
-            {
-                MessageBox.Show("Nama Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(jenisKelamin))
-            {
-                MessageBox.Show("Jenis Kelamin harus dipilih.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(alamat))
-            {
-                MessageBox.Show("Alamat Dokter harus diisi.", "Data Tidak Valid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            return true;
-        }
-
-
-        //tanpa remove spaces
-        //private void btn_Save_Click(object sender, EventArgs e)
-        //    {
-        //        // Ambil data dari kontrol UI
-        //        string nip = txt_NipDokter.Text;
-        //        string nama = txt_NamaDokter.Text;
-        //        string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-        //        string alamat = txt_AlamatDokter.Text;
-
-        //        // Periksa apakah semua data telah diisi
-        //        if (!IsDataValid(nip, nama, jenisKelamin, alamat))
-        //        {
-        //            return; // Hentikan proses penyimpanan jika data tidak valid
-        //        }
-
-        //        // Periksa apakah NIP sudah ada di DataGridView
-        //        if (IsNIPAlreadyExistsSimpan(nip))
-        //        {
-        //            MessageBox.Show("NIP sudah ada di dalam DataGridView. Harap masukkan NIP yang berbeda.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //            return; // Hentikan proses penyimpanan jika NIP sudah ada
-        //        }
-
-        //        // Simpan data ke file CSV
-        //        SimpanDataKeCSV(nip, nama, jenisKelamin, alamat);
-
-        //        bindingList.Add(new Dokter { NIP = nip, Nama = nama, JenisKelamin = jenisKelamin, Alamat = alamat });
-
-        //        // Tampilkan data di DataGridView setelah simpan
-        //        TampilkanDataKeDataGridView();
-
-        //        // Bersihkan kontrol setelah menyimpan
-        //        txt_NipDokter.Clear();
-        //        txt_NamaDokter.Clear();
-        //        radioButtonPria.Checked = false;
-        //        radioButtonWanita.Checked = false;
-        //        txt_AlamatDokter.Clear();
-
-        //        // Clear the DataTable (assuming it's the data source)
-        //        if (dataTable != null)
-        //        {
-        //            dataTable.Rows.Clear();
-        //        }
-
-        //        // Call the event to notify Form1 that Form2 is closed
-        //        FormClosedEvent?.Invoke();
-
-        //        // Kembalikan kontrol NIPDokter ke keadaan aktif
-        //        txt_NipDokter.Enabled = true;
-        //    }
-
-
-        //tanpa menggunakan Trim
-        //private void btn_Save_Click(object sender, EventArgs e)
-        //{
-        //    // Ambil data dari kontrol UI
-        //    string nip = txt_NipDokter.Text;
-        //    string nama = txt_NamaDokter.Text;
-        //    string jenisKelamin = radioButtonPria.Checked ? "Laki - laki" : "Perempuan";
-        //    string alamat = txt_AlamatDokter.Text;
-
-        //    // Periksa apakah semua data telah diisi
-        //    if (!IsDataValid(nip, nama, jenisKelamin, alamat))
-        //    {
-        //        return; // Hentikan proses penyimpanan jika data tidak valid
-        //    }
-
-        //    // Periksa apakah NIP sudah ada di DataGridView
-        //    if (IsNIPAlreadyExistsSimpan(nip))
-        //    {
-        //        MessageBox.Show("NIP sudah ada di dalam DataGridView. Harap masukkan NIP yang berbeda.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return; // Hentikan proses penyimpanan jika NIP sudah ada
-        //    }
-
-        //    // Simpan data ke file CSV
-        //    SimpanDataKeCSV(nip, nama, jenisKelamin, alamat);
-
-        //    bindingList.Add(new Dokter { NIP = nip, Nama = nama, JenisKelamin = jenisKelamin, Alamat = alamat });
-
-        //    // Tampilkan data di DataGridView setelah simpan
-        //    TampilkanDataKeDataGridView();
-
-        //    // Bersihkan kontrol setelah menyimpan
-        //    txt_NipDokter.Clear();
-        //    txt_NamaDokter.Clear();
-        //    radioButtonPria.Checked = false;
-        //    radioButtonWanita.Checked = false;
-        //    txt_AlamatDokter.Clear();
-
-        //    // Clear the DataTable (assuming it's the data source)
-        //    if (dataTable != null)
-        //    {
-        //        dataTable.Rows.Clear();
-        //    }
-
-        //    // Call the event to notify Form1 that Form2 is closed
-        //    FormClosedEvent?.Invoke();
-
-        //    // Kembalikan kontrol NIPDokter ke keadaan aktif
-        //    txt_NipDokter.Enabled = true;
-        //}
+        } 
     }
 }

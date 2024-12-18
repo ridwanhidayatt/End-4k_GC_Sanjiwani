@@ -38,9 +38,9 @@ namespace WindowsFormsApp1
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.txt_Search1 = new System.Windows.Forms.TextBox();
             this.btn_Search1 = new System.Windows.Forms.Button();
             this.panelUser = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelUser.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,10 +110,10 @@ namespace WindowsFormsApp1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(673, 5);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(673, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 31);
+            this.label5.Size = new System.Drawing.Size(216, 39);
             this.label5.TabIndex = 68;
             this.label5.Text = "Data Pasien";
             // 
@@ -148,26 +148,20 @@ namespace WindowsFormsApp1
             // 
             // btn_Refresh
             // 
+            this.btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
-            this.btn_Refresh.Location = new System.Drawing.Point(1491, 9);
+            this.btn_Refresh.Location = new System.Drawing.Point(1490, 8);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(30, 30);
             this.btn_Refresh.TabIndex = 67;
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // txt_Search1
-            // 
-            this.txt_Search1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Search1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Search1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Search1.Location = new System.Drawing.Point(1154, 12);
-            this.txt_Search1.Name = "txt_Search1";
-            this.txt_Search1.Size = new System.Drawing.Size(288, 24);
-            this.txt_Search1.TabIndex = 65;
-            // 
             // btn_Search1
             // 
+            this.btn_Search1.FlatAppearance.BorderSize = 0;
+            this.btn_Search1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search1.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search1.Image")));
             this.btn_Search1.Location = new System.Drawing.Point(1452, 8);
             this.btn_Search1.Name = "btn_Search1";
@@ -178,7 +172,7 @@ namespace WindowsFormsApp1
             // 
             // panelUser
             // 
-            this.panelUser.BackColor = System.Drawing.Color.White;
+            this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.comboBox1);
             this.panelUser.Controls.Add(this.button5);
@@ -219,6 +213,18 @@ namespace WindowsFormsApp1
             this.panelUser.Size = new System.Drawing.Size(1563, 992);
             this.panelUser.TabIndex = 72;
             this.panelUser.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUser_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "EGD",
+            "Kolonoskopi",
+            "Polipectomy"});
+            this.comboBox1.Location = new System.Drawing.Point(944, 248);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(595, 21);
+            this.comboBox1.TabIndex = 140;
             // 
             // button5
             // 
@@ -528,9 +534,9 @@ namespace WindowsFormsApp1
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txt_Search1);
+            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.btn_Search1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -545,17 +551,13 @@ namespace WindowsFormsApp1
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // comboBox1
+            // textBox6
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "EGD",
-            "Kolonoskopi",
-            "Polipectomy"});
-            this.comboBox1.Location = new System.Drawing.Point(944, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(595, 21);
-            this.comboBox1.TabIndex = 140;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(1073, 11);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(367, 24);
+            this.textBox6.TabIndex = 73;
             // 
             // FormUser
             // 
@@ -589,7 +591,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.TextBox txt_Search1;
         private System.Windows.Forms.Button btn_Search1;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Panel panel1;
@@ -624,5 +625,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txt_Nama;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }

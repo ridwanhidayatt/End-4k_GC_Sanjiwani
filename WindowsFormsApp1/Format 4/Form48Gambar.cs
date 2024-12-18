@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Text;
 using System.Xml.Linq;
 using PictureBox = System.Windows.Forms.PictureBox;
+using System.Drawing.Drawing2D;
 
 namespace WindowsFormsApp1.Format_4
 {
